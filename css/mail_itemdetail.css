@@ -1,0 +1,4 @@
+.item_detail_nav {
+  width: 100vw;
+  border-bottom: 1px solid var(--gray);
+}

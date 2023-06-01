@@ -1,0 +1,167 @@
+header {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid var(--gray);
+  background-color: var(--white);
+}
+.header_inner {
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Logo */
+.hugmom_logo {
+  width: 220px;
+}
+.hugmom_logo a {
+  width: 100%;
+}
+.hugmom_logo a img {
+  display: inline-block;
+  width: inherit;
+  margin: auto 0;
+  object-fit: cover;
+}
+
+/* ===== Header Menu List ===== */
+.header_menu_list {
+  width: 570px;
+}
+.header_menu_list > ul {
+  display: flex;
+  gap: 31px;
+}
+.header_menu_list > ul > .header_menu > a {
+  color: var(--black);
+  font-family: var(--eng);
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 1.25rem;
+  transition: 0.2s;
+}
+.header_menu_list ul li:nth-child(1) a span {
+  font-family: var(--kor);
+}
+.header_menu_list ul li:nth-child(4) > a {
+  display: block;
+  font-family: var(--kor);
+  font-size: 19px; /*영문폰트와 맞추기위해 조정함*/
+  font-size: 1.1875rem;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+.header_menu_list ul li:hover > a {
+  color: var(--main-green);
+}
+
+/* Header Menu List > Shop > Shop 하위 메뉴 */
+.header_menu.shop {
+  position: relative;
+}
+.header_menu.shop .shop_malls {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  width: 220px;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.header_menu.shop .shop_malls li {
+  text-align: center;
+  padding: 5px;
+  transition: 0.3s;
+}
+.header_menu.shop .shop_malls li:hover {
+  background-color: var(--main-green);
+}
+.header_menu.shop .shop_malls li:hover > a {
+  color: var(--white);
+}
+.header_menu.shop .shop_malls li a {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  font-family: var(--kor);
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.header_menu.shop:hover .shop_malls {
+  display: block;
+}
+
+/* Header Menu List > CS > CS 하위 메뉴*/
+.header_menu.cs {
+  position: relative;
+}
+.header_menu.cs .cs_menu_list {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+
+  width: 220px;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.header_menu.cs .cs_menu_list li {
+  text-align: center;
+  padding: 5px;
+  transition: 0.3s;
+}
+.header_menu.cs .cs_menu_list li > a {
+  display: block;
+  padding: 5px;
+  font-family: var(--kor);
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.header_menu.cs .cs_menu_list li:hover {
+  background-color: var(--main-green);
+}
+.header_menu.cs .cs_menu_list li:hover > a {
+  color: var(--white);
+}
+.header_menu.cs:hover .cs_menu_list {
+  display: block;
+}
+
+/* Search Box */
+.search_box {
+  border-bottom: 1px solid var(--main-green);
+  padding: 7px;
+}
+.search_box input {
+  outline: none;
+  border: none;
+}
+.search_box button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* Login-Join */
+.login_join_btns ul {
+  display: flex;
+  gap: 25px;
+}
+.login_join_btns ul li a {
+  color: var(--black);
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.login_join_btns ul li a {
+  font-family: var(--kor);
+  font-size: 16px;
+  font-size: 1rem;
+}

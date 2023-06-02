@@ -17,7 +17,7 @@
   color: var(--black);
   font-weight: bold;
 }
-.mypage_nav_wrap .mypage_nav_select {
+.mypage_nav_wrap .mypage_nav_first {
   color: var(--main-green);
 }
 
@@ -30,7 +30,7 @@
 /* Left */
 .mypage_contents aside {
   width: 197px;
-  height: calc(100vh - 409px);
+  height: calc(100vh - 410px);
   overflow: hidden;
   border-right: 1px solid var(--gray);
 }
@@ -52,6 +52,13 @@
 .mypage_contents aside li:nth-child(2) {
   margin-bottom: 20px;
 }
+.mypage_user_info li a {
+  color: var(--black);
+}
+.mypage_user_info li a.mypage_user_info_select {
+  color: var(--main-green);
+}
+
 /* Right */
 .mypage_userInfo {
   width: 100%;

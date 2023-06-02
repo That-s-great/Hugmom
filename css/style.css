@@ -32,4 +32,5 @@ footer {
   height: 275px;
   font-family: var(--kor);
   color: var(--black);
+  border-top: 0.5px solid var(--gray);
 }

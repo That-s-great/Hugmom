@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/15944cb74b.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/style.css">
-  <title>산후조리원 회원몰</title>
+  <title>산후조리원 회원몰-육아용품</title>
 </head>
 <body>
   <div class="container user_mall">
@@ -20,18 +20,18 @@
     <!-- User_mall Main -->
     <main class="user_mall_main">
       <!-- User_mall Header -->
-      <div class="user_mall_header">
+      <div class="user_mall_header baby">
         <div class="user_mall_title">
           <h3>산후조리원 회원몰</h3>
         </div>
         <div class="user_mall_banner">
           <div class="banner_text">
             <p>
-              <span>신선한 유기농 식품과 다양한 산모용품, 육아용품</span>
+              <span>미리미리 준비하는 육아용품!</span>
               산후조리원에서 바로 받아보세요!
             </p>
           </div>
-          <!-- <div class="banner_img"></div> -->
+          <!-- <div class="banner_img baby"></div> -->
         </div>
       </div>
 
@@ -39,21 +39,27 @@
       <section class="user_mall_section">
         <ul class="user_mall_menu">
           <li><a href="/html/04-1-food-usermall.html">식품</a></li>
-          <li><a href="/html/04-2-baby-usermall.html">육아용품</a></li>
+          <li><a class="checked" href="/html/04-2-baby-usermall.html">육아용품</a></li>
           <li><a href="/html/04-3-mom-usermall.html">산모용품</a></li>
         </ul>
 
         <div class="user_mall_menu_title">
-          <p>이번달 인기상품 <span class="hot_button">HOT</span></p>
+          <p class="user_mall_subtitle">육아용품</p>
+          <ul class="user_mall_order">
+            <li><a class="order_checked" href="#">추천순</a></li>
+            <li><a href="#">신상품순</a></li>
+            <li><a href="#">판매량순</a></li>
+          </ul>
         </div>
 
         <div class="user_mall_items">
-          <div class="user_mall_item best_item">
+
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_1.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_1.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -61,16 +67,17 @@
             <div class="user_mall_item_info">
               <div class="hot_new_btns">
                 <span class="hot_button">HOT</span>
+                <!-- <span class="new_button">NEW</span> -->
               </div>
               <div class="item_info_desc">
-                <span class="item_title">성주 꼬마 참외 900g(5-6개입)</span>
-                <p class="item_price">6,900원</p>
-                <span class="item_sale">22% <b>8,900</b></span>
+                <span class="item_title">우리아이 물티슈 3종(택1)</span>
+                <p class="item_price">1,690원~</p>
+                <span class="item_sale">43% <b>3,000</b></span>
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
                 <img src="/img/user_mall_best_item_2.jpeg" alt="">
@@ -83,6 +90,7 @@
             <div class="user_mall_item_info">
               <div class="hot_new_btns">
                 <span class="hot_button">HOT</span>
+                <!-- <span class="new_button">NEW</span> -->
               </div>
               <div class="item_info_desc">
                 <span class="item_title">데일리 물티슈 (100매입 X 10개)</span>
@@ -92,12 +100,12 @@
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_3.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_3.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -105,43 +113,22 @@
             <div class="user_mall_item_info">
               <div class="hot_new_btns">
                 <span class="hot_button">HOT</span>
+                <span class="new_button">NEW</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">국내산 친환경 골드키위 1.1kg</span>
-                <p class="item_price">13,900원</p>
-                <span class="item_sale">17% <b>16,900</b></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="user_mall_item best_item">
-            <div class="user_mall_item_img">
-              <a href="#">
-                <img src="/img/user_mall_best_item_4.jpeg" alt="">
-              </a>
-              <div class="organic_btn">유기농</div>
-              <div class="add_cart_icon_btn">
-                <i class="fas fa-cart-shopping"></i>
-              </div>
-            </div>
-            <div class="user_mall_item_info">
-              <div class="hot_new_btns">
-                <span class="hot_button">HOT</span>
-              </div>
-              <div class="item_info_desc">
-                <span class="item_title">오늘의 샐러드 10종 (택 1)</span>
-                <p class="item_price">4,900원~</p>
+                <span class="item_title">밴드/팬티형 기저귀 1팩 9종</span>
+                <p class="item_price">8,900원</p>
                 <!-- <span class="item_sale">22% <b>8,900</b></span> -->
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_5.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_4.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -149,21 +136,89 @@
             <div class="user_mall_item_info">
               <div class="hot_new_btns">
                 <span class="hot_button">HOT</span>
+                <span class="new_button">NEW</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">컷팅 파인애플 1kg</span>
-                <p class="item_price">10,900원</p>
+                <span class="item_title">100% 순면 건티슈</span>
+                <p class="item_price">3,600원</p>
                 <!-- <span class="item_sale">22% <b>8,900</b></span> -->
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_6.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_5.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
+              <div class="add_cart_icon_btn">
+                <i class="fas fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="user_mall_item_info">
+              <div class="hot_new_btns">
+                <span class="hot_button">HOT</span>
+                <span class="new_button">NEW</span>
+              </div>
+              <div class="item_info_desc">
+                <span class="item_title">젖병 & 주방세제 무향 480ml</span>
+                <p class="item_price">8,900원</p>
+                <span class="item_sale">40% <b>15,000</b></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="user_mall_item">
+            <div class="user_mall_item_img">
+              <a href="#">
+                <img src="/img/user_mall_baby_item_6.jpeg" alt="">
+              </a>
+              <!-- <div class="organic_btn">유기농</div> -->
+              <div class="add_cart_icon_btn">
+                <i class="fas fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="user_mall_item_info">
+              <div class="hot_new_btns">
+                <span class="new_button">NEW</span>
+              </div>
+              <div class="item_info_desc">
+                <span class="item_title">향균 지퍼백 5종 (택1)</span>
+                <p class="item_price">2,900원~</p>
+                <!-- <span class="item_sale">17% <b>16,900</b></span> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="user_mall_item">
+            <div class="user_mall_item_img">
+              <a href="#">
+                <img src="/img/user_mall_baby_item_7.jpeg" alt="">
+              </a>
+              <!-- <div class="organic_btn">유기농</div> -->
+              <div class="add_cart_icon_btn">
+                <i class="fas fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="user_mall_item_info">
+              <div class="hot_new_btns">
+                <span class="new_button">NEW</span>
+              </div>
+              <div class="item_info_desc">
+                <span class="item_title">에코 아기 지퍼백 6종 (택1)</span>
+                <p class="item_price">8,100원~</p>
+                <!-- <span class="item_sale">17% <b>16,900</b></span> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="user_mall_item">
+            <div class="user_mall_item_img">
+              <a href="#">
+                <img src="/img/user_mall_baby_item_8.jpeg" alt="">
+              </a>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -173,19 +228,19 @@
                 <span class="hot_button">HOT</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">청송사과 1.5kg (5~7개입)</span>
-                <p class="item_price">11,900원</p>
+                <span class="item_title">베이비 흘림 방지 빨대컵 3종 (택1)</span>
+                <p class="item_price">7,500원</p>
                 <!-- <span class="item_sale">22% <b>8,900</b></span> -->
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_7.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_9.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -195,19 +250,41 @@
                 <span class="hot_button">HOT</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">고당도 오렌지 1.2kg</span>
-                <p class="item_price">7,900원</p>
-                <span class="item_sale">11% <b>8,900원</b></span>
+                <span class="item_title">귀 적외선 체온계 2종 (택1)</span>
+                <p class="item_price">99,000원</p>
+                <span class="item_sale">22% <b>8,900</b></span>
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_8.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_10.jpeg" alt="">
               </a>
-              <div class="organic_btn">유기농</div>
+              <!-- <div class="organic_btn">유기농</div> -->
+              <div class="add_cart_icon_btn">
+                <i class="fas fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="user_mall_item_info">
+              <div class="hot_new_btns">
+                <span class="new_button">NEW</span>
+              </div>
+              <div class="item_info_desc">
+                <span class="item_title">3세대 자동출수 분유포트</span>
+                <p class="item_price">139,000원</p>
+                <!-- <span class="item_sale">23% <b>129,000</b></span> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="user_mall_item">
+            <div class="user_mall_item_img">
+              <a href="#">
+                <img src="/img/user_mall_baby_item_11.jpeg" alt="">
+              </a>
+              <!-- <div class="organic_btn">유기농</div> -->
               <div class="add_cart_icon_btn">
                 <i class="fas fa-cart-shopping"></i>
               </div>
@@ -217,17 +294,17 @@
                 <span class="hot_button">HOT</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">무농약 마틸다 토마토 1kg</span>
-                <p class="item_price">9,980원</p>
+                <span class="item_title">뉴오리진 a2 플래티넘 900g 2종</span>
+                <p class="item_price">45,000원</p>
                 <!-- <span class="item_sale">22% <b>8,900</b></span> -->
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
+          <div class="user_mall_item">
             <div class="user_mall_item_img">
               <a href="#">
-                <img src="/img/user_mall_best_item_9.jpeg" alt="">
+                <img src="/img/user_mall_baby_item_12.jpeg" alt="">
               </a>
               <div class="organic_btn">유기농</div>
               <div class="add_cart_icon_btn">
@@ -239,78 +316,13 @@
                 <span class="hot_button">HOT</span>
               </div>
               <div class="item_info_desc">
-                <span class="item_title">스테비아 토마토 (500g)</span>
-                <p class="item_price">7,480원</p>
+                <span class="item_title">유기농 분유 3종</span>
+                <p class="item_price">42,800원</p>
                 <!-- <span class="item_sale">22% <b>8,900</b></span> -->
               </div>
             </div>
           </div>
 
-          <div class="user_mall_item best_item">
-            <div class="user_mall_item_img">
-              <a href="#">
-                <img src="/img/user_mall_best_item_10.jpeg" alt="">
-              </a>
-              <div class="organic_btn">유기농</div>
-              <div class="add_cart_icon_btn">
-                <i class="fas fa-cart-shopping"></i>
-              </div>
-            </div>
-            <div class="user_mall_item_info">
-              <div class="hot_new_btns">
-                <span class="hot_button">HOT</span>
-              </div>
-              <div class="item_info_desc">
-                <span class="item_title">산딸기 팩 250g</span>
-                <p class="item_price">14,900원</p>
-                <!-- <span class="item_sale">22% <b>8,900</b></span> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="user_mall_item best_item">
-            <div class="user_mall_item_img">
-              <a href="#">
-                <img src="/img/user_mall_best_item_11.jpeg" alt="">
-              </a>
-              <div class="organic_btn">유기농</div>
-              <div class="add_cart_icon_btn">
-                <i class="fas fa-cart-shopping"></i>
-              </div>
-            </div>
-            <div class="user_mall_item_info">
-              <div class="hot_new_btns">
-                <span class="hot_button">HOT</span>
-              </div>
-              <div class="item_info_desc">
-                <span class="item_title">유기농 석류즙 (70ml X 30개입)</span>
-                <p class="item_price">34,800원</p>
-                <!-- <span class="item_sale">22% <b>8,900</b></span> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="user_mall_item best_item">
-            <div class="user_mall_item_img">
-              <a href="#">
-                <img src="/img/user_mall_best_item_12.jpeg" alt="">
-              </a>
-              <div class="organic_btn">유기농</div>
-              <div class="add_cart_icon_btn">
-                <i class="fas fa-cart-shopping"></i>
-              </div>
-            </div>
-            <div class="user_mall_item_info">
-              <div class="hot_new_btns">
-                <span class="hot_button">HOT</span>
-              </div>
-              <div class="item_info_desc">
-                <span class="item_title">유기농 밤고구마 800g</span>
-                <p class="item_price">5,300원</p>
-                <!-- <span class="item_sale">22% <b>8,900</b></span> -->
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>

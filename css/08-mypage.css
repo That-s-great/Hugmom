@@ -35,7 +35,7 @@
 /* Left Content */
 .mypage_contents aside {
   width: 197px;
-  height: calc(100vh - 432px);
+  height: calc(100vh - 410px);
   overflow: hidden;
   border-right: 1px solid var(--gray);
 }
@@ -60,24 +60,31 @@
 .mypage_user_info li a.mypage_user_info_select,
 .mypage_user_info li a.mypage_user_info_select i {
   color: var(--main-green);
-  font-weight: 800;
+  font-weight: 600;
 }
 .mypage_user_info_select {
   color: var(--main-green);
-  font-weight: 800;
+  font-weight: 600;
 }
-
 /* Right Content */
 .mypage_userInfo {
   width: 100%;
+  height: 100%;
 }
-.mypage_userInfo .mypage_userInfo_detail {
+.mypage_userInfo .mypage_article {
   width: calc(100% - 127px);
+  margin-top: 100px;
+  margin-left: 126px;
+}
+
+
+
+
+/* Mypage - Check */
+.mypage_userInfo .mypage_userInfo_detail {
   border: 1px solid var(--main-green);
   border-radius: 5px;
   padding: 40px 0 40px 30px;
-  margin-top: 100px;
-  margin-left: 126px;
 
   display: flex;
   flex-direction: row;
@@ -91,7 +98,7 @@
   gap: 10px;
 }
 .mypage_userInfo_detail_profile p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -101,6 +108,7 @@
 .mypage_userInfo_detail_profile p:nth-child(2),
 .mypage_userInfo_detail_profile p:nth-child(3) {
   font-size: 14px;
+  margin-bottom: 0;
 }
 .mypage_userInfo_detail_profile span.badge {
   background-color: var(--main-green);
@@ -128,7 +136,6 @@
   font-size: 18px;
   font-weight: 800;
 }
-
 .mypage_userInfo_detail_items {
   display: flex;
   flex-direction: row;
@@ -171,4 +178,93 @@
   font-family: var(--eng);
   font-weight: 700;
   color: var(--main-green);
+}
+
+
+
+
+/* Mypage - Edit(1) */
+.mypage_userInfo_identification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mypage_userInfo_identification h2 {
+  font-size: 24px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 40px;
+}
+.mypage_userInfo_identification h2::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 8px;
+  background-color: var(--sub-green);
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+}
+.mypage_userInfo_identification form {
+  position: relative;
+}
+.mypage_userInfo_identification form p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.mypage_userInfo_identification form p:nth-child(1) {
+  margin-bottom: 5px;
+}
+.mypage_userInfo_identification form p span.highlight {
+  color: var(--main-green);
+  font-weight: 600;
+}
+table {
+  margin: 20px 0;
+  border-top: 2px solid var(--main-green);
+  width: 650px;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid var(--light-gray);
+  text-align: left;
+  padding: 15px;
+}
+th {
+  width: 130px;
+  background-color: var(--lightest-gray);
+}
+td input {
+  outline: none;
+  padding: 5px 10px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+
+  font-family: var(--eng);
+}
+td input::placeholder {
+  color: var(--gray);
+}
+form .identification_btn {
+  display: inline-block;
+  width: 108px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+
+  cursor: pointer;
 }

@@ -1,3 +1,6 @@
+/* Common CSS */
+
+/* Top Bar */
 .mypage_nav {
   border-bottom: 1px solid var(--gray);
   width: 100vw;
@@ -15,29 +18,30 @@
 .mypage_nav_wrap a {
   font-family: var(--kor);
   color: var(--black);
-  font-weight: bold;
+  font-weight: 600;
 }
 .mypage_nav_wrap .mypage_nav_first {
   color: var(--main-green);
 }
 
-/* Contents */
+/* All Contents */
 .mypage_contents {
   width: 1280px;
   margin: 0 auto;
   display: flex;
+  font-family: var(--kor);
 }
+
 /* Left Content */
 .mypage_contents aside {
   width: 197px;
-  /* height: calc(100vh - 410px); */
   height: calc(100vh - 432px);
   overflow: hidden;
   border-right: 1px solid var(--gray);
 }
 .mypage_contents aside h2 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 800;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -47,17 +51,20 @@
 }
 .mypage_contents aside .mypage_user_info_title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 .mypage_contents aside li:nth-child(2) {
   margin-bottom: 20px;
 }
-.mypage_user_info li a {
-  color: var(--black);
-}
-.mypage_user_info li a.mypage_user_info_select {
+.mypage_user_info li a.mypage_user_info_select,
+.mypage_user_info li a.mypage_user_info_select i {
   color: var(--main-green);
+  font-weight: 800;
+}
+.mypage_user_info_select {
+  color: var(--main-green);
+  font-weight: 800;
 }
 
 /* Right Content */
@@ -65,10 +72,10 @@
   width: 100%;
 }
 .mypage_userInfo .mypage_userInfo_detail {
-  width: 100%;
+  width: calc(100% - 127px);
   border: 1px solid var(--main-green);
   border-radius: 5px;
-  padding: 50px 30px;
+  padding: 40px 0 40px 30px;
   margin-top: 100px;
   margin-left: 126px;
 
@@ -81,7 +88,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
 }
 .mypage_userInfo_detail_profile p {
   margin-bottom: 10px;
@@ -90,6 +97,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+}
+.mypage_userInfo_detail_profile p:nth-child(2),
+.mypage_userInfo_detail_profile p:nth-child(3) {
+  font-size: 14px;
 }
 .mypage_userInfo_detail_profile span.badge {
   background-color: var(--main-green);
@@ -111,6 +122,12 @@
 .mypage_userInfo_detail_profile p span.name b {
   color: var(--main-green);
 }
+.mypage_userInfo_detail_profile p span.user_code {
+  color: var(--main-green);
+  font-family: var(--eng);
+  font-size: 18px;
+  font-weight: 800;
+}
 
 .mypage_userInfo_detail_items {
   display: flex;
@@ -119,7 +136,7 @@
   align-items: center;
 }
 .mypage_userInfo_detail_item {
-  width: 210px;
+  width: 208px;
   height: 120px;
   text-align: center;
   border-right: 1px solid var(--main-green);

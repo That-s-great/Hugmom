@@ -5,6 +5,7 @@
 @import url("/css/mail_itemdetail.css");
 @import url("/css/08-mypage.css");
 @import url("/css/footer.css");
+
 header iframe {
   position: fixed;
   width: 100%;

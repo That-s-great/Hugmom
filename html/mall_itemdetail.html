@@ -14,7 +14,11 @@
   <body>
     <div class="container item_detailpage">
       <header>
-        <iframe src="/includes/header.html" frameborder="0"></iframe>
+        <iframe
+          src="/includes/header.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </header>
       <main class="item_detail">
         <section class="item_detail_nav">
@@ -77,13 +81,13 @@
         <section class="item_detail_info">
           <nav class="item_info_nav">
             <ul>
-              <li><a href="#">상품설명</a></li>
-              <li><a href="#">상세정보</a></li>
-              <li><a href="#">상품평(97)</a></li>
-              <li><a href="#">상품문의</a></li>
+              <li><a href="#list_item_detail">상품설명</a></li>
+              <li><a href="#list_item_info">상세정보</a></li>
+              <li><a href="#list_item_comment">상품평(97)</a></li>
+              <li><a href="#list_item_question">상품문의</a></li>
             </ul>
           </nav>
-          <article class="list_item_detail">
+          <article class="list_item_detail" id="list_item_detail">
             <img src="/img/item1_detailimg.PNG" alt="" />
             <div class="explanation">
               <h2>믿고 쓸 수 있는 우리 아이 물티슈</h2>
@@ -104,10 +108,17 @@
               </p>
             </div>
           </article>
+          <article class="list_item_info" id="list_item_info">상세정보</article>
+          <article class="list_item_comment" id="list_item_comment"></article>
+          <article class="list_item_question" id="list_item_question"></article>
         </section>
       </main>
       <footer>
-        <iframe src="/includes/footer.html" frameborder="0"></iframe>
+        <iframe
+          src="/includes/footer.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </footer>
     </div>
   </body>

@@ -157,26 +157,32 @@ img.itemimg {
   width: 1280px;
   margin-top: 30px;
 }
-.item_detail_info ul {
+/* .item_info_nav {
+  position: fixed;
+  width: inherit;
+} */
+.item_info_nav ul {
   background-color: var(--gray);
   display: flex;
   justify-content: space-around;
 }
-.item_detail_info ul li {
+.item_info_nav ul li {
   padding: 25px;
 }
 
-.item_detail_info ul li a {
+.item_info_nav ul li a {
   color: var(--black);
   font-weight: bold;
   font-size: 18px;
 }
 
 /* item_detail */
-.list_item_detail img {
-  width: 100%;
-}
+
 .item_detail .explanation h2,
 .item_detail .explanation h1 {
   text-align: center;
+}
+
+.list_item_info {
+  margin-top: 1000px;
 }

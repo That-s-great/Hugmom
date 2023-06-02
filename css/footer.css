@@ -1,3 +1,6 @@
+.footer {
+  height: 275px;
+}
 .footer_inner {
   width: 1280px;
   height: 100%;
@@ -25,6 +28,7 @@
 }
 
 /* Footer_Right */
+
 .footer_cs {
   display: flex;
   flex-direction: column;

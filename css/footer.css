@@ -1,5 +1,8 @@
 .footer {
+<<<<<<< HEAD
+=======
   width: 100%;
+>>>>>>> b2a29b6579f5cd954f6bdd4fec5c819899567662
   height: 275px;
 }
 .footer_inner {
@@ -29,6 +32,7 @@
 }
 
 /* Footer_Right */
+
 .footer_cs {
   display: flex;
   flex-direction: column;

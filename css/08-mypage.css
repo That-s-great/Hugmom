@@ -30,7 +30,7 @@
 /* Left */
 .mypage_contents aside {
   width: 197px;
-  height: calc(100vh - 147px);
+  height: calc(100vh - 409px);
   overflow: hidden;
   border-right: 1px solid var(--gray);
 }
@@ -67,7 +67,4 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.mypage_userInfo_detail_profile{
-  
 }

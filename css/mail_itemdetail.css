@@ -1,7 +1,7 @@
 .item_detail {
   color: var(--black);
   font-family: var(--kor);
-  overflow: hidden;
+  height: auto;
 }
 .item_detail_nav {
   width: 100vw;
@@ -25,7 +25,6 @@
   display: flex;
   justify-content: space-between;
   width: 1280px;
-  /* border: 1px solid red; */
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -185,10 +184,13 @@ img.itemimg {
   width: 1280px;
   margin-top: 30px;
 }
+/* item_info_nav */
 .item_info_nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
   margin-bottom: 30px;
-  /* position: fixed;
-  width: inherit; */
+  z-index: 100;
 }
 .item_info_nav ul {
   background-color: var(--light-gray);
@@ -236,23 +238,42 @@ img.itemimg {
 .list_item_info h3 {
   font-size: 24px;
   text-align: center;
+  margin: 200px 0 20px 0;
 }
 .list_item_info table {
   width: 100%;
+  border-collapse: collapse;
 }
 .list_item_info table th {
   width: 300px;
+  background-color: var(--lightest-gray);
+  padding: 13px;
 }
-
+.list_item_info td {
+  padding: 13px;
+}
 /* list_item_comment */
+.list_item_comment {
+  margin-bottom: 200px;
+}
+.list_item_comment h3 {
+  font-size: 24px;
+  margin: 200px 0 10px 0;
+}
+.list_item_comment p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
 .list_item_comment .comment .comment_title {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 75px;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  padding: 25px;
+  padding: 23px;
   margin-top: 10px;
+  align-items: center;
 }
 
 .list_item_comment .comment .comment_title .comment_Ltitle {
@@ -260,6 +281,10 @@ img.itemimg {
   display: flex;
   width: 20%;
   justify-content: space-between;
+  margin-top: 15px;
+}
+.list_item_comment .comment .comment_title .comment_Ltitle i {
+  margin-right: 5px;
 }
 .list_item_comment .comment .comment_title .comment_Rtitle {
   float: right;
@@ -268,11 +293,35 @@ img.itemimg {
   justify-content: space-between;
 }
 .list_item_comment .comment .comment_content {
-  background-color: var(--gray);
+  background-color: var(--more-light-gray);
   padding: 30px;
+  border-radius: 0 0 5px 5px;
   display: none;
+  height: auto;
 }
 
-.open {
+.comment.open .comment_content {
   display: block;
+}
+/* list_item_question */
+.list_item_question {
+  margin-bottom: 200px;
+}
+.list_item_question h3 {
+  font-size: 24px;
+  margin: 200px 0 10px 0;
+}
+.list_item_question p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.questionbtn {
+  width: 305px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 18px;
+  float: right;
 }

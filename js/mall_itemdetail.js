@@ -22,20 +22,20 @@ plus.addEventListener("click", () => {
   total.innerText = (parseInt(pricecal) * i).toLocaleString();
 });
 
-// comment.forEach(function (e) {
-//   e.addEventListener("click", toggleAccordion);
-// });
+comment.forEach(function (e) {
+  e.addEventListener("click", toggleAccordion);
+});
 
-// function toggleAccordion(e) {
-//   let comment_content = e.currentTarget.classList;
-//   console.log(comment_content);
+function toggleAccordion(e) {
+  let comment_content = e.currentTarget.classList;
+  console.log(comment_content);
 
-//   if (comment_content.contains("open")) {
-//     comment_content.remove("open");
-//   } else {
-//     comment.forEach(function (e) {
-//       e.classList.remove("open");
-//     });
-//     comment_content.add("open");
-//   }
-// }
+  if (comment_content.contains("open")) {
+    comment_content.remove("open");
+  } else {
+    comment.forEach(function (e) {
+      e.classList.remove("open");
+    });
+    comment_content.add("open");
+  }
+}

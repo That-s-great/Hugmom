@@ -39,3 +39,7 @@ function toggleAccordion(e) {
     comment_content.add("open");
   }
 }
+
+window.addEventListener("scroll", ()=>{
+  if(window.pageYOffset > rectTop)
+})

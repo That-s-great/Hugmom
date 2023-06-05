@@ -103,13 +103,22 @@
   justify-content: flex-end;
 }
 .user_mall_banner.graduate.mom {
-  background: url('/img/wepik-export-20230605054114XVA4.png')center center;
+  background: url('/img/graduate_user_mall_banner-4.png')center center;
+  background-size: cover;
+  justify-content: flex-end;
+}
+.user_mall_banner.graduate.co-buying {
+  background: url('/img/wepik-export-20230605065730URwF.png')center center;
   background-size: cover;
   justify-content: flex-end;
 }
 .user_mall_banner.graduate .banner_text {
   margin-left: 0;
-  margin-right: 40px;
+  margin-right: 70px;
+}
+.user_mall_banner.graduate.co-buying .banner_text {
+  margin-left: 0;
+  margin-right: 100px;
 }
 /* User_mall Main > Section */
 /* 식품, 육아용품, 산모용품 탭 */
@@ -264,6 +273,17 @@
   cursor: pointer;
 }
 .user_mall_item_img .add_cart_icon_btn i {
+  font-size: 18px;
+}
+/* 공동구매페이지 공구 타이머 */
+.user_mall_item_img .co-timer {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(114, 152, 30, 0.6);
+  padding: 15px;
+  text-align: center;
   font-size: 18px;
 }
 /* Item info 영역 */

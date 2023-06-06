@@ -11,19 +11,30 @@ foodbtn.addEventListener("click", (e) => {
   live_food.style.display = "block";
   live_baby.style.display = "none";
   live_mom.style.display = "none";
-  foodbtn.style.color = "#72981e";
 });
 babybtn.addEventListener("click", (e) => {
   e.preventDefault();
   live_food.style.display = "none";
   live_baby.style.display = "block";
   live_mom.style.display = "none";
-  foodbtn.style.color = "#72981e";
 });
 mombtn.addEventListener("click", (e) => {
   e.preventDefault();
   live_food.style.display = "none";
   live_baby.style.display = "none";
   live_mom.style.display = "block";
-  foodbtn.style.color = "#72981e";
+});
+
+const body = document.querySelector("body");
+const popup = document.querySelector(".popup");
+const schedulebtn = document.querySelector(".schedulebtn");
+const close = document.querySelector(".fa-xmark");
+
+schedulebtn.addEventListener("click", () => {
+  popup.style.display = "block";
+  body.classList.add("scrollLock");
+});
+close.addEventListener("click", () => {
+  popup.style.display = "none";
+  body.classList.remove("scrollLock");
 });

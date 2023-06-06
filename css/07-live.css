@@ -121,3 +121,71 @@
   margin-left: 430px;
   font-weight: bold;
 }
+.popup {
+  position: absolute;
+  top: 155%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  width: 846px;
+  height: 800px;
+  box-shadow: 5px 5px 20px 10px var(--gray);
+  border-radius: 5px;
+  background-color: var(--white);
+  display: none;
+}
+
+.scrollLock {
+  overflow: hidden;
+}
+.popup i {
+  float: right;
+  margin: 15px;
+}
+.popup h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+.popup p {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.popup h2 em {
+  color: var(--main-green);
+  font-style: normal;
+}
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.schedule .days {
+  width: calc(846px / 5);
+  border-left: 1px solid var(--main-green);
+  border-bottom: 1px solid var(--main-green);
+  margin-bottom: 30px;
+}
+.schedule .days:nth-child(1),
+.schedule .days:nth-child(6) {
+  border-left: none;
+}
+.schedule .day {
+  background-color: var(--main-green);
+  padding: 1px 0;
+}
+
+.schedule .day p {
+  color: var(--white);
+}
+.schedule .live {
+  height: 250px;
+  padding: 10px;
+}
+.schedule .live li {
+  font-size: 14px;
+}
+.schedule .live li em {
+  font-style: normal;
+  font-weight: bold;
+}

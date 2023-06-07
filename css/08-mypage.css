@@ -27,22 +27,19 @@
 /* All Contents */
 .mypage_contents {
   width: 1280px;
+  height: calc(100vh - 407.33px);
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
+  overflow: hidden;
 }
 
 /* Left Content */
 .mypage_contents aside {
   width: 197px;
-  /* height: calc(100vh - 410px); */
+  height: 100%;
   overflow: hidden;
-  /* border-right: 1px solid var(--gray); */
-}
-.mypage_contents section {
-  height: calc(100vh -100px);
-  overflow: hidden;
-  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
 }
 .mypage_contents aside h2 {
   font-size: 24px;

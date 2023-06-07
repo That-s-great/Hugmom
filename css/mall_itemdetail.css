@@ -16,6 +16,7 @@
 }
 .item_detail_nav p i {
   margin: 0 8px;
+  font-size: 16px;
 }
 .nav_color {
   color: var(--main-green);
@@ -54,6 +55,7 @@ img.itemimg {
   border-radius: 30px;
   text-align: center;
   margin-top: 5px;
+  padding-top: 2px;
 }
 .buy_price {
   font-size: 1.5rem;
@@ -185,12 +187,11 @@ img.itemimg {
   margin-top: 30px;
 }
 /* item_info_nav */
+
 .item_info_nav {
-  position: -webkit-sticky;
   position: sticky;
   top: 90px;
   margin-bottom: 30px;
-  z-index: 100;
 }
 .item_info_nav ul {
   background-color: var(--light-gray);
@@ -205,6 +206,7 @@ img.itemimg {
   color: var(--black);
   font-weight: bold;
   font-size: 18px;
+  scroll-padding: 100px;
 }
 
 /* item_detail */

@@ -2,7 +2,7 @@
 @import url("/css/variable.css");
 
 @import url("/css/header.css");
-@import url("/css/mail_itemdetail.css");
+@import url("/css/mall_itemdetail.css");
 @import url("/css/07-live.css");
 @import url("/css/04-usermall.css");
 @import url("/css/08-mypage.css");
@@ -11,7 +11,7 @@
 header iframe {
   position: fixed;
   width: 100%;
-  height: 200px;
+  height: 90px;
   border: none;
 }
 header {

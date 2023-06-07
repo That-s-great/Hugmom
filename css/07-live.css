@@ -85,6 +85,7 @@
 }
 .hot_live_video_title p span {
   color: var(--main-green);
+  font-size: 16px;
 }
 .hot_live_video_title span {
   font-size: 14px;

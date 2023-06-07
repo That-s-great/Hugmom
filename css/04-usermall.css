@@ -296,7 +296,6 @@
   text-align: center;
   line-height: 25px;
 }
-
 .user_mall_item_info .new_button {
   display: inline-block;
   width: 50px;
@@ -310,6 +309,20 @@
   text-align: center;
   line-height: 25px;
 }
+/* co-buying_button */
+.user_mall_item_info .coBuying_button {
+display: inline-block;
+width: 60px;
+height: 25px;
+border-radius: 5px;
+background-color: var(--yellow);
+color: var(--black);
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+line-height: 25px;
+}
+
 .item_info_desc {
   margin-top: 5px;
 

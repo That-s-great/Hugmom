@@ -160,3 +160,64 @@
   font-size: 16px;
   font-size: 1rem;
 }
+
+/* 로그인 후 헤더 변경 */
+.user_info .user_name {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 3px;
+}
+.user_info .user_name i {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 14px;
+  transition: 0.5s;
+}
+.user_info .user_name:hover i {
+  transform: rotate(180deg);
+}
+.user_info .user_info_menu {
+  width: 130px;
+  padding:  3px 10px;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  font-family: var(--kor);
+  font-size: 14px;
+  color: var(--black);
+
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+.user_info .user_info_menu li {
+  padding: 6px;
+  border-bottom: 1px solid var(--light-gray);
+}
+.user_info .user_info_menu li a {
+  font-family: var(--kor);
+  font-size: 14px;
+  color: var(--black);
+}
+.user_info .user_info_menu li:last-child {
+  border: none;
+}
+.user_info .user_name:hover .user_info_menu {
+  display: block;
+  /* z-index: 999; */
+}
+.user_info .user_info_menu li:hover > a {
+  color: var(--main-green);
+}
+/* 장바구니 갯수 */
+.cart_count {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--white);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  text-align: center;
+}

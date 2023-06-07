@@ -1,10 +1,18 @@
-
-let time = 3 * (24 * 60 * 60 * 1000); //3일의 시간
-setInterval(function() {
+const coBuyingTimer = document.querySelectorAll(".co-timer");
+let time = 12960; //3시간 36분을 초로 나타냄
+let coTimer = setInterval(function() {
   if(time >= 0) {
-    let hour = Math.floor(time / (60 * 60 * 1000));
-    let min = Math.floor(hour % (60 * 1000));
-    console.log(hour, min);
-    time = time - 1000;
+    let hour = String(Math.floor(time / 3600)).padStart("2", 0);
+    let timeOrigin = time % 3600;
+    let min = String(Math.floor(timeOrigin / 60)).padStart("2", 0);
+    let sec = String(time % 60).padStart("2", 0);
+    time = time - 1;
+    // console.log(`${hour}:${min}:${sec}`);
+
+    coBuyingTimer.forEach((timer) => {
+      timer.innerHTML =  `남은공구시간 ${hour}:${min}:${sec}`;
+    });
+  } else {
+    clearInterval(coTimer);
   }
 }, 1000);

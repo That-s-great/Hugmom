@@ -51,6 +51,9 @@
 .header_menu_list ul li:hover > a {
   color: var(--main-green);
 }
+.header_menu_list ul li:hover > a > span {
+  color: var(--main-green);
+}
 
 /* Header Menu List > Shop > Shop 하위 메뉴 */
 .header_menu.shop {

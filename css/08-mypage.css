@@ -27,7 +27,7 @@
 /* All Contents */
 .mypage_contents {
   width: 1280px;
-  height: calc(100vh - 407.33px);
+  /* height: calc(100vh - 407.33px); */
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
@@ -86,7 +86,7 @@
   margin-bottom: 40px;
 }
 .mypage_article h2::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 16px;
   height: 8px;
@@ -100,9 +100,6 @@
 .mypage_article form {
   position: relative;
 }
-
-
-
 
 /* Mypage - Check */
 .mypage_userInfo .mypage_userInfo_detail {
@@ -140,7 +137,7 @@
   font-size: 16px;
   font-family: var(--kor);
   font-weight: bold;
-  
+
   display: inline-block;
   text-align: center;
   width: 140px;
@@ -171,7 +168,7 @@
   height: 120px;
   text-align: center;
   border-right: 1px solid var(--main-green);
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +185,7 @@
   align-items: center;
   gap: 40px;
 }
-.mypage_userInfo_detail_item span{
+.mypage_userInfo_detail_item span {
   display: inline-block;
 }
 .mypage_userInfo_detail_item .desc_top {
@@ -203,9 +200,6 @@
   font-weight: 700;
   color: var(--main-green);
 }
-
-
-
 
 /* Mypage - Edit(1) */
 .mypage_userInfo_identification {
@@ -277,9 +271,6 @@
   cursor: pointer;
 }
 
-
-
-
 /* Mypage - Edit(2) */
 .mypage_userInfo_edit {
   display: flex;
@@ -338,7 +329,7 @@
   width: 130px;
   text-align: center;
 }
-.mypage_userInfo_edit input[type=radio] {
+.mypage_userInfo_edit input[type="radio"] {
   width: 16px;
   height: 16px;
   accent-color: var(--main-green);
@@ -436,9 +427,6 @@
   background-color: var(--main-green);
   color: var(--white);
 }
-
-
-
 
 /* Mypage - Cart */
 .mypage_shoppingInfo_order {
@@ -567,7 +555,7 @@
   color: var(--white);
   font-size: 18px;
   font-weight: 600;
-  
+
   cursor: pointer;
 }
 .mypage_shoppingInfo_order_history {
@@ -605,7 +593,7 @@
 .mypage_shoppingInfo_order_history .contents {
   padding: 25px 0;
   border-bottom: 1px solid var(--gray);
-  
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -621,7 +609,7 @@
   text-align: left;
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.photo {
-  background: url('/img/user_mall_best_item_8.jpeg') no-repeat center center;
+  background: url("/img/user_mall_best_item_8.jpeg") no-repeat center center;
   background-size: cover;
   width: 100px;
   height: 100px;

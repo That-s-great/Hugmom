@@ -10,16 +10,13 @@
     ></script>
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/mall_itemdetail.js"></script>
+    <script defer src="/js/script.js"></script>
     <title>Hugmom</title>
   </head>
   <body style="overflow-x: hidden; overflow-y: auto">
     <div class="container item_detailpage">
       <header>
-        <iframe
-          src="/includes/header.html"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
+        <div data-include-path="/includes/header.html"></div>
       </header>
       <main class="item_detail">
         <section class="item_detail_nav">
@@ -275,13 +272,7 @@
           </article>
         </section>
       </main>
-      <footer>
-        <iframe
-          src="/includes/footer.html"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
-      </footer>
+      <footer><div data-include-path="/includes/footer.html"></div></footer>
     </div>
   </body>
 </html>

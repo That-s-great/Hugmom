@@ -208,7 +208,9 @@ img.itemimg {
   font-size: 18px;
   scroll-padding: 100px;
 }
-
+.item_info_nav ul li a:hover {
+  color: var(--main-green);
+}
 /* item_detail */
 .list_item_detail {
   display: flex;

@@ -8,12 +8,7 @@
 @import url("/css/08-mypage.css");
 @import url("/css/footer.css");
 
-/* header iframe {
-  position: fixed;
-  width: 100%;
-  height: 90px;
-  border: none;
-} */
+
 header {
   position: fixed;
   z-index: 999;
@@ -25,13 +20,10 @@ header {
 main {
   padding-top: 90px;
 }
-/* footer iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-} */
+
 footer {
   position: absolute;
+  /* float: bottom; */
   width: 100%;
   height: 275px;
   font-family: var(--kor);

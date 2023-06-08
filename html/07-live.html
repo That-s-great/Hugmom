@@ -10,12 +10,14 @@
     ></script>
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/07-live.js"></script>
+    <script defer src="/js/script.js"></script>
     <title>Hugmom</title>
   </head>
   <body>
     <header>
-      <iframe id="header" src="/includes/header.html" scrolling="no"></iframe>
+      <div data-include-path="/includes/header.html"></div>
     </header>
+
     <main class="livepage">
       <div class="live_title">
         <h3>Hugmom LIVE</h3>
@@ -26,7 +28,7 @@
           <div class="hot_live_video_container">
             <i class="fas fa-chevron-left"></i>
             <div class="hot_live_videos">
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_1.jpeg" alt="" />
@@ -39,7 +41,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_1.jpeg" alt="" />
@@ -52,7 +54,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_1.jpeg" alt="" />
@@ -65,7 +67,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_1.jpeg" alt="" />
@@ -78,7 +80,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_2.jpeg" alt="" />
@@ -91,7 +93,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_2.jpeg" alt="" />
@@ -104,7 +106,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_2.jpeg" alt="" />
@@ -117,7 +119,7 @@
                   </div>
                 </a>
               </div>
-              <div class="hot_live_video">
+              <div class="hot_live_video hot_live_v">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
                     <img src="/img/user_mall_food_item_2.jpeg" alt="" />
@@ -137,17 +139,17 @@
         <article class="live_container">
           <ul class="user_mall_menu">
             <li>
-              <a href="#" class="btn foodbtn">식품</a>
+              <a href="#" class="btn foodbtn on">식품</a>
             </li>
             <li>
-              <a href="#" class="btn babybtn" value="babybtn">육아용품</a>
+              <a href="#" class="btn babybtn">육아용품</a>
             </li>
             <li>
               <a href="#" class="btn mombtn">산모용품</a>
             </li>
           </ul>
           <div class="live_wrap_food">
-            <div class="live_videos live_food">
+            <div class="live_videos open">
               <div class="hot_live_video">
                 <a href="#" class="hot_live_video_img">
                   <div class="live_img">
@@ -737,13 +739,6 @@
         </div>
       </div>
     </main>
-
-    <footer>
-      <iframe
-        src="/includes/footer.html"
-        frameborder="0"
-        scrolling="no"
-      ></iframe>
-    </footer>
+    <footer><div data-include-path="/includes/footer.html"></div></footer>
   </body>
 </html>

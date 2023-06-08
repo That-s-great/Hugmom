@@ -8,6 +8,7 @@
 @import url("/css/08-mypage.css");
 @import url("/css/footer.css");
 
+
 header {
   position: fixed;
   z-index: 999;

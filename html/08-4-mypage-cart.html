@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom CSS & JS -->
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
   <script defer src="/js/08-mypage.js"></script>
   <title>08 Mypage - Order</title>
 </head>
@@ -15,16 +16,16 @@
   <div class="container mypage">
     <div class="mypage-inner">
       <!-- Main Header -->
-      <header><iframe src="/includes/header.html" frameborder="0" scrolling="no"></iframe></header>
+      <header><div data-include-path="/includes/header.html"></div></iframe></header>
       <!-- Main Header -->
       <main>
         <nav class="mypage_nav">
           <div class="mypage_nav_wrap">
             <a href="#" class="mypage_nav_first">마이페이지</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">회원정보</a>
+            <a href="#">쇼핑정보</a>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">회원정보 수정</a>
+            <a href="#">장바구니</a>
           </div>
         </nav> 
         <div class="mypage_contents">
@@ -54,14 +55,105 @@
           <section class="mypage_shoppingInfo">
             <article class="mypage_shoppingInfo_cart mypage_article">
               <h2 class="mypage_title">장바구니</h2>
-              <div class="mypage_shoppingInfo_cart_select"></div>
+              <div class="mypage_shoppingInfo_cart_select">
+                <div class="top_nav">
+                  <div class="left">
+                    <input type="checkbox" id="selectAll" />
+                    <label for="selectAll">전체선택(총 <span class="selectNum">n</span>개)</label>
+                  </div>
+                  <div class="right">
+                    <span class="delete">선택삭제</span>
+                  </div>
+                </div>
+                <div class="contents">
+                  <input type="checkbox" />
+                  <div class="productBox">
+                    <div class="photo"></div>
+                    <div class="desc">
+                      <span class="company">싱싱농장</span>
+                      <span class="product_title">[싱싱농장] 종류별 과일 골라담기</span>
+                      <div class="product_detail">
+                        <span>[옵션 : 토마토]</span>
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <i class="bi bi-x" id="deleteProduct"></i>
+                  <span id="totalPrice">5,000원</span>
+                </div>
+                <div class="contents">
+                  <input type="checkbox" />
+                  <div class="productBox">
+                    <div class="photo"></div>
+                    <div class="desc">
+                      <span class="company">싱싱농장</span>
+                      <span class="product_title">[싱싱농장] 종류별 과일 골라담기</span>
+                      <div class="product_detail">
+                        <span>[옵션 : 토마토]</span>
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <i class="bi bi-x" id="deleteProduct"></i>
+                  <span id="totalPrice">5,000원</span>
+                </div>
+                <div class="contents">
+                  <input type="checkbox" />
+                  <div class="productBox">
+                    <div class="photo"></div>
+                    <div class="desc">
+                      <span class="company">싱싱농장</span>
+                      <span class="product_title">[싱싱농장] 종류별 과일 골라담기</span>
+                      <div class="product_detail">
+                        <span>[옵션 : 토마토]</span>
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <i class="bi bi-x" id="deleteProduct"></i>
+                  <span id="totalPrice">5,000원</span>
+                </div>
+              </div>
               <div class="mypage_shoppingInfo_cart_payment"></div>
             </article>
           </section>
         </div>
       </main>
       <!-- Footer -->
-      <footer><iframe src="/includes/footer.html" frameborder="0" scrolling="no"></iframe></footer>
+      <footer><div data-include-path="/includes/footer.html"></div></footer>
       <!-- Footer -->
     </div>
   </div>

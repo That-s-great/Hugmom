@@ -26,14 +26,8 @@
 
 /* All Contents */
 .mypage_contents {
-<<<<<<< HEAD
-  width: 1280px; 
-  /* height: calc(100vh - 407.33px); */
-  height: calc(100vh - 427.33px);
-=======
   width: 1280px;
   /* height: calc(100vh - 407.33px); */
->>>>>>> 594fcdabb370ac5894bbf9d052c76d1f42d28de6
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
@@ -434,14 +428,7 @@
   color: var(--white);
 }
 
-<<<<<<< HEAD
-
-
-
-/* Mypage - Order */
-=======
 /* Mypage - Cart */
->>>>>>> 594fcdabb370ac5894bbf9d052c76d1f42d28de6
 .mypage_shoppingInfo_order {
   display: flex;
   flex-direction: column;
@@ -639,7 +626,6 @@
   position: absolute;
   bottom: 0;
 }
-<<<<<<< HEAD
 
 
 
@@ -732,5 +718,3 @@
   font-weight: 600;
   color: var(--main-green);
 }
-=======
->>>>>>> 594fcdabb370ac5894bbf9d052c76d1f42d28de6

@@ -23,6 +23,7 @@ main {
 
 footer {
   position: absolute;
+  float: bottom;
   width: 100%;
   height: 275px;
   font-family: var(--kor);

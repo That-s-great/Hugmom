@@ -1,0 +1,46 @@
+@media all and (max-width:768px) {
+  .container.user_mall {
+  width: 100vw;
+  }
+  /* User_mall Main */
+  .user_mall_main {
+    width: 100vw;
+  }
+  /* User_mall Main > header */
+  .user_mall_header {
+    width: 100vw;
+    height: 300px;
+  }
+  .user_mall_title {
+  width: 100vw;
+  }
+  .user_mall_title h3 {
+    width: 100%;
+  }
+  .user_mall_banner {
+    width: 100vw;
+    height: calc(300px - 70px);
+    justify-content: center;
+  }
+  .user_mall_banner .banner_text {
+    margin-left: 0;
+    padding: 20px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .user_mall_banner .banner_text p {
+    font-size: 18px;
+  }
+
+  .user_mall_section {
+    width: 100vw;
+  }
+  /* User_mall Item section */
+  .user_mall_items {
+    width: 100vw;
+  }
+  .user_mall_item {
+    /* width: 47%; */
+    border: 1px solid tomato;
+  }
+}

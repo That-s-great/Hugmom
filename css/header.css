@@ -2,7 +2,6 @@
   width: 1280px;
   height: 100%;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,13 +19,23 @@
   margin: auto 0;
   object-fit: cover;
 }
-
+.mobile_heder_menu {
+  display: none;
+}
 /* ===== Header Menu List ===== */
+.mobile_close_menu_btn {
+  display: none;
+}
 .header_menu_list {
-  width: 570px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header_menu_list > ul {
+  width: 600px;
   display: flex;
+  justify-content: center;
   gap: 31px;
 }
 .header_menu_list > ul > .header_menu > a {
@@ -155,10 +164,6 @@
 }
 .login_join_btns ul li a {
   color: var(--black);
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-.login_join_btns ul li a {
   font-family: var(--kor);
   font-size: 16px;
   font-size: 1rem;
@@ -223,4 +228,176 @@
   height: 17px;
   border-radius: 50%;
   text-align: center;
+}
+
+
+
+@media all and (max-width:768px) {
+  .header_inner {
+    width: 100vw;
+    padding: 0 20px;
+    position: relative;
+  }
+  .hugmom_logo {
+    display: none;
+  }
+
+  /* 상단 헤더 메뉴 */
+  .mobile_heder_menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile_heder_menu >  div {
+    cursor: pointer;
+  }
+  .menu_toggle_btn {
+    font-size: 20px;
+    color: var(--black);
+  }
+  .cart_btn {
+    font-size: 18px;
+    color: var(--black);
+  }
+  .header_title_section > h1 {
+    font-size: 24px;
+    font-family: var(--eng);
+    color: var(--main-green);
+  }
+
+  /* 토글버튼 클릭시 나오는 메뉴 */
+  .header_menu_list {
+    /* display: none; */
+    /* border: 1px solid tomato; */
+    width: 255px;
+    height: 350px;
+    position: absolute;
+    left: -300px;
+    top: 60px;
+    padding-top: 10px;
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.5s;
+  }
+  /* .header_menu_list.menuopen {
+    left: 0;
+  } */
+  .mobile_close_menu_btn {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--main-green);
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    border-left: none;
+    top: 16px;
+    right: -30px;
+    font-size: 24px;
+  }
+  .mobile_close_menu_btn > i {
+    color: var(--main-green);
+  }
+  .header_menu_list::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 40px;
+    background: url("/img/hugmom_logo_2.png")center center no-repeat;
+    background-size: contain;
+  }
+  .header_menu_list > ul {
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    gap: 0;
+  }
+  .header_menu_list > ul > li {
+    width: inherit;
+    /* max-height: 100px; */
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gray);
+  }
+  .header_menu_list > ul > li > a {
+    margin-left: 20px;
+  }
+  .header_menu_list > ul > li > a::after {
+    content: "\f078";
+    font-family: fontawesome;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+  }
+
+  .header_menu_list > ul > .header_menu > a {
+    font-size: 16px;
+  }
+  .header_menu_list ul li:nth-child(4) > a {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  .header_menu.shop .shop_malls {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    margin-top: 15px;
+    border-radius: 0;
+    background-color: var(--light-gray);
+    box-shadow: none;
+    transition:  all 0.5s;
+  }
+  .header_menu.shop .shop_malls li {
+    width: 100%;   
+    border-radius:0;
+    border-bottom: 1px dotted var(--gray);
+  }
+  .header_menu.shop:hover .shop_malls {
+    height: 80px;
+  }
+  .header_menu.cs .cs_menu_list {
+    display: block;
+    position: absolute;
+    height: 0;
+    margin-top: 15px;
+    background-color: var(--light-gray);
+  
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  .header_menu.cs .cs_menu_list li {
+    width: 100%;   
+    border-radius:0;
+    border-bottom: 1px dotted var(--gray);
+  }
+  .header_menu.cs:hover .cs_menu_list {
+    height: 118px;
+  }
+
+  /* 검색창 none */
+  .search_box {
+    display: none;
+  }
+  .login_join_btns {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+  /* 로그인 & 회원가입 */
+  .login_join_btns ul {
+    gap: 10px;
+  }
+  .login_join_btns ul li a {
+    font-size: 14px;
+  }
 }

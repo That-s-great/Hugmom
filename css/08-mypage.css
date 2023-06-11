@@ -28,8 +28,8 @@
 /* All Contents */
 .mypage_contents {
   width: 1280px; 
-  /* height: calc(100vh - 407.33px); */
-  height: calc(100vh - 427.33px);
+  height: calc(100vh - 407.33px);
+  /* height: calc(100vh - 427.33px); */
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
@@ -61,6 +61,7 @@
 .mypage_contents aside li:nth-child(2) {
   margin-bottom: 20px;
 }
+/* JS로 할지 그냥 CSS로 넣을지 고민중 */
 .mypage_user_info li a.mypage_user_info_select,
 .mypage_user_info li a.mypage_user_info_select i {
   color: var(--main-green);

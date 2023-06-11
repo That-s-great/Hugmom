@@ -29,7 +29,7 @@
 .mypage_contents {
   width: 1280px; 
   /* height: calc(100vh - 407.33px); */
-  height: calc(100vh - 427.33px);
+  /* height: calc(100vh - 427.33px); */
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
@@ -39,7 +39,7 @@
 /* Left Content */
 .mypage_contents aside {
   width: 197px;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   border-right: 1px solid var(--gray);
 }
@@ -61,6 +61,7 @@
 .mypage_contents aside li:nth-child(2) {
   margin-bottom: 20px;
 }
+/* JS로 할지 그냥 CSS로 넣을지 고민중 */
 .mypage_user_info li a.mypage_user_info_select,
 .mypage_user_info li a.mypage_user_info_select i {
   color: var(--main-green);
@@ -623,11 +624,16 @@
   text-align: left;
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.photo {
-  background: url("/img/user_mall_best_item_8.jpeg") no-repeat center center;
+  background-image: url('/img/user_mall_best_item_8.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   width: 100px;
   height: 100px;
 }
+/* .mypage_shoppingInfo_order_history .contents:nth-of-type(1) .orderInfo div.photo {
+  background-image: url('/img/user_mall_best_item_8.jpeg');
+} */
 .mypage_shoppingInfo_order_history .contents .desc {
   display: flex;
   flex-direction: column;

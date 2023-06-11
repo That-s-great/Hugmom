@@ -1,0 +1,92 @@
+/* Common CSS */
+
+/* Top Bar */
+.cs_nav {
+  border-bottom: 1px solid var(--gray);
+  width: 100vw;
+  height: 40px;
+}
+.cs_nav_wrap {
+  width: 1280px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.cs_nav_wrap span {
+  font-family: var(--kor);
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 600;
+}
+.cs_nav_wrap .cs_nav_first {
+  color: var(--main-green);
+}
+
+/* All Contents */
+.cs_contents {
+  width: 1280px; 
+  /* 높이값 아직 해결 못함,,, */
+  height: calc(100vh - 407.33px);
+  /* height: calc(100vh - 427.33px); */
+  margin: 0 auto;
+  display: flex;
+  font-family: var(--kor);
+  overflow: hidden;
+}
+
+/* Left Content */
+.cs_contents aside {
+  width: 197px;
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid var(--gray);
+}
+.cs_contents aside h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.cs_contents aside .cs_FAQ_menu {
+  border-bottom: 1px solid var(--gray);
+  padding: 30px 0;
+}
+.cs_contents aside li:first-child {
+  margin-bottom: 20px;
+}
+.cs_FAQ_menu li a.cs_FAQ_menu_select,
+.cs_FAQ_menu li a.cs_FAQ_menu_select i {
+  color: var(--main-green);
+  font-weight: 700;
+}
+
+/* Right Content */
+.cs_FAQ_inner {
+  width: calc(100% - 197px);
+  height: 100%;
+}
+.cs_FAQ_inner .cs_article {
+  width: calc(100% - 127px);
+  margin: 100px 0 100px 126px;
+}
+.cs_article h2 {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 40px;
+}
+.cs_article h2::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 8px;
+  background-color: var(--sub-green);
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+}

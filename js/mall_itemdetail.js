@@ -28,7 +28,6 @@ comment.forEach(function (e) {
 
 function toggleAccordion(e) {
   let comment_content = e.currentTarget.classList;
-  console.log(comment_content);
 
   if (comment_content.contains("open")) {
     comment_content.remove("open");
@@ -39,3 +38,20 @@ function toggleAccordion(e) {
     comment_content.add("open");
   }
 }
+
+const focus = document.querySelectorAll(".commentcount span");
+const commentcount = document.querySelector(".commentcount");
+
+focus.forEach((e) => {
+  e.addEventListener("click", () => {
+    console.log(e);
+    if (e.classList.contains("color")) {
+      e.classList.remove("color");
+    } else {
+      commentcount.forEach((e) => {
+        e.classList.remove("color");
+      });
+      e.classList.add("color");
+    }
+  });
+});

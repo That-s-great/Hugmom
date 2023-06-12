@@ -79,7 +79,7 @@ function nextMove() {
       i.setAttribute("style", `left: ${-offset}px`);
     });
   } else {
-    maxcurrSlide--;
+    currSlide--;
   }
 }
 function prevMove() {

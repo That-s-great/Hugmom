@@ -28,8 +28,7 @@
 /* All Contents */
 .mypage_contents {
   width: 1280px; 
-  /* height: calc(100vh - 407.33px); */
-  /* height: calc(100vh - 427.33px); */
+  /* height: 100vh; */
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
@@ -544,6 +543,7 @@
   border-radius: 5px;
   outline: none;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 .mypage_shoppingInfo_order_check .bottom #selected_btn {
   display: inline-block;
@@ -591,7 +591,7 @@
   text-align: center;
 }
 .mypage_shoppingInfo_order_history .orderInfo {
-  flex: 2.4;
+  flex: 2.5;
 }
 .mypage_shoppingInfo_order_history .orderDate {
   flex: 1;
@@ -624,16 +624,21 @@
   text-align: left;
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.photo {
-  background-image: url('/img/user_mall_best_item_8.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100px;
   height: 100px;
 }
-/* .mypage_shoppingInfo_order_history .contents:nth-of-type(1) .orderInfo div.photo {
-  background-image: url('/img/user_mall_best_item_8.jpeg');
-} */
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic1 {
+  background-image: url('/img/user_mall_best_item_6.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic2 {
+  background-image: url('/img/user_mall_best_item_4.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic3 {
+  background-image: url('/img/user_mall_best_item_7.jpeg');
+}
 .mypage_shoppingInfo_order_history .contents .desc {
   display: flex;
   flex-direction: column;
@@ -641,8 +646,10 @@
   position: relative;
 }
 .mypage_shoppingInfo_order_history .contents .desc .product_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-weight: 400;
-
   position: absolute;
   bottom: 0;
 }
@@ -669,26 +676,58 @@
   font-size: 16px;
   font-weight: 700;
 }
+.mypage_shoppingInfo_cart_select .top_nav .left label {
+  cursor: pointer;
+}
+/* Custom checkbox - select all */
 .mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] {
   display: none;
 }
 .mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] + em {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
-  transform: translateY(2px);
   margin-right: 3px;
 }
 .mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] + em::before {
-  content: '\F26B';
-  font-family: bootstrap-icons;
+  content: '\f058';
+  font-family: fontawesome;
+  font-size: 18px;
   font-style: normal;
-  color: var(--light-gray);
+  color: var(--gray);
   display: inline-block;
+  transform: translateY(1px);
 }
 .mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox]:checked + em::before {
-  color: red;
+  color: var(--main-green);
 }
+.mypage_shoppingInfo_cart_select .top_nav .right span.delete {
+  cursor: pointer;
+}
+/* Custom checkbox - select one */
+.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] {
+  display: none;
+}
+.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] + em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] + em::before {
+  content: '\f058';
+  font-family: fontawesome;
+  font-size: 18px;
+  font-style: normal;
+  color: var(--gray);
+  display: inline-block;
+  transform: translateY(1px);
+}
+.mypage_shoppingInfo_cart_select .contents label input[type=checkbox]:checked + em::before {
+  color: var(--main-green);
+}
+
 .mypage_shoppingInfo_cart_select .contents {
   position: relative;
   display: flex;
@@ -699,16 +738,27 @@
   padding: 20px 10px;
   border-bottom: 1px solid var(--gray);
 }
+.mypage_shoppingInfo_cart_select .contents,
 .mypage_shoppingInfo_cart_select .contents .productBox {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 .mypage_shoppingInfo_cart_select .contents .productBox div.photo {
-  background: url('/img/user_mall_best_item_8.jpeg') no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   width: 120px;
   height: 120px;
+}
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic1{
+  background-image: url('/img/user_mall_best_item_8.jpeg');
+}
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic2{
+  background-image: url('/img/user_mall_mom_item_4.jpeg');
+}
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic3{
+  background-image: url('/img/user_mall_best_item_2.jpeg');
 }
 .mypage_shoppingInfo_cart_select .contents .productBox div.desc {
   position: relative;
@@ -749,6 +799,7 @@
   right: 10px;
   font-size: 36px;
   color: var(--dark-gray);
+  cursor: pointer;
 }
 .mypage_shoppingInfo_cart_select .contents #totalPrice {
   position: absolute;
@@ -814,4 +865,5 @@
   color: var(--white);
   font-size: 24px;
   font-weight: 700;
+  cursor: pointer;
 }

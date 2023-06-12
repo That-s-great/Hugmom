@@ -31,7 +31,6 @@ footer {
   font-family: var(--kor);
   border-top: 1px solid var(--gray);
   color: var(--black);
-  border-top: 0.5px solid var(--gray);
 }
 
 @media all and (max-width:768px) {

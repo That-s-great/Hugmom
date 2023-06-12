@@ -417,9 +417,9 @@ img.itemimg {
   font-size: 24px;
   margin: 200px 0 10px 0;
 }
-.list_item_question p {
+.list_item_question .questionp {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .questionbtn {
@@ -434,61 +434,17 @@ img.itemimg {
   margin-top: 50px;
 }
 
-/* .list_item_question table {
-  border-collapse: collapse;
-  width: 100%;
-  border: none;
-  margin-top: 30px;
-}
-.list_item_question thead {
-  height: 58px;
-  border-top: 2px solid var(--black);
-  border-bottom: 1px solid var(--black);
-}
-.list_item_question .title {
-  width: 710px;
-}
-.author,
-.created-date,
-.status {
-  width: 100px;
-}
-.list_item_question tbody tr {
-  height: 64px;
-  line-height: 19px;
-  letter-spacing: -0.5px;
-}
-.list_item_question tbody tr td {
-  border-bottom: 1px solid var(--gray);
-}
-.title_sub {
-  padding-left: 20px;
-  cursor: pointer;
-}
-.title_sub.lock span,
-.title_sub.lock span i {
-  color: var(--dark-gray);
-}
-.author_sub,
-.created-date_sub,
-.status_sub {
-  text-align: center;
-  color: var(--dark-gray);
-}
-
 .status_sub.complete {
   color: var(--main-green);
 }
 
-.hide {
+/* .hide {
   background-color: var(--light-gray);
   display: ;
 } */
-
 .question-list {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid #ccc; */
 }
 .head {
   border-top: 1px solid var(--black);
@@ -496,21 +452,84 @@ img.itemimg {
 }
 .question {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 10px;
   border-bottom: 1px solid var(--gray);
-  padding: 20px;
+  padding: 10px;
 }
 .question:nth-child(1) {
   border-bottom: 1px solid var(--black);
 }
-
-.question p {
-  padding: 5px 10px;
+.title,
+.title_sub {
+  width: 70%;
+}
+.title {
   text-align: center;
-  border: 1px solid red;
+  color: var(--black);
+}
+.title_sub {
+  padding-left: 20px;
 }
 
-.hide {
-  display: none;
+.author,
+.author_sub,
+.created-date,
+.created-date_sub,
+.status,
+.status_sub {
+  width: 10%;
+  text-align: center;
+  color: var(--dark-gray);
+}
+.author,
+.created-date,
+.status {
+  color: var(--black);
+}
+.lock span,
+.lock i {
+  color: var(--dark-gray);
+}
+.question {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+/* cobuying */
+.cobuying_timebox {
+  width: 85%;
+  float: right;
+}
+.timer {
+  width: 100%;
+  border: 1px solid var(--main-green);
+  border-radius: 5px;
+  padding: 10px 0;
+  text-align: center;
+  color: var(--main-green);
+  font-size: 20px;
+  font-weight: bold;
+}
+.in {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.Rin {
+  display: flex;
+  align-items: center;
+}
+.people em {
+  font-style: normal;
+  color: var(--main-green);
+}
+.cobtn {
+  width: 107px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  margin-left: 10px;
+  font-size: 16px;
 }

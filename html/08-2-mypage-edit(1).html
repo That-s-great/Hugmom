@@ -67,14 +67,20 @@
                   </tr>
                   <tr>
                     <th>비밀번호</th>
-                    <td><input type="password" placeholder="비밀번호를 입력하세요."></td>
+                    <td>
+                      <input type="password" class="inputPw" placeholder="비밀번호를 입력하세요.">
+                      <span class="errorM_pw">비밀번호를 입력하세요.</span>
+                    </td>
                   </tr>
                   <tr>
                     <th>임산부코드</th>
-                    <td><input type="text" placeholder="임산부코드를 입력하세요."></td>
+                    <td>
+                      <input type="text" class="inputCode" placeholder="임산부코드를 입력하세요.">
+                      <span class="errorM_code">임산부코드를 입력하세요.</span>
+                    </td>
                   </tr>
                 </table>
-                <a href="/html/08-2-mypage-edit(2).html" class="identification_btn">확인</a>
+                <button onclick="showError()" class="identification_btn">확인</button>
               </form>
             </article>
           </section>

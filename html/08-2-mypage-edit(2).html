@@ -8,23 +8,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom CSS & JS -->
   <link rel="stylesheet" href="/css/style.css">
-  <script defer src="/js/08-mypage-script.js"></script>
+  <script defer src="/js/script.js"></script>
+  <script defer src="/js/08-mypage.js"></script>
   <title>08 Mypage - Edit</title>
 </head>
 <body>
   <div class="container mypage">
     <div class="mypage-inner">
       <!-- Main Header -->
-      <header><iframe src="/includes/header.html" frameborder="0" scrolling="no"></iframe></header>
+      <header>
+        <div data-include-path="/includes/header.html"></div>
+      </header>
       <!-- Main Header -->
       <main>
         <nav class="mypage_nav">
           <div class="mypage_nav_wrap">
-            <a href="#" class="mypage_nav_first">마이페이지</a>
+            <span class="mypage_nav_first">마이페이지</span>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">회원정보</a>
+            <span>회원정보</span>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">회원정보 수정</a>
+            <span>회원정보 수정</span>
           </div>
         </nav> 
         <div class="mypage_contents">
@@ -171,7 +174,9 @@
         </div>
       </main>
       <!-- Footer -->
-      <footer><iframe src="/includes/footer.html" frameborder="0" scrolling="no"></iframe></footer>
+      <footer>
+        <div data-include-path="/includes/footer.html"></div>
+      </footer>
       <!-- Footer -->
     </div>
   </div>

@@ -1,11 +1,3 @@
-const addCartIconBtn = document.querySelectorAll(".add_cart_icon_btn");
-
-addCartIconBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    alert("선택하신 상품이 장바구니에 담겼습니다");
-  });
-});
-
 const recommendBtn = document.querySelector("#recommend_btn");
 const newProductBtn = document.querySelector("#newProdut_btn");
 const salesBtn = document.querySelector("#sales_btn");

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom CSS & JS -->
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/script.js"></script>
+  <script defer src="/js/script.js"></script>
   <script defer src="/js/08-mypage.js"></script>
   <title>08 Mypage - Order</title>
 </head>
@@ -16,16 +16,18 @@
   <div class="container mypage">
     <div class="mypage-inner">
       <!-- Main Header -->
-      <header><div data-include-path="/includes/header.html"></div></iframe></header>
+      <header>
+        <div data-include-path="/includes/header.html"></div>
+      </header>
       <!-- Main Header -->
       <main>
         <nav class="mypage_nav">
           <div class="mypage_nav_wrap">
-            <a href="#" class="mypage_nav_first">마이페이지</a>
+            <span class="mypage_nav_first">마이페이지</span>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">쇼핑정보</a>
+            <span>쇼핑정보</span>
             <i class="bi bi-chevron-right"></i>
-            <a href="#">장바구니</a>
+            <span>장바구니</span>
           </div>
         </nav> 
         <div class="mypage_contents">
@@ -58,8 +60,10 @@
               <div class="mypage_shoppingInfo_cart_select">
                 <div class="top_nav">
                   <div class="left">
-                    <input type="checkbox" id="selectAll" />
-                    <label for="selectAll">전체선택(총 <span class="selectNum">n</span>개)</label>
+                    <label for="selectAll">
+                      <input type="checkbox" id="selectAll" /><em></em>
+                      전체선택(총 <span class="selectNum">n</span>개)
+                    </label>
                   </div>
                   <div class="right">
                     <span class="delete">선택삭제</span>
@@ -147,13 +151,38 @@
                   <span id="totalPrice">5,000원</span>
                 </div>
               </div>
-              <div class="mypage_shoppingInfo_cart_payment"></div>
+              <div class="mypage_shoppingInfo_cart_payment">
+                <p class="final_payment_price">최종 결제 금액</p>
+                <div class="order_box">
+                  <div class="orderPrice_box">
+                    <p>주문금액</p>
+                    <p id="orderPrice">20,000원</p>
+                  </div>
+                  <div class="deliveryPrice_box">
+                    <p>배송비</p>
+                    <p id="deliveryPrice">2,500원</p>
+                  </div>
+                </div>
+                <div class="final_box">
+                  <div class="finalPrice_box">
+                    <p>총 결제 예정 금액</p>
+                    <p id="finalPrice">20,000원</p>
+                  </div>
+                  <div class="point_box">
+                    <p>적립 예정 포인트</p>
+                    <p id="point">200P</p>
+                  </div>
+                </div>
+              </div>
+              <button id="orderBtn">주문하기</button>
             </article>
           </section>
         </div>
       </main>
       <!-- Footer -->
-      <footer><div data-include-path="/includes/footer.html"></div></footer>
+      <footer>
+        <div data-include-path="/includes/footer.html"></div>
+      </footer>
       <!-- Footer -->
     </div>
   </div>

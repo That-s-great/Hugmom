@@ -307,6 +307,24 @@ img.itemimg {
 .comment.open .comment_content {
   display: block;
 }
+.commentcount {
+  display: flex;
+  justify-content: center;
+}
+.commentcount span {
+  margin: 20px 10px;
+}
+.commentcount span:hover {
+  cursor: pointer;
+}
+.color {
+  background-color: var(--main-green);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: var(--white);
+  border-radius: 50%;
+}
 /* list_item_question */
 .list_item_question {
   margin-bottom: 200px;

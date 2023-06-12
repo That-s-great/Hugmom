@@ -250,6 +250,7 @@
   outline: none;
   width: 190px;
   padding: 5px 10px;
+  margin-right: 5px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 
@@ -257,6 +258,15 @@
 }
 .mypage_userInfo_identification td input::placeholder {
   color: var(--gray);
+}
+/* .mypage_userInfo_identification td .errorM_pw,
+.mypage_userInfo_identification td .errorM_code {
+
+} */
+.errorM_pw {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--red);
 }
 .mypage_userInfo_identification form .identification_btn {
   display: inline-block;

@@ -39,19 +39,14 @@ function toggleAccordion(e) {
   }
 }
 
-const focus = document.querySelectorAll(".commentcount span");
-const commentcount = document.querySelector(".commentcount");
+const title_sub = document.querySelectorAll(".title_sub");
+const qcount = document.querySelector(".qcount");
+qcount.innerText = title_sub.length;
 
-focus.forEach((e) => {
+const view = document.querySelectorAll(".view");
+
+view.forEach((e) => {
   e.addEventListener("click", () => {
-    console.log(e);
-    if (e.classList.contains("color")) {
-      e.classList.remove("color");
-    } else {
-      commentcount.forEach((e) => {
-        e.classList.remove("color");
-      });
-      e.classList.add("color");
-    }
+    view.innerHTML = `<h1>안녕</h1>`;
   });
 });

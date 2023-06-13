@@ -231,6 +231,11 @@
 }
 
 
+.user_name_mobile {
+  display: none;
+}
+
+
 
 @media all and (max-width:768px) {
   .header_inner {
@@ -313,6 +318,18 @@
     background: url("/img/hugmom_logo_2.png")center center no-repeat;
     background-size: contain;
     background-color: var(--white);
+  }
+  /* 로그인시 나오는 유저네임...임시로 */
+  .header_menu_list::after {
+    content: "홍길동님";
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--black);
+    font-family: var(--kor);
+    font-size: 16px;
+    font-weight: normal;
   }
   /* 각 메뉴 탭 */
   .header_menu_list > ul {
@@ -442,5 +459,10 @@
   }
   .login_join_btns ul li a {
     font-size: 14px;
+  }
+
+  /* 로그인시 나오는 메뉴 */
+  .user_info {
+    display: none;
   }
 }

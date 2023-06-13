@@ -11,17 +11,47 @@ const newProductBtn = document.querySelector("#newProdut_btn");
 const salesBtn = document.querySelector("#sales_btn");
 
 recommendBtn.addEventListener("click", () => {
-  recommendBtn.classList.add("order_checked");
-  newProductBtn.classList.remove("order_checked");
-  salesBtn.classList.remove("order_checked");
+  // 추천순, 신상품순, 판매순 클릭시 순서 바꾸기
+  const itemDiv = document.querySelectorAll(".user_mall_item")[0];
+  // const itemDiv2 = document.querySelectorAll(".user_mall_item")[1];
+  const items = itemDiv.parentNode;
+  items.insertBefore(itemDiv, items.firstChild);
+  // items.insertBefore(itemDiv2, items.firstChild);
+  console.log(itemDiv);
+  console.log(items);
 });
+
 newProductBtn.addEventListener("click", () => {
-  newProductBtn.classList.add("order_checked");
-  recommendBtn.classList.remove("order_checked");
-  salesBtn.classList.remove("order_checked");
+    // 추천순, 신상품순, 판매순 클릭시 순서 바꾸기
+    const itemDiv = document.querySelectorAll(".user_mall_item")[3];
+    // const itemDiv2 = document.querySelectorAll(".user_mall_item")[0];
+    const items = itemDiv.parentNode;
+    items.insertBefore(itemDiv, items.firstChild);
+    // items.insertBefore(itemDiv2, items.childNodes[5]);
 });
+
 salesBtn.addEventListener("click", () => {
-  salesBtn.classList.add("order_checked");
-  newProductBtn.classList.remove("order_checked");
-  recommendBtn.classList.remove("order_checked");
+  // 추천순, 신상품순, 판매순 클릭시 순서 바꾸기
+  const itemDiv = document.querySelectorAll(".user_mall_item")[3];
+  const items = itemDiv.parentNode;
+  items.insertBefore(itemDiv, items.firstChild);
 });
+
+
+
+
+  function newItemOrder() {
+    newProductBtn.classList.add("order_checked");
+    recommendBtn.classList.remove("order_checked");
+    salesBtn.classList.remove("order_checked");
+  };
+  function recommendItemOrder() {
+    recommendBtn.classList.add("order_checked");
+    newProductBtn.classList.remove("order_checked");
+    salesBtn.classList.remove("order_checked");
+  };
+  function salesItemOrder() {
+    salesBtn.classList.add("order_checked");
+    newProductBtn.classList.remove("order_checked");
+    recommendBtn.classList.remove("order_checked");
+  };

@@ -42,10 +42,6 @@
   overflow: hidden;
   width: 1030px;
   position: relative;
-  user-select: none;
-  /* border: 1px solid blue; */
-
-  /* border: 1px solid red; */
 }
 .hot_live_video {
   display: flex;
@@ -57,12 +53,13 @@
   margin: 20px 10px;
   flex-shrink: 0;
   transition: left 0.15s;
-  /* border: 1px solid red; */
 }
+
 .live_img {
   width: 237px;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 .hot_live_video_img img {
   width: inherit;
@@ -111,7 +108,6 @@
   color: var(--dark-gray);
   margin-right: 10px;
 }
-
 .live_container {
   border-top: 2px solid var(--gray);
   margin: 50px 0 100px 0;
@@ -149,10 +145,11 @@
   font-size: 18px;
   margin-left: 430px;
   font-weight: bold;
+  cursor: pointer;
 }
 .popup {
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 50%;
   transform: translateX(-50%);
   width: 846px;
@@ -169,6 +166,7 @@
 .popup i {
   float: right;
   margin: 15px;
+  cursor: pointer;
 }
 .popup h2 {
   text-align: center;
@@ -182,6 +180,12 @@
 .popup h2 em {
   color: var(--main-green);
   font-style: normal;
+}
+.popup.open {
+  display: block;
+}
+.popup.close {
+  display: none;
 }
 .schedule {
   display: flex;

@@ -43,10 +43,16 @@ const title_sub = document.querySelectorAll(".title_sub");
 const qcount = document.querySelector(".qcount");
 qcount.innerText = title_sub.length;
 
-const view = document.querySelectorAll(".view");
+const lock = document.querySelectorAll(".lock");
 
-view.forEach((e) => {
+lock.forEach((e) => {
   e.addEventListener("click", () => {
-    view.innerHTML = `<h1>안녕</h1>`;
+    alert("비밀글입니다.");
   });
 });
+
+const numContent = 97;
+const maxContent = 5;
+const showButton = 5;
+const maxPage = Math.ceil(numContent / maxContent);
+let page = 1;

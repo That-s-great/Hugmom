@@ -320,7 +320,7 @@
     background-color: var(--white);
   }
   /* 로그인시 나오는 유저네임...임시로 */
-  .header_menu_list::after {
+  /* .header_menu_list::after {
     content: "홍길동님";
     display: inline-block;
     position: absolute;
@@ -330,7 +330,7 @@
     font-family: var(--kor);
     font-size: 16px;
     font-weight: normal;
-  }
+  } */
   /* 각 메뉴 탭 */
   .header_menu_list > ul {
     background-color: var(--white);

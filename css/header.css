@@ -268,22 +268,22 @@
 
   /* 토글버튼 클릭시 나오는 메뉴 */
   .header_menu_list {
-    /* display: none; */
-    /* border: 1px solid tomato; */
     width: 255px;
+    height: 200px;
     max-height: 500px;
     position: absolute;
     left: -300px;
     top: 60px;
     padding-top: 10px;
     background-color: var(--white);
-    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); */
 
     transition: all 0.5s;
   }
+  /* 토글버튼 클릭시 오픈 */
   .header_menu_list.menuopen {
     left: 0;
   }
+  /* 닫기버튼 */
   .mobile_close_menu_btn {
     display: block;
     position: absolute;
@@ -301,6 +301,7 @@
   .mobile_close_menu_btn > i {
     color: var(--main-green);
   }
+  /* 상단 로고 */
   .header_menu_list::before {
     content: "";
     display: inline-block;
@@ -311,7 +312,9 @@
     height: 40px;
     background: url("/img/hugmom_logo_2.png")center center no-repeat;
     background-size: contain;
+    background-color: var(--white);
   }
+  /* 각 메뉴 탭 */
   .header_menu_list > ul {
     background-color: var(--white);
     width: 100%;
@@ -321,7 +324,7 @@
     gap: 0;
   }
   .header_menu_list > ul > li {
-    width: inherit;
+    width: 100%;
     max-height: 150px;
     padding: 15px 0;
     border-bottom: 1px solid var(--gray);
@@ -331,14 +334,28 @@
     padding: 15px 0 0;
   }
   .header_menu_list > ul > li > a {
+    display: inline-block;
+    width: 90%;
     margin-left: 20px;
   }
-  .header_menu_list > ul > li > a::after {
+  /* 각 메뉴 오른쪽 쉐브론 아이콘 */
+  .header_menu > a::after {
     content: "\f078";
     font-family: fontawesome;
     display: inline-block;
     position: absolute;
     right: 20px;
+
+    transition: all 0.5s;
+  }
+  .header_menu:hover > a::after {
+    transform: rotate(-90deg);
+  }
+  .header_menu.shop:hover > a::after {
+    transform: rotate(180deg);
+  }
+  .header_menu.cs:hover > a::after {
+    transform: rotate(180deg);
   }
 
   .header_menu_list > ul > .header_menu > a {
@@ -349,6 +366,8 @@
     margin-left: 20px;
   }
 
+
+  /* shop 하위메뉴 */
   .header_menu.shop .shop_malls {
     display: block;
     position: relative;
@@ -361,13 +380,23 @@
     transition:  all 0.5s;
   }
   .header_menu.shop .shop_malls li {
+    text-align: left;
     width: 100%;   
     border-radius:0;
     border-bottom: 1px dotted var(--gray);
   }
-  .header_menu.shop:hover .shop_malls {
-    height: 80px;
+  .header_menu.shop .shop_malls li:first-child {
+    border-top: 1px solid var(--gray);
   }
+  .header_menu.shop .shop_malls li a {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+  .header_menu.shop:hover .shop_malls {
+    height: 74px;
+  }
+
+  /* 고객센터 하위메뉴 */
   .header_menu.cs .cs_menu_list {
     display: block;
     position: relative;
@@ -381,12 +410,20 @@
     transition: all 0.5s;
   }
   .header_menu.cs .cs_menu_list li {
+    text-align: left;
     width: 100%;   
     border-radius:0;
     border-bottom: 1px dotted var(--gray);
   }
+  .header_menu.cs .cs_menu_list li:first-child {
+    border-top: 1px solid var(--gray);
+  }
+  .header_menu.cs .cs_menu_list li a {
+    padding-left: 30px;
+    font-size: 14px;
+  }
   .header_menu.cs:hover .cs_menu_list {
-    height: 118px;
+    height: 112px;
   }
 
   /* 검색창 none */
@@ -398,6 +435,7 @@
     top: 20px;
     right: 10px;
   }
+
   /* 로그인 & 회원가입 */
   .login_join_btns ul {
     gap: 10px;

@@ -69,17 +69,20 @@
                   </tr>
                   <tr>
                     <th>비밀번호 재설정</th>
-                    <td><input type="password" value=""></td>
+                    <td><input type="password" class="resetPw" /></td>
                   </tr>
                   <tr>
                     <th>비밀번호 재설정 확인</th>
-                    <td><input type="password" value=""></td>
+                    <td>
+                      <input type="password" class="resetPw_chk" />
+                      <span class="errorPw errormessage">비밀번호가 일치하지 않습니다.</span>
+                    </td>
                   </tr>
                   <tr>
                     <th>생년월일</th>
                     <td>
-                      <input type="text" class="birth" /> <span class="birthText">년</span>
-                      <select class="birth">
+                      <input type="text" class="birth birthYear" maxlength="4" /> <span class="birthText">년</span>
+                      <select class="birth birthMonth">
                         <option value="선택" selected disabled>==선택==</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -95,14 +98,15 @@
                         <option value="12">12</option>
                       </select>
                       <span class="birthText">월</span>
-                      <input type="text" class="birth" /> <span class="birthText">일</span>
+                      <input type="text" class="birth birthDate" maxlength="2" /> <span class="birthText">일</span>
+                      <span class="errorBirth">생년월일은 필수 입력란입니다.</span>
                     </td>
                   </tr>
                   <tr>
                     <th>이메일</th>
                     <td>
                       <input type="text" class="email" /> @ <input type="text" class="email" />
-                      <select class="email">
+                      <select class="email selectEmail">
                         <option value="직접선택" selected disabled>===직접선택===</option>
                         <option value="naver.com">naver.com</option>
                         <option value="gmail.com">gmail.com</option>
@@ -110,6 +114,7 @@
                         <option value="nate.com">nate.com</option>
                         <option value="hanmail.net">hanmail.net</option>
                       </select>
+                      <span class="errorEmail">이메일은 필수 입력란입니다.</span>
                     </td>
                   </tr> 
                   <tr>
@@ -129,20 +134,22 @@
                     <th>주소</th>
                     <td>
                       <div class="search">
-                        <input type="text" class="postNumber" />
+                        <input type="text" class="postNumber addressHome" />
                         <button>우편번호 찾기</button>
                       </div>
-                      <input type="text" class="address_detail" placeholder="상세주소를 입력해주세요." />
+                      <input type="text" class="address_detail addressHome" placeholder="상세주소를 입력해주세요." />
+                      <span class="errorAddHome">주소는 필수 입력란입니다.</span>
                     </td>
                   </tr>
                   <tr>
                     <th>소속 산후조리원</th>
                     <td>
                       <div class="search">
-                        <input type="text" class="careCenter" />
+                        <input type="text" class="careCenter addressCenter" />
                         <button>산후조리원 찾기</button>
                       </div>
-                      <input type="text" class="address_detail" placeholder="상세주소를 입력해주세요." />
+                      <input type="text" class="address_detail addressCenter" placeholder="상세주소를 입력해주세요." />
+                      <span class="errorAddCenter">소속 산후조리원 주소는 필수 입력란입니다.</span>
                     </td>
                   </tr>
                   <tr>
@@ -155,6 +162,7 @@
                         <span> - </span>
                         <input type="text" id="p3" oninput="changeFocus3()" maxlength="4" />
                         <button class="send-btn" disabled="false">인증번호 전송</button>
+                        <span class="errorPhone">휴대전화 번호는 필수 입력란입니다.</span>
                       </div>
                       <div id="chk-num">
                         <!-- 인증번호는 alert로 뜨게끔..? -->
@@ -166,7 +174,7 @@
                   </tr>
                 </table>
                 <div class="edit-btn">
-                  <a href="/html/08-1-mypage.html" class="editBtn">수정하기</a>
+                  <button class="editBtn">수정하기</button>
                 </div>
               </form>
             </article>

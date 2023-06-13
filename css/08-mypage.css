@@ -250,7 +250,6 @@
   outline: none;
   width: 190px;
   padding: 5px 10px;
-  margin-right: 5px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 
@@ -259,14 +258,12 @@
 .mypage_userInfo_identification td input::placeholder {
   color: var(--gray);
 }
-/* .mypage_userInfo_identification td .errorM_pw,
+.mypage_userInfo_identification td .errorM_pw,
 .mypage_userInfo_identification td .errorM_code {
-
-} */
-.errorM_pw {
-  display: inline-block;
+  display: none;
   font-size: 14px;
   color: var(--red);
+  margin-left: 5px;
 }
 .mypage_userInfo_identification form .identification_btn {
   display: inline-block;
@@ -322,6 +319,7 @@
   width: 186px;
   height: 27px;
   padding: 0 10px;
+  
 
   outline: none;
   border: 1px solid var(--more-light-gray);
@@ -438,15 +436,25 @@
   display: inline-block;
   width: 219px;
   height: 45px;
-  line-height: 45px;
   outline: none;
   border: none;
   border-radius: 5px;
 
   text-align: center;
   font-size: 18px;
+  font-weight: 400;
   background-color: var(--main-green);
   color: var(--white);
+}
+.mypage_userInfo_edit .errorPw,
+.mypage_userInfo_edit .errorBirth,
+.mypage_userInfo_edit .errorEmail,
+.mypage_userInfo_edit .errorAddHome,
+.mypage_userInfo_edit .errorAddCenter,
+.mypage_userInfo_edit .errorPhone {
+  display: none;
+  color: var(--red);
+  margin-left: 5px;
 }
 
 

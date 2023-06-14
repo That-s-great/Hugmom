@@ -575,6 +575,7 @@
   border: 1px solid var(--main-green);
   color: var(--main-green);
 }
+.selected
 .mypage_shoppingInfo_order .orderChk_btn {
   width: 100px;
   height: 35px;

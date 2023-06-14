@@ -28,13 +28,16 @@ mombtn.addEventListener("click", (e) => {
 const body = document.querySelector("body");
 const popup = document.querySelector(".popup");
 const schedulebtn = document.querySelector(".schedulebtn");
+const popup_bg = document.querySelector(".popup-bg");
 const closebtn = document.querySelector(".closebtn");
 
 schedulebtn.addEventListener("click", () => {
-  popup.classList.toggle("open");
+  popup_bg.style.display = "block";
+  popup.style.display = "block";
 });
 closebtn.addEventListener("click", () => {
   popup.style.display = "none";
+  popup_bg.style.display = "none";
 });
 
 const btn = document.querySelectorAll(".btn");

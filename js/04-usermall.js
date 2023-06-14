@@ -34,7 +34,7 @@ salesBtn.addEventListener("click", () => {
   // 추천순, 신상품순, 판매순 클릭시 순서 바꾸기
   const itemDiv = document.querySelectorAll(".user_mall_item")[3];
   const items = itemDiv.parentNode;
-  items.insertBefore(itemDiv, items.firstChild);
+  items.insertBefore(itemDiv, items.lastChild);
 });
 
 

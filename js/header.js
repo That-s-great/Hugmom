@@ -22,14 +22,22 @@ menuCloseBtn.addEventListener("click", () => {
 })
 
 /* Mobile ver. Header Tiltle-Text 변경 */
-const headerTitle = document.querySelector(".header_title_section");
-const url = window.location.href;
-const urlEl = url.split("/").filter((value) => { return value.includes("-") });
+const headerTitle = document.querySelector(".header_title_section h1");
 
-console.log(urlEl)
-// parameters.forEach((parameter) => {
-//   const parameterList = parameter.split("=");
-//   const key = parameterList[0];
-//   const value = decodeURIComponent(parameterList[1]); //디코딩메서드
-//   hashes[key] = value;
-// });
+window.addEventListener("load", () => {
+  const url = window.location.href;
+  const urlElements = url.split("/").filter((value) => { return value.includes(".html") });
+  const urlEl = urlElements.toString();
+
+  if(urlEl.includes("mall")) {
+    headerTitle.innerText = "SHOP";
+  } else if(urlEl.includes("live")) {
+    headerTitle.innerText = "LIVE";
+  } else if(urlEl.includes("login")) {
+    headerTitle.innerText = "로그인"
+  } else if(urlEl.includes("mypage")) {
+    headerTitle.innerText = "마이페이지"
+  } else if(urlEl.includes("cs")) {
+    headerTitle.innerText = "고객센터"
+  };
+});

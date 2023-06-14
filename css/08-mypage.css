@@ -432,7 +432,7 @@
   width: 760px;
   text-align: center;
 }
-.mypage_userInfo_edit .editBtn {
+.mypage_userInfo_edit #editBtn {
   display: inline-block;
   width: 219px;
   height: 45px;
@@ -452,6 +452,7 @@
 .mypage_userInfo_edit .errorAddHome,
 .mypage_userInfo_edit .errorAddCenter,
 .mypage_userInfo_edit .errorPhone {
+  /* display: inline-block; */
   display: none;
   color: var(--red);
   margin-left: 5px;
@@ -529,6 +530,7 @@
   font-size: 16px;
 }
 .mypage_shoppingInfo_order_check .bottom .order_type .btn,
+.mypage_shoppingInfo_order_check .bottom .inquiry_period .date,
 .mypage_shoppingInfo_order_check .bottom .inquiry_period .period {
   display: flex;
   flex-direction: row;
@@ -563,11 +565,11 @@
   letter-spacing: 1px;
   cursor: pointer;
 }
-.mypage_shoppingInfo_order_check .bottom #selected_btn {
+/* .mypage_shoppingInfo_order_check .bottom #selected_btn {
   display: inline-block;
   border: 1px solid var(--main-green);
   color: var(--main-green);
-}
+} */
 #selected_btn {
   display: inline-block;
   border: 1px solid var(--main-green);
@@ -593,6 +595,7 @@
 }
 .mypage_shoppingInfo_order_history {
   width: 100%;
+  display: block;
 }
 .mypage_shoppingInfo_order_history .top_nav {
   width: 100%;

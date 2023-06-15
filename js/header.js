@@ -50,5 +50,9 @@ window.addEventListener("load", () => {
     headerTitle.innerText = "고객센터";
     headerTitle.style.fontSize = "21px";
     headerTitle.style.fontFamily = "var(--kor)";
+  } else if (urlEl.includes("inquiry")) {
+    headerTitle.innerText = "문의하기";
+    headerTitle.style.fontSize = "21px";
+    headerTitle.style.fontFamily = "var(--kor)";
   }
 });

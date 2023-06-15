@@ -3,8 +3,11 @@
   border: 1px solid var(--light-gray);
   display: flex;
   flex-direction: column;
-  gap: 20px;
   background-color: var(--white);
+}
+.inquiry_nav {
+  width: 100%;
+  border-bottom: 1px solid var(--gray);
 }
 .goods_category {
   width: 100%;
@@ -12,8 +15,7 @@
 
   display: flex;
   align-items: center;
-  /* gap: 10px; */
-  /* border: 1px solid lightcoral; */
+
   border-bottom: 1px solid var(--light-gray);
 }
 .goods_category label {
@@ -23,7 +25,7 @@
   font-family: var(--kor);
   font-weight: bold;
   font-size: 16px;
-  flex: 1;
+  width: 180px;
   position: relative;
   background-color: var(--lightest-gray);
   border-bottom: 1px solid var(--light-gray);
@@ -48,4 +50,209 @@
   outline: none;
   font-size: 16px;
   font-family: var(--kor);
+}
+.inquiry_title {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray);
+}
+.inquiry_title label {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-family: var(--kor);
+  font-weight: bold;
+  font-size: 16px;
+  width: 180px;
+  position: relative;
+  background-color: var(--lightest-gray);
+  border-bottom: 1px solid var(--light-gray);
+}
+.inquiry_title label::after {
+  content: "*";
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  color: var(--red);
+}
+.inquiry_title input {
+  flex: 2;
+  height: 30px;
+  border: 1px solid var(--gray);
+  margin: 0 10px;
+  font-size: 16px;
+  font-family: var(--kor);
+  padding: 0 5px;
+}
+.inquiry_textbox {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  /* border-bottom: 1px solid var(--light-gray); */
+  background-color: var(--white);
+}
+.inquiry_textbox label {
+  height: 100%;
+  line-height: 50px;
+  padding-left: 10px;
+  font-family: var(--kor);
+  font-weight: bold;
+  font-size: 16px;
+  width: 180px;
+  position: relative;
+  background-color: var(--lightest-gray);
+  /* border-bottom: 1px solid var(--light-gray); */
+}
+.inquiry_textbox label::after {
+  content: "*";
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  color: var(--red);
+}
+.inquiry_text_input {
+  padding-bottom: 10px;
+  height: 100%;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  margin: 10px;
+}
+.inquiry_text_input textarea {
+  height: 90%;
+  border: 1px solid var(--light-gray);
+  outline: none;
+  padding: 10px;
+
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.inquiry_text_input textarea:focus {
+  outline: 1px solid var(--main-green);
+}
+.inquiry_text_input span {
+  font-size: 14px;
+  color: var(--gray);
+}
+.btn_inquiry_submit {
+  width: 200px;
+  margin: 30px auto;
+}
+.btn_inquiry_submit button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--main-green);
+
+  text-align: center;
+  font-size: 18px;
+}
+
+@media all and (max-width: 768px) {
+  .container.cs-FAQ {
+    width: 100vw;
+  }
+  /* Top bar */
+  .inquiry_nav {
+    width: 100vw;
+    background-color: var(--lightest-gray);
+  }
+  .inquiry_nav .cs_nav_wrap {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .inquiry_nav span {
+    font-family: var(--kor);
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .inquiry_nav .cs_nav_first {
+    color: var(--dark-gray);
+  }
+  .inquiry_nav i {
+    color: var(--dark-gray);
+  }
+
+  /* Aside Hidden */
+  .cs_contents.inquiry aside {
+    display: none;
+  }
+
+  /* Contents */
+  .cs_contents.inquiry {
+    width: 100vw;
+    height: 100%;
+  }
+  .inquiry_form_wrapper {
+    width: 100%;
+  }
+  .cs_FAQ_inner.inquiry {
+    width: 100%;
+  }
+  .cs_FAQ_inner.inquiry .cs_article  {
+    width: 100%;
+    margin: 0;
+    padding: 40px 20px;
+  }
+  .cs_FAQ_inner.inquiry .cs_article h2 {
+    font-size: 18px;
+    font-weight: 800;
+    /* position: relative; */
+    margin-left: 25px;
+    margin-bottom: 25px;
+  }
+  .goods_category {
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+  }
+  .goods_category label {
+    width: 100%;
+    font-size: 14px;
+  }
+  .goods_category select {
+    flex: 1;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .inquiry_title {
+    flex-direction: column;
+    height: 100px;
+  }
+  .inquiry_title label {
+    width: 100%;
+    font-size: 14px;
+  }
+  .inquiry_title input {
+    width: 100%;
+    flex: 1;
+    font-size: 14px;
+  }
+  .inquiry_textbox {
+    flex-direction: column;
+  }
+  .inquiry_textbox label {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+  }
+  .inquiry_text_input {
+    height: 600px;
+  }
+  .inquiry_text_input textarea {
+    height: 100%;
+  }
+  .inquiry_text_input span {
+    font-size: 12px;
+  }
+  .btn_inquiry_submit {
+    width: 100%;
+  }
 }

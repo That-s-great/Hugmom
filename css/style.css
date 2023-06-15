@@ -11,7 +11,6 @@
 @import url("/css/09-cs.css");
 @import url("/css/footer.css");
 
-
 header {
   position: fixed;
   z-index: 999;
@@ -34,7 +33,7 @@ footer {
   color: var(--black);
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width: 768px) {
   header {
     width: 100vw;
     height: 60px;

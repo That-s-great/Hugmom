@@ -1,6 +1,12 @@
-@media all and (max-width:768px) {
+@media all and (max-width: 768px) {
+  body {
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
   .container.user_mall {
-  width: 100vw;
+    width: 100vw;
   }
   /* User_mall Main */
   .user_mall_main {
@@ -12,7 +18,7 @@
     height: 300px;
   }
   .user_mall_title {
-  width: 100vw;
+    width: 100vw;
   }
   .user_mall_title h3 {
     width: 100%;

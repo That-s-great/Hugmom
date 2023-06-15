@@ -269,6 +269,15 @@
   border-radius: 50%;
   text-align: center;
 }
+/* 모바일 버전 장바구니 갯수 */
+.cart_btn .cart_count {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 14px;
+  top: -8px;
+  font-size: 13px;
+}
 
 /* 모바일 버전 메뉴 -  데스크탑 버전에서는 안나타남 */
 .user_name_mobile {
@@ -278,12 +287,10 @@
   display: none;
 }
 
-
-
-@media all and (max-width:768px) {
+@media all and (max-width: 768px) {
   .header_inner {
     width: 100vw;
-    padding: 0 20px;
+    padding: 0 30px;
     position: relative;
   }
   .hugmom_logo {
@@ -297,7 +304,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .mobile_heder_menu >  div {
+  .mobile_heder_menu > div {
     cursor: pointer;
   }
   .menu_toggle_btn {
@@ -305,12 +312,14 @@
     color: var(--black);
   }
   .cart_btn {
+    position: relative;
     font-size: 18px;
     color: var(--black);
   }
   .header_title_section > h1 {
     font-size: 24px;
     font-family: var(--eng);
+    font-weight: bold;
     color: var(--main-green);
   }
 
@@ -358,7 +367,7 @@
     left: 10px;
     width: 50px;
     height: 40px;
-    background: url("/img/hugmom_logo_2.png")center center no-repeat;
+    background: url("/img/hugmom_logo_2.png") center center no-repeat;
     background-size: contain;
     background-color: var(--white);
   }
@@ -390,7 +399,7 @@
     border-bottom: 1px solid var(--gray);
   }
   .header_menu_list > ul > li:nth-child(2),
-  .header_menu_list > ul > li:nth-child(4), 
+  .header_menu_list > ul > li:nth-child(4),
   .header_menu_list > ul > li:nth-child(5) {
     padding: 15px 0 0;
   }
@@ -426,7 +435,6 @@
     margin-left: 20px;
   }
 
-
   /* shop 하위메뉴 */
   .header_menu.shop .shop_malls {
     display: block;
@@ -437,12 +445,12 @@
     border-radius: 0;
     background-color: var(--light-gray);
     box-shadow: none;
-    transition:  all 0.5s;
+    transition: all 0.5s;
   }
   .header_menu.shop .shop_malls li {
     text-align: left;
-    width: 100%;   
-    border-radius:0;
+    width: 100%;
+    border-radius: 0;
     border-bottom: 1px dotted var(--gray);
   }
   .header_menu.shop .shop_malls li:first-child {
@@ -463,7 +471,7 @@
     height: 0;
     margin-top: 15px;
     background-color: var(--light-gray);
-  
+
     width: 100%;
     border-radius: 0;
     box-shadow: none;
@@ -471,8 +479,8 @@
   }
   .header_menu.cs .cs_menu_list li {
     text-align: left;
-    width: 100%;   
-    border-radius:0;
+    width: 100%;
+    border-radius: 0;
     border-bottom: 1px dotted var(--gray);
   }
   .header_menu.cs .cs_menu_list li:first-child {
@@ -483,7 +491,7 @@
     font-size: 14px;
   }
   .header_menu.cs:hover .cs_menu_list {
-    height: 110px;
+    height: 74px;
   }
 
   /* 마이페이지 메뉴 */
@@ -497,7 +505,7 @@
     height: 0;
     margin-top: 15px;
     background-color: var(--light-gray);
-  
+
     width: 100%;
     border-radius: 0;
     box-shadow: none;
@@ -505,8 +513,8 @@
   }
   .mobile_myFage_list li {
     text-align: left;
-    width: 100%;   
-    border-radius:0;
+    width: 100%;
+    border-radius: 0;
     border-bottom: 1px dotted var(--gray);
   }
   .mobile_myFage_list li:first-child {
@@ -522,8 +530,6 @@
   .header_menu.mobile_myFage:hover .mobile_myFage_list {
     height: 112px;
   }
-
-
 
   /* 검색창 none */
   .search_box {

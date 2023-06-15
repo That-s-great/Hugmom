@@ -358,8 +358,8 @@
   flex-direction: row;
   gap: 20px;
   /* border 겹쳐보여서 다시 정의함 */
-  border: none;
-  border-right: 1px solid var(--more-light-gray);
+  border-top: none;
+  border-bottom: none;
 }
 .mypage_userInfo_edit .sms_yes {
   display: flex;

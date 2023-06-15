@@ -1,4 +1,13 @@
 @media all and (max-width: 768px) {
+<<<<<<< HEAD
+=======
+  body {
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+>>>>>>> 463da16c1fe91592d1f3f6d78e26f47de7de028d
   .container.user_mall {
     width: 100vw;
   }

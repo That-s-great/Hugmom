@@ -129,7 +129,7 @@ img.itemimg {
 .select_itemwrap {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px;
+  /* margin: 0 10px; */
 }
 .select_item_box {
   width: 100%;
@@ -269,12 +269,7 @@ img.itemimg {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--gray);
 }
-.certified_title i {
-  margin-right: 10px;
 
-  border-radius: 50%;
-  padding: 2px 4px;
-}
 .certified_content {
   display: flex;
   padding: 0 50px;
@@ -328,6 +323,7 @@ img.itemimg {
 .list_item_info table {
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid var(--gray);
 }
 .list_item_info table th {
   width: 300px;
@@ -338,46 +334,37 @@ img.itemimg {
   padding: 13px;
 }
 /* list_item_comment */
-.list_item_comment {
+.list_item_comment,
+.list_item_question {
   margin-bottom: 200px;
 }
-.list_item_comment h3 {
+.list_item_comment h3,
+.list_item_question h3 {
   font-size: 24px;
   margin: 200px 0 10px 0;
 }
-.list_item_comment p {
+.list_item_comment p,
+.list_item_question p {
   font-size: 16px;
   margin-bottom: 30px;
 }
-.list_item_comment .comment .comment_title {
+.showcomment {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 75px;
+  align-items: center;
+  gap: 60px;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  padding: 23px;
-  margin-top: 10px;
-  align-items: center;
+  padding: 25px;
 }
-
-.list_item_comment .comment .comment_title .comment_Ltitle {
-  float: left;
-  display: flex;
-  width: 20%;
-  justify-content: space-between;
-  margin-top: 30px;
+.comment {
+  margin: 15px 0;
 }
-.list_item_comment .comment .comment_title .comment_Ltitle i {
+.comment .comment_title {
+  flex: 1;
+}
+.comment .comment_star i {
   margin-right: 5px;
 }
-.list_item_comment .comment .comment_title .comment_Rtitle {
-  float: right;
-  display: flex;
-  width: 20%;
-  justify-content: space-between;
-}
-
 .list_item_comment .comment .comment_content {
   background-color: var(--more-light-gray);
   padding: 30px;
@@ -410,16 +397,31 @@ img.itemimg {
   border-radius: 50%;
 }
 /* list_item_question */
-.list_item_question {
-  margin-bottom: 200px;
+
+.showquestion {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  gap: 60px;
+  height: 50px;
+  padding: 50px 0 20px 0;
 }
-.list_item_question h3 {
-  font-size: 24px;
-  margin: 200px 0 10px 0;
+.showquestion_head {
+  border-top: 1px solid var(--dark-gray);
+  border-bottom: 1px solid var(--dark-gray);
+  text-align: center;
+  display: flex;
+  gap: 72px;
+  padding-top: 25px;
 }
-.list_item_question .questionp {
-  font-size: 16px;
-  margin-bottom: 30px;
+.showquestion_head .title {
+  flex: 1;
+}
+.showquestion .title {
+  flex: 1;
+}
+.question_content {
+  display: none;
 }
 
 .questionbtn {
@@ -432,67 +434,6 @@ img.itemimg {
   font-size: 18px;
   float: right;
   margin-top: 50px;
-}
-
-.status_sub.complete {
-  color: var(--main-green);
-}
-
-/* .hide {
-  background-color: var(--light-gray);
-  display: ;
-} */
-.question-list {
-  display: flex;
-  flex-direction: column;
-}
-.head {
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-}
-.question {
-  display: flex;
-  margin-bottom: 10px;
-  border-bottom: 1px solid var(--gray);
-  padding: 10px;
-}
-.question:nth-child(1) {
-  border-bottom: 1px solid var(--black);
-}
-.title,
-.title_sub {
-  width: 70%;
-}
-.title {
-  text-align: center;
-  color: var(--black);
-}
-.title_sub {
-  padding-left: 20px;
-}
-
-.author,
-.author_sub,
-.created-date,
-.created-date_sub,
-.status,
-.status_sub {
-  width: 10%;
-  text-align: center;
-  color: var(--dark-gray);
-}
-.author,
-.created-date,
-.status {
-  color: var(--black);
-}
-.lock span,
-.lock i {
-  color: var(--dark-gray);
-}
-.question {
-  padding: 20px 0;
-  cursor: pointer;
 }
 
 /* cobuying */
@@ -648,7 +589,14 @@ img.itemimg {
     font-weight: bold;
   }
   .select_itemwrap {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 2px 2px 20px var(--gray);
+    border-radius: 5px;
+    background-color: var(--white);
+    padding: 30px;
+    z-index: 9999;
   }
 
   .item_detail_info {
@@ -666,5 +614,119 @@ img.itemimg {
   .item_info_nav ul li a {
     font-size: 14px;
     text-align: center;
+  }
+
+  .item_detail .explanation h2 {
+    font-size: 16px;
+  }
+
+  .item_detail .explanation h1 {
+    font-size: 24px;
+  }
+  .item_detail .explanation p {
+    margin: 20px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  /* certified */
+  .certified {
+    width: 90%;
+    padding: 30px;
+  }
+  .certified_title {
+    font-size: 16px;
+    margin: 0 0 30px 0;
+  }
+
+  .certified_content {
+    padding: 0 30px;
+    text-align: center;
+  }
+  .certified_content img {
+    width: 30%;
+    height: 30%;
+    margin-right: 30px;
+  }
+  .txt_wrap h2 {
+    font-size: 14px;
+  }
+  .txt_wrap h1 {
+    font-size: 20px;
+  }
+  .txt_wrap p {
+    font-size: 12px;
+  }
+  /* tip */
+  .tip {
+    width: 90%;
+  }
+  .tip fieldset {
+    padding: 30px;
+  }
+  .tip legend {
+    font-size: 24px;
+  }
+  .tip .tip_title {
+    font: 16px;
+  }
+  .tip .tip_p {
+    font-size: 14px;
+  }
+
+  .list_item_info table {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .list_item_info table tr {
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .list_item_info table th {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--gray);
+  }
+  .list_item_info table th:nth-child(1) {
+    border-top: none;
+  }
+  .list_item_info td {
+    text-align: center;
+    border: none;
+  }
+  .list_item_info .no {
+    display: none;
+  }
+  .list_item_comment {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .comment .showcomment {
+    font-size: 14px;
+    gap: 20px;
+  }
+  .list_item_question {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .showquestion p {
+    font-size: 14px;
+  }
+  .questionbtn {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .cobuying_timebox {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 2px 2px 20px var(--gray);
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 30px;
+    z-index: 9999;
   }
 }

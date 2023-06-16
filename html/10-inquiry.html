@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <!-- Font Awesome Icon js -->
     <script
       src="https://kit.fontawesome.com/15944cb74b.js"
       crossorigin="anonymous"
     ></script>
     <!-- Custom CSS & JS -->
+    <script defer src="/js/10-inquiry.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/header.js"></script>
     <title>허그맘 - 문의하기</title>
@@ -131,18 +135,22 @@
               <div class="inquiry_form_wrapper">
                 <div class="goods_category">
                   <label>유형</label>
-                  <select name="" id="">
-                    <option selected disabled value="">문의유형을 선택해주세요</option>
-                    <option value="">주문/결제/반품/교환문의</option>
-                    <option value="">배송문의</option>
-                    <option value="">기타문의</option>
+                  <select name="" id="select_1" required>
+                    <option selected disabled value="0">
+                      문의유형을 선택해주세요
+                    </option>
+                    <option value="1">주문/결제/반품/교환문의</option>
+                    <option value="2">배송문의</option>
+                    <option value="3">기타문의</option>
                   </select>
-                  <select name="" id="">
-                    <option selected disabled value="">상세유형을 선택해주세요</option>
-                    <option value="">주문취소 해주세요</option>
-                    <option value="">상품 반품을 원해요</option>
-                    <option value="">상품 교환을 원해요</option>
-                    <option value="">기타</option>
+                  <select name="" id="select_2">
+                    <option selected disabled value="0">
+                      상세유형을 선택해주세요
+                    </option>
+                    <option value="1">주문취소 해주세요</option>
+                    <option value="2">상품 반품을 원해요</option>
+                    <option value="3">상품 교환을 원해요</option>
+                    <option value="4">기타</option>
                   </select>
                 </div>
                 <div class="inquiry_title">
@@ -152,16 +160,26 @@
                 <div class="inquiry_textbox">
                   <label for="">내용</label>
                   <div class="inquiry_text_input">
-                    <textarea name="" id="" placeholder="문의 작성 전 확인해 주세요 &#13;&#10; 답변은 영업일 기준 2~3일 소요됩니다.&#13;&#10; 입고일: 품절 상품 입고일이 확정된 경우 공지사항 게시판을 통해 확인 가능합니다. &#13;&#10; 제품 상세정보: 영양성분 및 함량, 용량, 보관 및 취급 방법 등 제품 정보는 상세페이지를 통해 확인 가능합니다.&#13;&#10; 전화번호, 이메일, 주소, 계좌번호등의 상세 개인정보가 문의 내용에 저장되지 않도록 주의하기시 바랍니다."></textarea>
+                    <textarea
+                      name=""
+                      id=""
+                      placeholder="문의 작성 전 확인해 주세요 &#13;&#10; 답변은 영업일 기준 2~3일 소요됩니다.&#13;&#10; 입고일: 품절 상품 입고일이 확정된 경우 공지사항 게시판을 통해 확인 가능합니다. &#13;&#10; 제품 상세정보: 영양성분 및 함량, 용량, 보관 및 취급 방법 등 제품 정보는 상세페이지를 통해 확인 가능합니다.&#13;&#10; 전화번호, 이메일, 주소, 계좌번호등의 상세 개인정보가 문의 내용에 저장되지 않도록 주의하기시 바랍니다."
+                    ></textarea>
+
+                    <div class="file_box">
+                      <label for="file_upload"></label>
+                      <input class="add_file" type="file" id="file_upload" />
+                    </div>
                     <span
-                      >* 상품과 무관한 내용이거나 음란 및 불법적인 내용은 통보없이
-                      삭제 될 수 있습니다.</span
+                      >* 상품과 무관한 내용이거나 음란 및 불법적인 내용은
+                      통보없이 삭제 될 수 있습니다.</span
                     >
+                    <span>* 30MB 이하의 이미지만 업로드 가능합니다.</span>
                   </div>
                 </div>
               </div>
               <div class="btn_inquiry_submit">
-                <button>등록</button>
+                <button type="submit">등록</button>
               </div>
             </article>
           </section>
@@ -179,7 +197,9 @@
                   상호 : 주식회사 허그맘 | 대표자 : 김대단 | 사업자등록번호
                   126-12-34567
                 </p>
-                <p class="copyright">Copyright © Hugmom Corp. All Rights Reserved.</p>
+                <p class="copyright">
+                  Copyright © Hugmom Corp. All Rights Reserved.
+                </p>
               </div>
             </div>
             <div class="footer_right">

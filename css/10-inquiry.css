@@ -1,3 +1,17 @@
+select:focus {
+  outline: 1px solid var(--main-green);
+}
+input:focus {
+  outline: 1px solid var(--main-green);
+}
+button {
+  cursor: pointer;
+}
+textarea::placeholder {
+  font-family: var(--kor);
+  line-height: 2;
+}
+
 .inquiry_form_wrapper {
   width: 100%;
   border: 1px solid var(--light-gray);
@@ -40,12 +54,13 @@
 .goods_category select {
   flex: 2;
   height: 30px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--light-gray);
   margin: 0 10px;
   font-size: 16px;
   font-family: var(--kor);
   /* border-radius: 5px; */
 }
+
 .goods_category select option {
   outline: none;
   font-size: 16px;
@@ -81,7 +96,7 @@
 .inquiry_title input {
   flex: 2;
   height: 30px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--light-gray);
   margin: 0 10px;
   font-size: 16px;
   font-family: var(--kor);
@@ -89,7 +104,7 @@
 }
 .inquiry_textbox {
   width: 100%;
-  height: 500px;
+  height: 600px;
   display: flex;
   /* border-bottom: 1px solid var(--light-gray); */
   background-color: var(--white);
@@ -122,12 +137,12 @@
   margin: 10px;
 }
 .inquiry_text_input textarea {
-  height: 90%;
+  height: 450px;
   border: 1px solid var(--light-gray);
   outline: none;
   padding: 10px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
 }
 .inquiry_text_input textarea:focus {
@@ -136,7 +151,35 @@
 .inquiry_text_input span {
   font-size: 14px;
   color: var(--gray);
+  margin: 5px 0;
 }
+.file_box {
+  border: 1px solid var(--light-gray);
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+.file_box label {
+  background-color: var(--w);
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+}
+.file_box label::after {
+  content: "\f03e";
+  font-family: "fontawesome";
+  display: block;
+  font-size: 55px;
+  margin-left: 10px;
+  color: var(--gray);
+}
+
+.file_box .add_file {
+  display: none;
+}
+
 .btn_inquiry_submit {
   width: 200px;
   margin: 30px auto;
@@ -195,7 +238,7 @@
   .cs_FAQ_inner.inquiry {
     width: 100%;
   }
-  .cs_FAQ_inner.inquiry .cs_article  {
+  .cs_FAQ_inner.inquiry .cs_article {
     width: 100%;
     margin: 0;
     padding: 40px 20px;
@@ -213,25 +256,32 @@
     height: 150px;
   }
   .goods_category label {
+    margin-bottom: 1px;
     width: 100%;
     font-size: 14px;
   }
   .goods_category select {
+    margin: 7px 0;
     flex: 1;
-    width: 100%;
+    width: 95%;
     font-size: 14px;
     padding: 0 10px;
+  }
+  .goods_category select:last-child {
+    margin-top: 0;
   }
   .inquiry_title {
     flex-direction: column;
     height: 100px;
   }
   .inquiry_title label {
+    margin-bottom: 1px;
     width: 100%;
     font-size: 14px;
   }
   .inquiry_title input {
-    width: 100%;
+    margin: 7px 0;
+    width: 95%;
     flex: 1;
     font-size: 14px;
   }
@@ -244,10 +294,13 @@
     font-size: 14px;
   }
   .inquiry_text_input {
-    height: 600px;
+    height: 500px;
   }
   .inquiry_text_input textarea {
-    height: 100%;
+    height: 400px;
+  }
+  .file_box {
+    margin-bottom: 10px;
   }
   .inquiry_text_input span {
     font-size: 12px;

@@ -11,6 +11,19 @@ addCartIconBtn.forEach((btn) => {
   });
 });
 
+// 인기상품 더보기 클릭시, 상품 다 뜨게
+const usermallItems = document.querySelectorAll(".user_mall_item");
+const moreHotItemBtn = document.querySelector(".more_view_hotitem_btn");
+
+moreHotItemBtn.addEventListener("click", () => {
+  for (let i = 0; i < usermallItems.length; i++) {
+    if (i > 5) {
+      usermallItems[i].style.display = "block";
+    }
+  }
+  moreHotItemBtn.style.display = "none";
+});
+
 const recommendBtn = document.querySelector("#recommend_btn");
 const newProductBtn = document.querySelector("#newProdut_btn");
 const salesBtn = document.querySelector("#sales_btn");

@@ -115,6 +115,7 @@
 /* 식품, 육아용품, 산모용품 탭 */
 .user_mall_section {
   width: 1280px;
+  height: 100%;
 }
 .user_mall_menu {
   width: 100%;
@@ -338,4 +339,7 @@
 .item_sale b {
   color: var(--gray);
   text-decoration: line-through;
+}
+.more_view_hotitem_btn {
+  display: none;
 }

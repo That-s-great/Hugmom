@@ -839,20 +839,20 @@
   border-top: 3px solid var(--main-green);
   border-bottom: 1px solid var(--main-green);
   margin: 60px 0;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
 }
 .mypage_shoppingInfo_cart_payment .final_payment_price {
   margin: 20px 30px;
 }
 .mypage_shoppingInfo_cart_payment .order_box {
-  padding: 40px 30px;
+  padding: 30px 30px;
   border-top: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
 
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 .mypage_shoppingInfo_cart_payment .order_box .orderPrice_box,
 .mypage_shoppingInfo_cart_payment .order_box .deliveryPrice_box,
@@ -864,10 +864,10 @@
   align-items: center;
 }
 .mypage_shoppingInfo_cart_payment .final_box {
-  padding: 50px 30px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   color: var(--main-green);
 }
 .mypage_shoppingInfo_cart_payment .final_box div p {

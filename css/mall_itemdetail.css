@@ -175,12 +175,11 @@ img.itemimg {
 }
 .buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 35px;
 }
 .button {
   width: 250px;
   padding: 15px 0;
-
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
@@ -372,11 +371,13 @@ img.itemimg {
   display: none;
   height: auto;
 }
-.comment.open .comment_title {
+.comment.open .showcomment {
   border-radius: 5px 5px 0 0;
 }
+
 .comment.open .comment_content {
   display: block;
+  border-radius: 0 0 5px 5px;
 }
 .commentcount {
   display: flex;
@@ -406,6 +407,10 @@ img.itemimg {
   height: 50px;
   padding: 50px 0 20px 0;
 }
+.showquestion p {
+  color: var(--dark-gray);
+  font-size: 12px;
+}
 .showquestion_head {
   border-top: 1px solid var(--dark-gray);
   border-bottom: 1px solid var(--dark-gray);
@@ -414,11 +419,26 @@ img.itemimg {
   gap: 72px;
   padding-top: 25px;
 }
+.showquestion_head .status {
+  margin-right: 13px;
+}
 .showquestion_head .title {
   flex: 1;
 }
 .showquestion .title {
   flex: 1;
+  margin-left: 10px;
+}
+.showquestion .title span,
+.showquestion .title span i {
+  color: var(--dark-gray);
+  font-size: 12px;
+}
+.showquestion .status {
+  margin-right: 10px;
+}
+.showquestion .status.complete {
+  color: var(--main-green);
 }
 .question_content {
   display: none;
@@ -431,7 +451,7 @@ img.itemimg {
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 18px;
+  font-size: 14px;
   float: right;
   margin-top: 50px;
 }
@@ -643,9 +663,10 @@ img.itemimg {
     text-align: center;
   }
   .certified_content img {
-    width: 30%;
-    height: 30%;
+    width: 100px;
+    height: 100px;
     margin-right: 30px;
+    margin-top: 15px;
   }
   .txt_wrap h2 {
     font-size: 14px;

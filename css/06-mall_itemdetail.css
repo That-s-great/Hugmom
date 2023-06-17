@@ -142,8 +142,10 @@ img.itemimg {
   display: flex;
   justify-content: space-between;
 }
-.select_itemwrap .select_title {
+
+.select_itemwrap .select_title_cobuy {
   margin-left: 12px;
+  display: none;
 }
 
 .select_item_box {
@@ -539,7 +541,9 @@ img.itemimg {
   margin-left: 10px;
   font-size: 16px;
 }
-
+.buybtn_mobile {
+  display: none;
+}
 @media all and (max-width: 767px) {
   .item_detail_nav {
     width: 100vw;
@@ -657,20 +661,21 @@ img.itemimg {
   .select_itemwrap {
     flex-direction: column;
     position: fixed;
-    bottom: 0;
+    bottom: -100%;
     left: 0;
     width: 100vw;
     box-shadow: 2px 2px 20px var(--gray);
     border-radius: 5px;
     background-color: var(--white);
     padding: 20px;
-    z-index: 9999;
+    z-index: 100000;
+    transition: all 0.8s;
   }
-  .select_itemwrap {
-    display: none;
+  .select_itemwrap.buybox_open {
+    bottom: 0;
   }
-  .select_itemwrap.open {
-    display: block;
+  .cobuy_select_itemwrap.buybox_open {
+    bottom: 0;
   }
   .select_itemwrap .select_title {
     font-size: 16px;
@@ -893,5 +898,45 @@ img.itemimg {
     font-size: 14px;
     float: none;
     margin: 15px 0 50px 0;
+  }
+  .buybtn_mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 25px;
+    z-index: 10000;
+    border-top: 1px solid var(--light-gray);
+  }
+  .closeline {
+    width: 80px;
+    height: 5px;
+    background-color: var(--gray);
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .buybtn {
+    width: 100%;
+    padding: 20px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+  }
+  /* cobuymall */
+  .buttons.cobuy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 25px;
+    z-index: 10000;
+    border-top: 1px solid var(--light-gray);
   }
 }

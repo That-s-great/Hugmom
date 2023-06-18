@@ -133,18 +133,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// const buybtn_box = document.querySelector(".buybtn_mobile");
-// const cobuybtn = document.querySelector(".cobuybtn");
-// const buyboxclose = document.querySelector(".closeline");
-// const cobuy_select_itemwrap = document.querySelector(".cobuy_select_itemwrap");
+const buybtn_box = document.querySelector(".buybtn_mobile");
+const cobuybtn = document.querySelector(".cobuybtn");
+const buyboxclose = document.querySelector(".closeline");
+const cobuy_select_itemwrap = document.querySelector(".cobuy_select_itemwrap");
 
-// cobuybtn.addEventListener("click", () => {
-//   // select_itemwrap.style.display = "block";
-//   cobuy_select_itemwrap.classList.add("buybox_open");
-//   // buybtn_box.style.display = "none";
-// });
-// buyboxclose.addEventListener("click", () => {
-//   // select_itemwrap.style.display = "none";
-//   cobuy_select_itemwrap.classList.remove("buybox_open");
-//   buybtn_box.style.display = "block";
-// });
+cobuybtn.addEventListener("click", () => {
+  // select_itemwrap.style.display = "block";
+  cobuy_select_itemwrap.classList.add("buybox_open");
+  // buybtn_box.style.display = "none";
+});
+buyboxclose.addEventListener("click", () => {
+  // select_itemwrap.style.display = "none";
+  cobuy_select_itemwrap.classList.remove("buybox_open");
+  buybtn_box.style.display = "block";
+});

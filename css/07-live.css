@@ -240,9 +240,10 @@
   }
   .schdulebtn_box {
     width: 100vw;
+    margin: 50px 0;
   }
   .schedulebtn {
-    width: 0%;
+    width: 90%;
     padding: 20px;
   }
   .popup {

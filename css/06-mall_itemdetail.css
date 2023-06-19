@@ -233,10 +233,13 @@ img.itemimg {
   border: none;
   background-color: var(--main-green);
 }
-.button.buybtn a {
+.button.buybtn a,
+.button.cobuybtn {
   color: var(--white);
 }
-
+.button.alonebtn a {
+  color: var(--main-green);
+}
 .button.cartbtn_mobile {
   display: none;
 }
@@ -532,6 +535,7 @@ img.itemimg {
   color: var(--white);
   font-size: 14px;
 }
+.question
 
 /* cobuying */
 .cobuying_timebox {

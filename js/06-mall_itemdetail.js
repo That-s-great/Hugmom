@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const buybtn_box = document.querySelector(".buybtn_mobile");
-const buybtn = document.querySelector(".buybtn");
+const buybtn = document.querySelector(".buybtn_mobile_fix");
 const select_itemwrap = document.querySelector(".select_itemwrap");
 const buyboxclose = document.querySelector(".closeline");
 
@@ -146,4 +146,10 @@ buybtn.addEventListener("click", () => {
 buyboxclose.addEventListener("click", () => {
   // select_itemwrap.style.display = "none";
   select_itemwrap.classList.remove("buybox_open");
+});
+
+const cartbtn = document.querySelector(".button.cartbtn");
+
+cartbtn.addEventListener("click", () => {
+  alert("장바구니에 상품이 담겼습니다.");
 });

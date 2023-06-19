@@ -565,15 +565,9 @@
   letter-spacing: 1px;
   cursor: pointer;
 }
-/* .mypage_shoppingInfo_order_check .bottom #selected_btn {
-  display: inline-block;
-  border: 1px solid var(--main-green);
-  color: var(--main-green);
-} */
-#selected_btn {
-  display: inline-block;
-  border: 1px solid var(--main-green);
-  color: var(--main-green);
+.selected_btn {
+  border: 1px solid var(--main-green) !important;
+  color: var(--main-green) !important;
 }
 .mypage_shoppingInfo_order .orderChk_btn {
   width: 100px;

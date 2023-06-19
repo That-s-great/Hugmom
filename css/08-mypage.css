@@ -632,6 +632,12 @@
   font-size: 14px;
   font-weight: 800;
 }
+.mypage_shoppingInfo_order_history .contents.history2,
+.mypage_shoppingInfo_order_history .contents.history3,
+.mypage_shoppingInfo_order_history .contents.history4,
+.mypage_shoppingInfo_order_history .contents.reserve1 {
+  display: none;
+}
 .mypage_shoppingInfo_order_history .contents:last-child {
   border-bottom: none;
 }
@@ -652,10 +658,22 @@
   background-image: url('/img/user_mall_best_item_6.jpeg');
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic2 {
-  background-image: url('/img/user_mall_best_item_4.jpeg');
+  background-image: url('/img/user_mall_baby_item_8.jpeg');
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic3 {
+  background-image: url('/img/user_mall_best_item_5.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic4 {
+  background-image: url('/img/user_mall_best_item_4.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic5 {
   background-image: url('/img/user_mall_best_item_7.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic6 {
+  background-image: url('/img/user_mall_mom_item_3.jpeg');
+}
+.mypage_shoppingInfo_order_history .contents .orderInfo div.pic7 {
+  background-image: url('/img/user_mall_food_item_1.jpeg');
 }
 .mypage_shoppingInfo_order_history .contents .desc {
   display: flex;

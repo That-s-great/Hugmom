@@ -624,7 +624,7 @@
   padding: 25px 0;
   border-bottom: 1px solid var(--gray);
 
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
 
@@ -838,12 +838,15 @@
   color: var(--dark-gray);
   cursor: pointer;
 }
-.mypage_shoppingInfo_cart_select .contents #totalPrice {
+.mypage_shoppingInfo_cart_select .contents p {
   position: absolute;
   bottom: 20px;
   right: 10px;
   font-size: 24px;
   font-weight: 700;
+  color: var(--main-green);
+}
+.mypage_shoppingInfo_cart_select .contents #totalPrice {
   color: var(--main-green);
 }
 /* total price */
@@ -882,7 +885,8 @@
   gap: 30px;
   color: var(--main-green);
 }
-.mypage_shoppingInfo_cart_payment .final_box div p {
+.mypage_shoppingInfo_cart_payment .final_box div p,
+.mypage_shoppingInfo_cart_payment .final_box div span {
   color: var(--main-green);
 }
 .mypage_shoppingInfo_cart_payment .final_box .point_box p {

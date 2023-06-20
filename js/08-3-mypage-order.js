@@ -9,57 +9,12 @@ const year1 = document.querySelector('.inquiry_period .year1');
 
 const orderChkBtn = document.querySelector('.orderChk_btn');
 const historyBox = document.querySelectorAll('.mypage_shoppingInfo_order_history .contents');
-const history1 = document.querySelector('.mypage_shoppingInfo_order_history .history1');
+// const history1All = document.querySelectorAll('.mypage_shoppingInfo_order_history .history1');
+const history1 = document.querySelectorAll('.mypage_shoppingInfo_order_history .history1');
 const history2 = document.querySelector('.mypage_shoppingInfo_order_history .history2');
 const history3 = document.querySelector('.mypage_shoppingInfo_order_history .history3');
 const history4 = document.querySelector('.mypage_shoppingInfo_order_history .history4');
 const reserve1 = document.querySelector('.mypage_shoppingInfo_order_history .reserve1');
-
-
-// 조회 버튼 눌렀을 시 주문내역 표시
-orderChkBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (reservedProduct.classList.contains('selected_btn')) {
-    // reservedProduct를 눌렀을 때
-    history1.style.display = 'none';
-    history2.style.display = 'none';
-    history3.style.display = 'none';
-    history4.style.display = 'none';
-    reserve1.style.display = 'flex';
-  } else {
-    // reservedProduct 이외의 경우
-    if (allProduct.classList.contains('selected_btn')) {
-      if (month1.classList.contains('selected_btn')) {
-        history1.style.display = 'flex';
-        history2.style.display = 'none';
-        history3.style.display = 'none';
-        history4.style.display = 'none';
-        reserve1.style.display = 'none';
-      } else if (month3.classList.contains('selected_btn')) {
-        history1.style.display = 'flex';
-        history2.style.display = 'flex';
-        history3.style.display = 'none';
-        history4.style.display = 'none';
-        reserve1.style.display = 'none';
-      } else if (month6.classList.contains('selected_btn')) {
-        history1.style.display = 'flex';
-        history2.style.display = 'flex';
-        history3.style.display = 'flex';
-        history4.style.display = 'none';
-        reserve1.style.display = 'none';
-      } else {
-        history1.style.display = 'flex';
-        history2.style.display = 'flex';
-        history3.style.display = 'flex';
-        history4.style.display = 'flex';
-        reserve1.style.display = 'none';
-      }
-    } else {
-      historyBox.style.display = 'none';
-    }
-  }
-});
 
 
 // 주문종류 선택
@@ -119,36 +74,67 @@ function inquiryPeriod() {
     }
   });
 }
-
 orderType();
 inquiryPeriod();
 
+// 초기화면 history1 3개 모두 화면에 표시
+for (let i = 0; i < history1.length; i++) {
+  history1[i].style.display = 'flex';
+}
 
+// 조회 버튼 눌렀을 시 주문내역 표시
+orderChkBtn.addEventListener('click', (e) => {
+  e.preventDefault();
 
-
-
-
-
-
-// querySelectorAll로 하는 방법
-// const periodSpans = document.querySelectorAll('.period span');
-
-// periodSpans.forEach(span => {
-//   span.addEventListener('click', () => {
-//     periodSpans.forEach(span => {
-//       span.classList.remove('selected_btn');
-//     });
-//     span.classList.add('selected_btn');
-//   });
-// });
-
-// const ordertypeSpans = document.querySelectorAll('.order_type .btn span');
-
-// ordertypeSpans.forEach(span => {
-//   span.addEventListener('click', () => {
-//     ordertypeSpans.forEach(span => {
-//       span.classList.remove('selected_btn');
-//     });
-//     span.classList.add('selected_btn');
-//   });
-// });
+  if (reservedProduct.classList.contains('selected_btn')) {
+    // reservedProduct를 눌렀을 때
+    for (let i = 0; i < history1.length; i++) {
+      history1[i].style.display = 'none';
+    }
+    history2.style.display = 'none';
+    history3.style.display = 'none';
+    history4.style.display = 'none';
+    reserve1.style.display = 'flex';
+  } else {
+    // reservedProduct 이외의 경우
+    if (allProduct.classList.contains('selected_btn')) {
+      if (month1.classList.contains('selected_btn')) {
+        for (let i = 0; i < history1.length; i++) {
+          history1[i].style.display = 'flex';
+        }
+        history2.style.display = 'none';
+        history3.style.display = 'none';
+        history4.style.display = 'none';
+        reserve1.style.display = 'none';
+      } else if (month3.classList.contains('selected_btn')) {
+        for (let i = 0; i < history1.length; i++) {
+          history1[i].style.display = 'flex';
+        }
+        history2.style.display = 'flex';
+        history3.style.display = 'none';
+        history4.style.display = 'none';
+        reserve1.style.display = 'none';
+      } else if (month6.classList.contains('selected_btn')) {
+        for (let i = 0; i < history1.length; i++) {
+          history1[i].style.display = 'flex';
+        }
+        history2.style.display = 'flex';
+        history3.style.display = 'flex';
+        history4.style.display = 'none';
+        reserve1.style.display = 'none';
+      } else {
+        for (let i = 0; i < history1.length; i++) {
+          history1[i].style.display = 'flex';
+        }
+        history2.style.display = 'flex';
+        history3.style.display = 'flex';
+        history4.style.display = 'flex';
+        reserve1.style.display = 'none';
+      }
+    } else {
+      for (let i = 0; i < historyBox.length; i++) {
+        historyBox[i].style.display = 'none';
+      }
+    }
+  }
+});

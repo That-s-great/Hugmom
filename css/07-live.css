@@ -66,6 +66,7 @@
 /* live_video */
 .hot_live_video {
   width: 305px;
+  height: 492px;
 }
 .live_img {
   width: 100%;
@@ -96,14 +97,14 @@
 }
 
 .hot_live_video_title h3 {
-  width: 237px;
+  width: 100%;
   font-size: 16px;
 
   margin: 10px 0 5px 0;
   font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: ㅜㅐ그미;
 }
 .hot_live_video_title p {
   margin: 5px 0;
@@ -157,7 +158,6 @@
 }
 .popup {
   width: 846px;
-  height: 800px;
   border-radius: 5px;
   background-color: var(--white);
   display: none;
@@ -212,15 +212,19 @@
   color: var(--white);
 }
 .schedule .live {
-  height: 250px;
+  /* height: 250px; */
   padding: 10px;
 }
 .schedule .live li {
   font-size: 14px;
+  margin: 10px 0;
 }
 .schedule .live li em {
+  display: block;
   font-style: normal;
   font-weight: bold;
+  font-size: 16px;
+  margin-right: 5px;
 }
 
 @media all and (max-width: 767px) {
@@ -248,7 +252,7 @@
   }
   .popup {
     width: 80%;
-    height: 50%;
+    height: 67%;
     overflow: scroll;
   }
   .popup::-webkit-scrollbar {
@@ -285,7 +289,6 @@
     margin-bottom: 0px;
   }
   .schedule .live {
-    height: 180px;
     padding: 10px;
   }
   .schedule .live li {

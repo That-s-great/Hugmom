@@ -142,9 +142,7 @@ cobuybtn.addEventListener("click", () => {
   cobuy_select_itemwrap.classList.toggle("buybox_open");
 });
 buyboxclose.addEventListener("click", () => {
-  // select_itemwrap.style.display = "none";
   cobuy_select_itemwrap.classList.remove("buybox_open");
-  buybtn_box.style.display = "block";
 });
 
 const item = document.getElementById("item");
@@ -183,12 +181,10 @@ cartButton.addEventListener("click", function () {
     div.appendChild(divRin);
 
     cobuypeople.appendChild(div);
+
+    item.selectedIndex = 0;
   }
 });
-
-const site = function () {
-  alert("해당 상품 구매 페이지로 이동합니다.");
-};
 
 const alonebtn = document.querySelector(".alonebtn");
 alonebtn.addEventListener("click", () => {

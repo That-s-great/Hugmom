@@ -185,3 +185,12 @@ cartButton.addEventListener("click", function () {
     cobuypeople.appendChild(div);
   }
 });
+
+const site = function () {
+  alert("해당 상품 구매 페이지로 이동합니다.");
+};
+
+const alonebtn = document.querySelector(".alonebtn");
+alonebtn.addEventListener("click", () => {
+  alert("해당 상품구매 페이지로 이동합니다.");
+});

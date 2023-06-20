@@ -135,22 +135,28 @@
               <div class="inquiry_form_wrapper">
                 <div class="goods_category">
                   <label>유형</label>
-                  <select name="" id="select_1" required>
+                  <select
+                    name=""
+                    id="select_1"
+                    onchange="categoryChange(this)"
+                    required
+                  >
                     <option selected disabled value="0">
                       문의유형을 선택해주세요
                     </option>
                     <option value="1">주문/결제/반품/교환문의</option>
-                    <option value="2">배송문의</option>
-                    <option value="3">기타문의</option>
+                    <option value="2">상품문의</option>
+                    <option value="3">배송문의</option>
+                    <option value="4">기타문의</option>
                   </select>
                   <select name="" id="select_2">
                     <option selected disabled value="0">
                       상세유형을 선택해주세요
                     </option>
-                    <option value="1">주문취소 해주세요</option>
+                    <!-- <option value="1">주문취소 해주세요</option>
                     <option value="2">상품 반품을 원해요</option>
                     <option value="3">상품 교환을 원해요</option>
-                    <option value="4">기타</option>
+                    <option value="4">기타</option> -->
                   </select>
                 </div>
                 <div class="inquiry_title">

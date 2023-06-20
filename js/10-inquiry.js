@@ -31,3 +31,45 @@ inquiryBtn.addEventListener("click", () => {
     }
   }
 });
+
+function categoryChange(e) {
+  const opt1 = [
+    "주문취소 해주세요",
+    "상품 반품을 원해요",
+    " 상품 교환을 원해요",
+    "주문/결제는 어떻게 하나요?",
+    "주문/결제 오류",
+    "기타",
+  ];
+  const opt2 = ["불량상품이에요", "상품에대해 알려주세요", "기타"];
+  const opt3 = [
+    "배송상품이 안왔어요",
+    "배송지 변경해주세요",
+    "포장상태가 좋지 않아요",
+    "기타",
+  ];
+  const opt4 = [
+    "이용중에 오류가 발생했어요",
+    "산후조리원 코드가 무엇인가요?",
+    "제안하고 싶어요",
+    "기타",
+  ];
+  let opt;
+  if (e.value === "1") {
+    opt = opt1;
+  } else if (e.value === "2") {
+    opt = opt2;
+  } else if (e.value === "3") {
+    opt = opt3;
+  } else if (e.value === "4") {
+    opt = opt4;
+  }
+  inquirySel2.options.length = 0;
+
+  for (let el in opt) {
+    const newOpt = document.createElement("option");
+    newOpt.value = opt[el];
+    newOpt.innerHTML = opt[el];
+    inquirySel2.appendChild(newOpt);
+  }
+}

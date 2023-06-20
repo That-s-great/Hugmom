@@ -148,8 +148,15 @@ buyboxclose.addEventListener("click", () => {
   select_itemwrap.classList.remove("buybox_open");
 });
 
-const cartbtn = document.querySelector(".button.cartbtn");
+const item = document.getElementById("item");
+const cartButton = document.querySelector(".cartbtn");
 
-cartbtn.addEventListener("click", () => {
-  alert("장바구니에 상품이 담겼습니다.");
+cartButton.addEventListener("click", function () {
+  const value = item.options[item.selectedIndex].value;
+  if (value === "no_select") {
+    alert("상품을 선택해주세요");
+  } else {
+    alert("장바구니에 상품이 담겼습니다.");
+    item.selectedIndex = 0;
+  }
 });

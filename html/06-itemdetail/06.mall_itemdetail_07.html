@@ -139,20 +139,24 @@
               <div class="closeline"></div>
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option name="item" value="no_select">
                     상품을 선택해주세요
                   </option>
-                  <option value="">쉬림프 애그 샐러드</option>
-                  <option value="">허니 리코타 치즈 샐러드</option>
-                  <option value="">고구마 단호박 샐러드</option>
-                  <option value="">닭가슴살 고구마 샐러드</option>
-                  <option value="">케이준 치킨 샐러드 샐러드</option>
-                  <option value="">푸실리 파스타 샐러드</option>
-                  <option value="">단호박 메쉬 훈제 닭가슴살 샐러드</option>
-                  <option value="">닭가슴살 리코타 샐러드</option>
-                  <option value="">바질 리코타 샐러드</option>
-                  <option value="">당근라페 리코타 샐러드</option>
+                  <option name="item" value="1">쉬림프 애그 샐러드</option>
+                  <option name="item" value="2">허니 리코타 치즈 샐러드</option>
+                  <option name="item" value="3">고구마 단호박 샐러드</option>
+                  <option name="item" value="4">닭가슴살 고구마 샐러드</option>
+                  <option name="item" value="5">
+                    케이준 치킨 샐러드 샐러드
+                  </option>
+                  <option name="item" value="6">푸실리 파스타 샐러드</option>
+                  <option name="item" value="7">
+                    단호박 메쉬 훈제 닭가슴살 샐러드
+                  </option>
+                  <option name="item" value="8">닭가슴살 리코타 샐러드</option>
+                  <option name="item" value="9">바질 리코타 샐러드</option>
+                  <option name="item" value="10">당근라페 리코타 샐러드</option>
                 </select>
                 <div class="select_count">
                   <div class="count">
@@ -167,8 +171,11 @@
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>

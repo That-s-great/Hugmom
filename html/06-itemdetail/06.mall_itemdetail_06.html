@@ -110,7 +110,7 @@
             <div class="buy_price">
               <div class="buy_price_txt">
                 <h3>
-                  <p class="price">16,900</p>
+                  <p class="price">13,900</p>
                   <em>원</em>
                   <span class="item_sale item_detail_sale"
                     >17% <b>16,900</b></span
@@ -142,8 +142,8 @@
               <div class="closeline"></div>
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option name="item" value="no_select">
                     상품을 선택해주세요
                   </option>
                   <option value="">국내산 친환경 골드키위 1.1kg</option>
@@ -155,14 +155,17 @@
                     <i class="fas fa-plus"></i>
                   </div>
                   <h1>
-                    <p class="total">16,900</p>
+                    <p class="total">13,900</p>
                     <em>원</em>
                   </h1>
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>

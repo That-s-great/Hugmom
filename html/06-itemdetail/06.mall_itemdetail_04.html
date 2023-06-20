@@ -138,13 +138,14 @@
             </div>
             <div class="select_itemwrap">
               <div class="closeline"></div>
+
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option name="item" value="no_select">
                     상품을 선택해주세요
                   </option>
-                  <option value="">애플수박 1kg</option>
+                  <option name="item" value="1">애플수박 1kg</option>
                 </select>
                 <div class="select_count">
                   <div class="count">
@@ -159,8 +160,11 @@
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>

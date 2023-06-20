@@ -139,12 +139,49 @@ const buyboxclose = document.querySelector(".closeline");
 const cobuy_select_itemwrap = document.querySelector(".cobuy_select_itemwrap");
 
 cobuybtn.addEventListener("click", () => {
-  // select_itemwrap.style.display = "block";
-  cobuy_select_itemwrap.classList.add("buybox_open");
-  // buybtn_box.style.display = "none";
+  cobuy_select_itemwrap.classList.toggle("buybox_open");
 });
 buyboxclose.addEventListener("click", () => {
   // select_itemwrap.style.display = "none";
   cobuy_select_itemwrap.classList.remove("buybox_open");
   buybtn_box.style.display = "block";
+});
+
+const item = document.getElementById("item");
+const cartButton = document.querySelector(".cartbtn_mobile");
+
+cartButton.addEventListener("click", function () {
+  const value = item.options[item.selectedIndex].value;
+  const cobuypeople = document.querySelector(".cobuypeople");
+
+  if (value === "no_select") {
+    alert("상품을 선택해주세요");
+  } else {
+    alert("공동 구매하기 모집이 진행됩니다.");
+    const div = document.createElement("div");
+    div.className = "in";
+
+    const pId = document.createElement("p");
+    pId.className = "id";
+    pId.textContent = "you***** (1/3)";
+
+    const divRin = document.createElement("div");
+    divRin.className = "Rin";
+
+    const pPeople = document.createElement("p");
+    pPeople.className = "people";
+    pPeople.innerHTML = "<em>2명</em> 남음";
+
+    const buttonCo = document.createElement("button");
+    buttonCo.className = "cobtn";
+    buttonCo.textContent = "공구참여";
+
+    divRin.appendChild(pPeople);
+    divRin.appendChild(buttonCo);
+
+    div.appendChild(pId);
+    div.appendChild(divRin);
+
+    cobuypeople.appendChild(div);
+  }
 });

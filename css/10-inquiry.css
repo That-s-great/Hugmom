@@ -141,9 +141,9 @@ textarea::placeholder {
   border: 1px solid var(--light-gray);
   outline: none;
   padding: 10px;
-
   margin-bottom: 10px;
   font-size: 14px;
+  resize: none;
 }
 .inquiry_text_input textarea:focus {
   outline: 1px solid var(--main-green);
@@ -153,27 +153,24 @@ textarea::placeholder {
   color: var(--gray);
   margin: 5px 0;
 }
-.file_box {
+/* .file_box {
+  width: 80px;
   border: 1px solid var(--light-gray);
-  background-color: white;
-  width: 100px;
-  height: 100px;
+} */
+.file_box img {
+  border: 1px solid var(--light-gray);
 }
 .file_box label {
-  background-color: var(--w);
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 100px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background-color: var(--gray);
+  color: var(--white);
+  font-size: 14px;
+  margin-right: 20px;
 }
+
 .file_box label::after {
-  content: "\f03e";
-  font-family: "fontawesome";
-  display: block;
-  font-size: 55px;
-  margin-left: 10px;
-  color: var(--gray);
+  content: none;
 }
 
 .file_box .add_file {

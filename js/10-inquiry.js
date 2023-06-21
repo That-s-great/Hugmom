@@ -32,6 +32,7 @@ inquiryBtn.addEventListener("click", () => {
   }
 });
 
+// 선택한 문의유형에 따라 상세유형이 보이게 하기
 function categoryChange(e) {
   const opt1 = [
     "주문취소 해주세요",
@@ -73,3 +74,18 @@ function categoryChange(e) {
     inquirySel2.appendChild(newOpt);
   }
 }
+
+// 이미지 업로드
+const fileInput = document.querySelector("#file_upload");
+
+const handleFiles = (e) => {
+  const selectedFile = [...fileInput.files];
+  const fileReader = new FileReader();
+
+  fileReader.readAsDataURL(selectedFile[0]);
+  fileReader.onload = () => {
+    document.querySelector("#previewImg").src = fileReader.result;
+  };
+};
+
+fileInput.addEventListener("change", handleFiles);

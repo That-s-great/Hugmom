@@ -1,0 +1,34 @@
+.live_detail_wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.live_detail {
+  width: 767px;
+  height: 100%;
+  background: url(/img/live_baby_1.png) no-repeat center center;
+  background-size: cover;
+}
+.live_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid red;
+}
+.live_detail_title {
+  display: flex;
+}
+.live_detail_title img {
+  height: 50px;
+}
+.live_detail_title h1 {
+  font-size: 18px;
+  color: var(--white);
+  line-height: 50px;
+}
+.live_detail_view {
+  display: flex;
+  align-items: center;
+}

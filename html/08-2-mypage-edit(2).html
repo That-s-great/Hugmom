@@ -184,7 +184,7 @@
                   <tr>
                     <th>이메일</th>
                     <td>
-                      <input type="text" class="email" /> @ <input type="text" class="email" />
+                      <input type="text" class="email emailId" /> @ <input type="text" class="email emailAuto" />
                       <select class="email selectEmail">
                         <option value="직접선택" selected disabled>===직접선택===</option>
                         <option value="naver.com">naver.com</option>
@@ -213,10 +213,10 @@
                     <th>주소</th>
                     <td>
                       <div class="search">
-                        <input type="text" class="postNumber addressHome" />
-                        <button>우편번호 찾기</button>
+                        <input type="text" class="postNumber addressHome" maxlength="5" />
+                        <button id="searchAddNum">우편번호 찾기</button>
                       </div>
-                      <input type="text" class="address_detail addressHome" placeholder="상세주소를 입력해주세요." />
+                      <input type="text" class="address_detail addressHome address_home" placeholder="상세주소를 입력해주세요." />
                       <span class="errorAddHome">주소는 필수 입력란입니다.</span>
                     </td>
                   </tr>
@@ -225,9 +225,9 @@
                     <td>
                       <div class="search">
                         <input type="text" class="careCenter addressCenter" />
-                        <button>산후조리원 찾기</button>
+                        <button id="searchCenterNum">산후조리원 찾기</button>
                       </div>
-                      <input type="text" class="address_detail addressCenter" placeholder="상세주소를 입력해주세요." />
+                      <input type="text" class="address_detail addressCenter address_center" placeholder="상세주소를 입력해주세요." />
                       <span class="errorAddCenter">소속 산후조리원 주소는 필수 입력란입니다.</span>
                     </td>
                   </tr>
@@ -241,7 +241,6 @@
                         <span> - </span>
                         <input type="text" id="p3" oninput="changeFocus3()" maxlength="4" />
                         <button class="send-btn" disabled="false">인증번호 전송</button>
-                        <span class="errorPhone">휴대전화 번호는 필수 입력란입니다.</span>
                       </div>
                       <div id="chk-num">
                         <!-- 인증번호는 alert로 뜨게끔..? -->

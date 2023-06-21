@@ -100,18 +100,22 @@
           </p>
         </section>
         <section class="item_detail_buybox">
-          <img class="itemimg" src="/img/user_mall_baby_item_7.jpeg" alt="" />
+          <img class="itemimg" src="/img/user_mall_mom_item_5.jpeg" alt="" />
           <article class="item_detail_buy">
             <div class="buy_title">
-              <h1>에코 아기 지퍼백 6종 (택1)</h1>
+              <h1>모유수유 원목 발판</h1>
+              <span class="hot_button">HOT</span>
               <span class="new_button">NEW</span>
             </div>
             <hr />
             <div class="buy_price">
               <div class="buy_price_txt">
                 <h3>
-                  <p class="price">8,100</p>
-                  <em>원~</em>
+                  <p class="price">30,000</p>
+                  <em>원</em>
+                  <span class="item_sale item_detail_sale"
+                    >33% <b>45,000</b></span
+                  >
                 </h3>
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -139,16 +143,11 @@
               <div class="closeline"></div>
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option name="item" value="no_select">
                     상품을 선택해주세요
                   </option>
-                  <option value="">에코 아기 지퍼백 미니</option>
-                  <option value="">에코 아기 지퍼백 스몰</option>
-                  <option value="">에코 아기 지퍼백 미디엄</option>
-                  <option value="">에코 아기 지퍼백 라지</option>
-                  <option value="">에코 아기 지퍼백 엑스라지</option>
-                  <option value="">에코 아기 지퍼백 특대형</option>
+                  <option name="item" value="1">모유수유 원목 발판</option>
                 </select>
                 <div class="select_count">
                   <div class="count">
@@ -157,14 +156,17 @@
                     <i class="fas fa-plus"></i>
                   </div>
                   <h1>
-                    <p class="total">8,100</p>
+                    <p class="total">30,000</p>
                     <em>원</em>
                   </h1>
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>
@@ -185,55 +187,58 @@
             </ul>
           </nav>
           <article class="list_item_detail" id="list_item_detail">
-            <img src="/img/user_mall_food_itemdetail_19.jpg" alt="" />
+            <img src="/img/user_mall_food_itemdetail_29.jpg" alt="" />
             <div class="explanation">
-              <h2>안전한 소재로 만든 멀티 지퍼백</h2>
-              <h1>에코 아기 지퍼백 6종</h1>
+              <h2>행복한 모유수유를 위한</h2>
+              <h1>수유 원목 발판</h1>
+              <hr />
               <p>
-                아이와 함께 외출을 할 때면 짐을 한가득 챙겨서 나가야 하죠.<br />
-                마더케이는 아이용품 전문 브랜드답게 5가지 각기 다른 사이즈의
-                지퍼백을 용도 별로 기능을 달리해 선보입니다. <br />사탕수수의
-                설탕을 정제하고 남은 폐당밀에서 유래한 소재, Bio-PE로 만든
-                지퍼백이라 마음이 놓이죠. <br />6가지의 지퍼백을 넉넉한 구성으로
-                보여드리니, 용도에 맞게 골라 보다 실용적으로 활용해보세요.
+                침대에서 쇼파에서 의자에서 다양한 곳에서 편안한 수유자세를
+                유지하며, 수유할 수 있도록 서포트 해주는 원목 발판입니다.
               </p>
-            </div>
-
-            <div class="tip">
-              <fieldset>
-                <legend>Hugmom's Tip</legend>
-                <h1 class="tip_title">구매 전에 유의해주세요</h1>
-                <p class="tip_p">
-                  지퍼백의 용도에 따라 손잡이와 바닥 밑면 펼침 기능의 유무,
-                  지퍼의 생김새가 각각 다르므로 구매 전에 다시 한 번
-                  확인해주세요.
-                </p>
-              </fieldset>
             </div>
           </article>
           <article class="list_item_info" id="list_item_info">
             <h3>상품고지정보</h3>
             <table border="1">
               <tr>
-                <th>품목 또는 명칭</th>
+                <th>내용물의 용량 또는 중량</th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>제품 주요 사양 (피부타입, 색상(호, 번) 등)</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  사용기한 또는 개봉 후 사용기간(개봉 후 사용기간을 기재할
+                  경우에는 제조연월일을 병행표기)
+                </th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>사용방법</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자
+                </th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>제조국</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>｢화장품법｣에 따라 기재ㆍ표시하여야 하는 모든 성분</th>
                 <td>상품설명 및 상품이미지 참조</td>
                 <th>
-                  법에 의한 인증 · 허가 등을 받았음을 확인할 수 있는 경우 그에
-                  대한 사항
+                  ｢화장품법｣에 따른 기능성 화장품(미백, 주름개선, 자외선
+                  차단제품 등)의 경우 “화장품법에 따른 기능성 화장품 심사(또는
+                  보고)를 필함”의 문구
                 </th>
                 <td>상품설명 및 상품이미지 참조</td>
               </tr>
               <tr>
-                <th>제조국 또는 원산지</th>
+                <th>사용할 때의 주의사항</th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>품질보증기준</th>
                 <td>상품설명 및 상품이미지 참조</td>
-                <th>제조자, 수입품의 경우 수입자를 함께 표기</th>
-                <td>상품설명 및 상품이미지 참조</td>
-              </tr>
-              <tr>
-                <th>A/S 책임자와 전화번호 또는 소비자 상담 관련 전화번호</th>
-                <td>상품설명 및 상품이미지 참조</td>
-                <th class="no"></th>
-                <td class="no"></td>
               </tr>
             </table>
           </article>

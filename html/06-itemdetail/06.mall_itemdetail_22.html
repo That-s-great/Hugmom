@@ -139,11 +139,11 @@
               <div class="closeline"></div>
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option value="no_select" name="item">
                     상품을 선택해주세요
                   </option>
-                  <option value="">3세대 자동출수 분유포트</option>
+                  <option name="item" value="1">3세대 자동출수 분유포트</option>
                 </select>
                 <div class="select_count">
                   <div class="count">
@@ -158,8 +158,11 @@
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>
@@ -182,69 +185,60 @@
           <article class="list_item_detail" id="list_item_detail">
             <img src="/img/user_mall_food_itemdetail_22.jpg" alt="" />
             <div class="explanation">
-              <h2>향료를 넣지 않아 더욱 안심할 수 있는</h2>
-              <h1>젖병 & 주방세제 무향 480ml</h1>
+              <h2>터치 한번으로 간편하게 조절하는 물의 양</h2>
+              <h1>3세대 자동출수 분유포트</h1>
               <p>
-                주방세제는 입에 직접 닿는 식기들을 세척하다 보니 더욱 꼼꼼한
-                기준으로 골라야 해요. <br />아토앤오투의 주방세제는 말끔한
-                세정력을 지닌 순한 성분의 세제로 컬리에서 이미 많은 사랑을 받고
-                있는데요. <br />이번에 소개해 드리는 주방세제는 향료를 넣지 않아
-                아이들 젖병, 생활용품을 세척할 때 더욱 안심할 수 있을 거예요.
-                <br />고농축으로 조금만 사용해도 풍성한 거품이 일어나 기름때까지
-                말끔하게 지워주죠. <br />과일, 야채 세척도 가능한 1종 세척제이니
-                싱크대 위에서 여러 가지로 든든하게 활약할 제품이랍니다.
+                ・사이즈 : 가로 15 X 세로 21 X 높이 27cm <br />
+                ・용량 : 1.5L<br />
+                ・무게 : 약 1.6kg<br />
+                ・특징 : 버튼 터치 한 번으로 출수량을 조절할 수 있는
+                분유포트입니다. <br />물을 끓여주는 것부터 원하는 온도로
+                보온해주는 기능까지 탑재되어 있어요. <br />내부 소재가
+                스테인리스 소재로 만들어져 위생적으로 사용할 수 있어요.
               </p>
-            </div>
-
-            <div class="tip">
-              <fieldset>
-                <legend>Hugmom's Tip</legend>
-                <h1 class="tip_title">주의사항</h1>
-                <p class="tip_p">
-                  고농축 제품으로 소량만 사용해도 충분히 세척이 가능합니다.<br />
-                  1회 펌핑 시 약 3mL 정도가 사용됩니다.
-                </p>
-                <h1 class="tip_title">권장 사용량 안내</h1>
-                <p class="tip_p">
-                  과일, 야채 세정 시 : 3mL 미만을 사용해 문지른 뒤 흐르는 물에
-                  30초 이상 씻어주세요.
-                  <br />
-                  식기, 젖병 세정 시 : 적당량의 세제를 사용해 닦은 후 흐르는
-                  물에 5초 이상 씻어주세요. <br />
-                </p>
-                <h1 class="tip_title">구매 전 참고사항</h1>
-                <p class="tip_p">
-                  통에 세제를 담는 과정에서 넘치거나 새는 현상이 발생하지
-                  않도록, 아토엔오투는 실제 용량(480mL)보다 큰 용기(500mL)를
-                  사용하고 있습니다. 제품 윗부분에 빈 공간이 있는 것이 정상이니
-                  구매에 참고하세요.
-                </p>
-              </fieldset>
             </div>
           </article>
           <article class="list_item_info" id="list_item_info">
             <h3>상품고지정보</h3>
             <table border="1">
               <tr>
-                <th>품목 또는 명칭</th>
+                <th>내용물의 용량 또는 중량</th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>제품 주요 사양 (피부타입, 색상(호, 번) 등)</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  사용기한 또는 개봉 후 사용기간(개봉 후 사용기간을 기재할
+                  경우에는 제조연월일을 병행표기)
+                </th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>사용방법</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자
+                </th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>제조국</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>｢화장품법｣에 따라 기재ㆍ표시하여야 하는 모든 성분</th>
                 <td>상품설명 및 상품이미지 참조</td>
                 <th>
-                  법에 의한 인증 · 허가 등을 받았음을 확인할 수 있는 경우 그에
-                  대한 사항
+                  ｢화장품법｣에 따른 기능성 화장품(미백, 주름개선, 자외선
+                  차단제품 등)의 경우 “화장품법에 따른 기능성 화장품 심사(또는
+                  보고)를 필함”의 문구
                 </th>
                 <td>상품설명 및 상품이미지 참조</td>
               </tr>
               <tr>
-                <th>제조국 또는 원산지</th>
+                <th>사용할 때의 주의사항</th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>품질보증기준</th>
                 <td>상품설명 및 상품이미지 참조</td>
-                <th>제조자, 수입품의 경우 수입자를 함께 표기</th>
-                <td>상품설명 및 상품이미지 참조</td>
-              </tr>
-              <tr>
-                <th>A/S 책임자와 전화번호 또는 소비자 상담 관련 전화번호</th>
-                <td>상품설명 및 상품이미지 참조</td>
-                <th class="no"></th>
-                <td class="no"></td>
               </tr>
             </table>
           </article>

@@ -100,7 +100,7 @@
           </p>
         </section>
         <section class="item_detail_buybox">
-          <img class="itemimg" src="/img/user_mall_baby_item_6.jpeg" alt="" />
+          <img class="itemimg" src="/img/user_mall_baby_item_8.jpeg" alt="" />
           <article class="item_detail_buy">
             <div class="buy_title">
               <h1>베이비 흘림 방지 빨대컵 3종(택1)</h1>
@@ -139,13 +139,19 @@
               <div class="closeline"></div>
               <p class="select_title">상품선택</p>
               <div class="select_item">
-                <select name="" id="" class="select_item_box">
-                  <option value="" disabled="true" selected="true">
+                <select name="item" id="item" class="select_item_box">
+                  <option name="item" value="no_select">
                     상품을 선택해주세요
                   </option>
-                  <option value="">베이비 흘림 방지 빨대컵 블루</option>
-                  <option value="">베이비 흘림 방지 빨대컵 베이지</option>
-                  <option value="">베이비 흘림 방지 빨대컵 핑크</option>
+                  <option name="item" value="1">
+                    베이비 흘림 방지 빨대컵 블루
+                  </option>
+                  <option name="item" value="2">
+                    베이비 흘림 방지 빨대컵 베이지
+                  </option>
+                  <option name="item" value="3">
+                    베이비 흘림 방지 빨대컵 핑크
+                  </option>
                 </select>
                 <div class="select_count">
                   <div class="count">
@@ -160,8 +166,11 @@
                 </div>
                 <div class="buttons">
                   <button class="button cartbtn">장바구니</button>
-                  <button class="button buybtn">
-                    <a href="/html/08-4-mypage-cart.html">바로구매</a>
+                  <button
+                    class="button buybtn"
+                    onclick="location.href='/html/08-4-mypage-cart.html'"
+                  >
+                    바로구매
                   </button>
                 </div>
               </div>
@@ -182,7 +191,7 @@
             </ul>
           </nav>
           <article class="list_item_detail" id="list_item_detail">
-            <img src="/img/user_mall_food_itemdetail_15.jpg" alt="" />
+            <img src="/img/user_mall_food_itemdetail_20.jpg" alt="" />
             <div class="explanation">
               <h2>흘릴 걱정 없는 빨대컵</h2>
               <h1>베이비 흘림방지 빨대컵 3종</h1>
@@ -235,25 +244,43 @@
             <h3>상품고지정보</h3>
             <table border="1">
               <tr>
-                <th>품목 또는 명칭</th>
+                <th>내용물의 용량 또는 중량</th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>제품 주요 사양 (피부타입, 색상(호, 번) 등)</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  사용기한 또는 개봉 후 사용기간(개봉 후 사용기간을 기재할
+                  경우에는 제조연월일을 병행표기)
+                </th>
+                <td>상품설명 및 상품이미지 참조</td>
+                <th>사용방법</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>
+                  화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자
+                </th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>제조국</th>
+                <td>상품설명 및 상품이미지 참조</td>
+              </tr>
+              <tr>
+                <th>｢화장품법｣에 따라 기재ㆍ표시하여야 하는 모든 성분</th>
                 <td>상품설명 및 상품이미지 참조</td>
                 <th>
-                  법에 의한 인증 · 허가 등을 받았음을 확인할 수 있는 경우 그에
-                  대한 사항
+                  ｢화장품법｣에 따른 기능성 화장품(미백, 주름개선, 자외선
+                  차단제품 등)의 경우 “화장품법에 따른 기능성 화장품 심사(또는
+                  보고)를 필함”의 문구
                 </th>
                 <td>상품설명 및 상품이미지 참조</td>
               </tr>
               <tr>
-                <th>제조국 또는 원산지</th>
+                <th>사용할 때의 주의사항</th>
+                <td>상품 설명 및 상품이미지 참조</td>
+                <th>품질보증기준</th>
                 <td>상품설명 및 상품이미지 참조</td>
-                <th>제조자, 수입품의 경우 수입자를 함께 표기</th>
-                <td>상품설명 및 상품이미지 참조</td>
-              </tr>
-              <tr>
-                <th>A/S 책임자와 전화번호 또는 소비자 상담 관련 전화번호</th>
-                <td>상품설명 및 상품이미지 참조</td>
-                <th class="no"></th>
-                <td class="no"></td>
               </tr>
             </table>
           </article>

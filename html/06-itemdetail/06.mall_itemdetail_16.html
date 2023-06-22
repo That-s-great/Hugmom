@@ -65,12 +65,24 @@
               <li class="header_menu cs">
                 <a href="#">고객센터</a>
                 <ul class="cs_menu_list">
-                  <li><a href="#">자주하는 질문</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">문의하기</a></li>
+                  <li><a href="/html/9-1-cs-FAQ.html">자주하는 질문</a></li>
+                  <li><a href="/html/9-2-cs-inform.html">공지사항</a></li>
+                  <li><a href="/html/10-inquiry.html">문의하기</a></li>
+                </ul>
+              </li>
+              <!-- Mobile 전용 메뉴 추가 -->
+              <li class="header_menu mobile_myFage">
+                <a href="#">마이페이지</a>
+                <ul class="mobile_myFage_list">
+                  <li><a href="/html/08-1-mypage.html">회원정보 확인</a></li>
+                  <li>
+                    <a href="/html/08-2-mypage-edit(1).html">회원정보 수정</a>
+                  </li>
+                  <li><a href="/html/08-3-mypage-order.html">주문내역</a></li>
                 </ul>
               </li>
             </ul>
+
             <!-- Search Box -->
             <div class="search_box">
               <input type="text" />
@@ -78,13 +90,21 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
-
-            <!-- Login & Join Btn -->
-            <div class="login_join_btns">
-              <ul>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-              </ul>
+            <!-- user info -->
+            <div class="user_info">
+              <div class="user_name">
+                <span>홍길동님</span>
+                <a class="logout_btn" href="#">로그아웃</a>
+                <i class="fas fa-chevron-down"></i>
+                <ul class="user_info_menu">
+                  <li>
+                    <a href="/html/08-4-mypage-cart.html">장바구니</a>
+                    <span class="cart_count" data-cart-count="0">0</span>
+                  </li>
+                  <li><a href="/html/08-1-mypage.html">마이페이지</a></li>
+                  <li><a href="#">로그아웃</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>

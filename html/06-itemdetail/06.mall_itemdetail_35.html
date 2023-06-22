@@ -65,12 +65,24 @@
               <li class="header_menu cs">
                 <a href="#">고객센터</a>
                 <ul class="cs_menu_list">
-                  <li><a href="#">자주하는 질문</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">문의하기</a></li>
+                  <li><a href="/html/9-1-cs-FAQ.html">자주하는 질문</a></li>
+                  <li><a href="/html/9-2-cs-inform.html">공지사항</a></li>
+                  <li><a href="/html/10-inquiry.html">문의하기</a></li>
+                </ul>
+              </li>
+              <!-- Mobile 전용 메뉴 추가 -->
+              <li class="header_menu mobile_myFage">
+                <a href="#">마이페이지</a>
+                <ul class="mobile_myFage_list">
+                  <li><a href="/html/08-1-mypage.html">회원정보 확인</a></li>
+                  <li>
+                    <a href="/html/08-2-mypage-edit(1).html">회원정보 수정</a>
+                  </li>
+                  <li><a href="/html/08-3-mypage-order.html">주문내역</a></li>
                 </ul>
               </li>
             </ul>
+
             <!-- Search Box -->
             <div class="search_box">
               <input type="text" />
@@ -78,13 +90,21 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
-
-            <!-- Login & Join Btn -->
-            <div class="login_join_btns">
-              <ul>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-              </ul>
+            <!-- user info -->
+            <div class="user_info">
+              <div class="user_name">
+                <span>홍길동님</span>
+                <a class="logout_btn" href="#">로그아웃</a>
+                <i class="fas fa-chevron-down"></i>
+                <ul class="user_info_menu">
+                  <li>
+                    <a href="/html/08-4-mypage-cart.html">장바구니</a>
+                    <span class="cart_count" data-cart-count="0">0</span>
+                  </li>
+                  <li><a href="/html/08-1-mypage.html">마이페이지</a></li>
+                  <li><a href="#">로그아웃</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -195,7 +215,8 @@
               <hr />
               <p>
                 행복한 모유수유 솔루션 마더스베이비의 에코 워셔블 수유패드는<br />
-                아이의 입이 엄마에게 안심하고 닿을 수 있도록 높은 흡수력과 편안한 착용감을 고려하여 깨끗하게 만들었습니다.
+                아이의 입이 엄마에게 안심하고 닿을 수 있도록 높은 흡수력과
+                편안한 착용감을 고려하여 깨끗하게 만들었습니다.
               </p>
             </div>
 
@@ -205,17 +226,21 @@
                 <h1 class="tip_title">체크 포인트</h1>
                 <p class="tip_p">
                   1. 3D 입체 몰드 구조로 자연스럽게 밀착됩니다.<br />
-                  2. 3중구조로 얇은 두께를 유지하면서도 흡수력과 방수력을 높여 보송하게 관리해 줍니다.<br />
+                  2. 3중구조로 얇은 두께를 유지하면서도 흡수력과 방수력을 높여
+                  보송하게 관리해 줍니다.<br />
                   3. 면 안감을 사용하여 착용감이 부드럽습니다.<br />
                   4. 사용후 흐르는 물에 간편하게 세탁이 가능합니다.<br />
-                  5. 사용후 세탁해서 다시쓰는 제품으로 환경적을 생각한 경제적인 제품입니다.<br />
+                  5. 사용후 세탁해서 다시쓰는 제품으로 환경적을 생각한 경제적인
+                  제품입니다.<br />
                 </p>
                 <h1 class="tip_title">유의사항</h1>
                 <p class="tip_p">
-                  1. 패드를 교환할때는 젖은 가제 손수건이나 물티슈등으로 부위를 깨끗이 닦아주세요.<br />
+                  1. 패드를 교환할때는 젖은 가제 손수건이나 물티슈등으로 부위를
+                  깨끗이 닦아주세요.<br />
                   2. 부위를 중심으로 워셔블 안쪽 중심을 잘 맞추어 주세요.<br />
                   3.세탁한 수유패드는 헹굼과 건조를 완벽하게 해주세요.<br />
-                  4.세탁기 사용시 원단 자극 및 모영 변형 될 수 있으니 가급적 손세탁 해주세요.
+                  4.세탁기 사용시 원단 자극 및 모영 변형 될 수 있으니 가급적
+                  손세탁 해주세요.
                 </p>
               </fieldset>
             </div>

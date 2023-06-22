@@ -93,7 +93,7 @@
   margin-right: 10px;
 }
 
-.live_footer input {
+#comment_chat {
   position: inherit;
   bottom: 20px;
   width: 75%;

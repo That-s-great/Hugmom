@@ -1,3 +1,4 @@
+
 // 수정하기 버튼
 const editBtn = document.querySelector('.mypage_userInfo_edit #editBtn');
 
@@ -6,7 +7,7 @@ editBtn.addEventListener('click', (e) => {
 
   if(birthYear.value !== '' && birthMonth.value !== '선택' && birthDate.value !== '' && emailId.value !== '' && emailAuto.value !== '' && postNumber.value !== '' && addressHomeDetail.value !== '' && careCenter.value !== '' && addressCenterDetail.value !== '') {
     alert('회원정보 수정이 완료되었습니다! 💚');
-    window.location.href = '08-2-mypage-edit(1).html';
+    window.location.href = '08-1-mypage.html';
   } else {
     alert('입력란이 비어있습니다.');
   }
@@ -33,6 +34,12 @@ editBtn.addEventListener('click', (e) => {
     errorAddCenter.style.display = 'none';
   } else {
     errorAddCenter.style.display = 'inline-block';
+  }
+
+  if(document.querySelector('#p1').value !== "" && document.querySelector('#p2').value !== "" && document.querySelector('#p3').value !== "") {
+    errorPhone.style.display = "none";
+  } else {
+    errorPhone.style.display = "inline-block";
   }
 })
 
@@ -102,6 +109,7 @@ emailAuto.addEventListener('input', () => {
 selectEmail.addEventListener('change', () => {
   const selectedOpt = selectEmail.value;
   emailAuto.value = selectedOpt;
+  errorEmail.style.display = 'none';
 });
 
 
@@ -109,10 +117,18 @@ selectEmail.addEventListener('change', () => {
 const postNumber = document.querySelector('.mypage_userInfo_edit .postNumber');
 const addressHomeDetail = document.querySelector('.mypage_userInfo_edit .address_home');
 const errorAddHome = document.querySelector('.mypage_userInfo_edit .errorAddHome');
-const searchAddNum = document.querySelector('.mypage_userInfo_edit #searchAddNum"');
+const searchAddNum = document.querySelector('.mypage_userInfo_edit #searchAddNum');
+
+postNumber.addEventListener('input', () => {
+  if (postNumber.value !== '' && addressHomeDetail.value !== '') {
+    errorAddHome.style.display = 'none';
+  } else {
+    errorAddHome.style.display = 'inline-block';
+  }
+});
 
 addressHomeDetail.addEventListener('input', () => {
-  if(postNumber.value !== '' && addressHomeDetail.value !== '') {
+  if (postNumber.value !== '' && addressHomeDetail.value !== '') {
     errorAddHome.style.display = 'none';
   } else {
     errorAddHome.style.display = 'inline-block';
@@ -130,22 +146,20 @@ searchAddNum.addEventListener('click', (e) => {
   window.open(url, '우편번호 찾기', `width=${windowWidth}, height=${windowHeight}, left=${windowLeft}, top=${windowTop}`);
 });
 
-
-
-
 // 산후조리원 주소
 const careCenter = document.querySelector('.mypage_userInfo_edit .careCenter');
 const addressCenterDetail = document.querySelector('.mypage_userInfo_edit .address_center');
 const errorAddCenter = document.querySelector('.mypage_userInfo_edit .errorAddCenter');
-const searchCenterNum = document.querySelector('.mypage_userInfo_edit #searchCenterNum"');
+const searchCenterNum = document.querySelector('.mypage_userInfo_edit #searchCenterNum');
 
 addressCenterDetail.addEventListener('input', () => {
-  if(careCenter.value !== '' && addressCenterDetail.value !== '') {
+  if (careCenter.value !== '' && addressCenterDetail.value !== '') {
     errorAddCenter.style.display = 'none';
   } else {
     errorAddCenter.style.display = 'inline-block';
   }
 });
+
 
 
 // 휴대폰
@@ -208,7 +222,8 @@ btn.addEventListener('click', (e) => {
       }
     }, 1000); 
 
-    completeBtn.addEventListener('click', () => {
+    completeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if(inputNum.value === token) {
         alert('인증이 완료되었습니다.');
       } else {

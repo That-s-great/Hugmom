@@ -7,6 +7,7 @@
 }
 .live_detail_wrap .background {
   width: 630px;
+  object-fit: cover;
 }
 .live_detail {
   position: absolute;
@@ -17,12 +18,21 @@
 .live_header {
   display: flex;
   flex-direction: column;
-  background-color: rgb(59, 59, 59);
   padding: 10px 20px;
+  height: 80px;
 }
+
 .live_detail_title {
   display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(59, 59, 59, 0.5);
+  transition: all 0.8s;
+  padding: 10px 20px;
 }
+
 .live_detail_title img {
   height: 60px;
   margin-top: 5px;
@@ -80,7 +90,9 @@
 }
 .live_comment .id {
   font-weight: bold;
+  margin-right: 10px;
 }
+
 .live_footer input {
   position: inherit;
   bottom: 20px;
@@ -89,9 +101,10 @@
   border-radius: 5px;
   border: none;
   padding-left: 10px;
+  font-size: 16px;
 }
 
-button {
+.live_footer button {
   position: inherit;
   bottom: 20px;
   right: 90px;
@@ -100,7 +113,7 @@ button {
   font-size: 40px;
 }
 .fa-paper-plane {
-  color: var(--main-green);
+  color: var(--black);
 }
 .live_footer .icons {
   position: inherit;
@@ -132,7 +145,14 @@ button {
 .live_comments.comment_show {
   display: none;
 }
-
+.closeline_live {
+  width: 80px;
+  height: 5px;
+  background-color: var(--gray);
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 .benefit {
   position: absolute;
   width: 100%;

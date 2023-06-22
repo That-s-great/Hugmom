@@ -124,8 +124,8 @@
   margin-right: 10px;
 }
 /* hot_live_v */
-.hot_live_v {
-  width: 281px;
+.hot_live_video.hot_live_v {
+  width: 305px;
 }
 /* schedule */
 .schdulebtn_box {

@@ -14,7 +14,6 @@
 }
 .lives {
   width: 1280px;
-
   margin: 0 auto;
 }
 .hot_live {
@@ -29,6 +28,7 @@
   border: 1px solid blue;
 }
 .hot_live_videos {
+  width: 100vw;
   display: flex;
   transition: transform 0.3s ease-in-out;
   gap: 20px;
@@ -67,6 +67,9 @@
 .hot_live_video {
   width: 305px;
   height: 492px;
+}
+.hot_live_video.hot_live_v {
+  width: 280px;
 }
 .live_img {
   width: 100%;
@@ -123,10 +126,7 @@
   color: var(--dark-gray);
   margin-right: 10px;
 }
-/* hot_live_v */
-.hot_live_video.hot_live_v {
-  width: 305px;
-}
+
 /* schedule */
 .schdulebtn_box {
   width: 100%;
@@ -228,6 +228,13 @@
 }
 
 @media all and (max-width: 767px) {
+  .hot_live_video_container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .hot_live {
+    width: 100vw;
+  }
   .live_container {
     width: 100vw;
   }

@@ -153,20 +153,22 @@ textarea::placeholder {
   color: var(--gray);
   margin: 5px 0;
 }
-/* .file_box {
-  width: 80px;
-  border: 1px solid var(--light-gray);
-} */
-.file_box img {
-  border: 1px solid var(--light-gray);
+.file_box {
+  height: 60px;
+  /* border: 1px solid var(--light-gray); */
+  display: flex;
+  gap: 10px;
 }
-.file_box label {
+.file_box img {
+  width: 100px;
+  height: 60px;
+}
+.file_box .img_upload_btn {
   padding: 5px 7px;
   border-radius: 5px;
   background-color: var(--gray);
   color: var(--white);
-  font-size: 14px;
-  margin-right: 20px;
+  font-size: 12px;
 }
 
 .file_box label::after {

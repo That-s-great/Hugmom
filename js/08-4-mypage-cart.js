@@ -18,7 +18,7 @@ selectAllBtn.addEventListener('change', function() {
   }
 });
 
-// 선택 삭제 기능
+// 체크박스는 오로지 선택삭제를 위해 있는 기능!!! 체크한 것만 가격에 합쳐지는 시스템 아님!!!
 // 선택 삭제 기능
 const deleteSelect = document.querySelector('.mypage_shoppingInfo_cart .delete');
 const deleteProduct1 = document.querySelector('.product1 #deleteProduct');
@@ -29,32 +29,35 @@ deleteSelect.addEventListener('click', function(e) {
   e.preventDefault();
 
   const checkedProducts = document.querySelectorAll('.mypage_shoppingInfo_cart_select .contents input[type="checkbox"]:checked');
-
   checkedProducts.forEach(function(product) {
     const contents = product.closest('.contents');
     contents.remove();
   });
+  
 });
 
 deleteProduct1.addEventListener('click', function(e) {
   e.preventDefault();
-
   const product1 = document.querySelector('.mypage_shoppingInfo_cart_select .product1');
   product1.remove();
+
+  updateOrderPrice();
 });
 
 deleteProduct2.addEventListener('click', function(e) {
   e.preventDefault();
-
   const product2 = document.querySelector('.mypage_shoppingInfo_cart_select .product2');
   product2.remove();
+
+  updateOrderPrice();
 });
 
 deleteProduct3.addEventListener('click', function(e) {
   e.preventDefault();
-
   const product3 = document.querySelector('.mypage_shoppingInfo_cart_select .product3');
   product3.remove();
+
+  updateOrderPrice();
 });
 
 
@@ -101,11 +104,6 @@ p3Select.addEventListener('change', function() {
 
 
 // 최종 결제 금액
-const orderPrice = document.querySelector('.mypage_shoppingInfo_cart_payment #orderPrice');
-const deliveryPrice = document.querySelector('.mypage_shoppingInfo_cart_payment #deliveryPrice');
-const finalPrice = document.querySelector('.mypage_shoppingInfo_cart_payment #finalPrice');
-const point = document.querySelector('.mypage_shoppingInfo_cart_payment #point');
-
 function updateOrderPrice() {
   const p1Price = parseInt(p1TotalPrice.innerText.replace(/[^0-9]/g, ''));
   const p2Price = parseInt(p2TotalPrice.innerText.replace(/[^0-9]/g, ''));
@@ -123,13 +121,12 @@ function updateOrderPrice() {
     finalPrice.innerText = finalP.toLocaleString();
   } else {
     let finalP = totalPrice + deliveryP2;
-    deliveryPrice.innerText = deliveryP2;
+    deliveryPrice.innerText = deliveryP2.toLocaleString();
     finalPrice.innerText = finalP.toLocaleString();
   }
 
-  point.innerText = Math.floor(totalPrice/100);
+  point.innerText = Math.floor(totalPrice/100).toLocaleString();
 }
-updateOrderPrice();
 
 
 // 주문하기 버튼
@@ -140,3 +137,5 @@ orderBtn.addEventListener('click', (e) => {
   alert('주문이 완료되었습니다! 💚');
   window.location.href = '08-3-mypage-order.html';
 });
+
+updateOrderPrice();

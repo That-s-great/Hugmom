@@ -134,17 +134,10 @@ addressHomeDetail.addEventListener('input', () => {
     errorAddHome.style.display = 'inline-block';
   }
 });
-
-searchAddNum.addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = 'https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm';
-  const windowWidth = 400;
-  const windowHeight = 300;
-  const windowLeft = (window.innerWidth - windowWidth) / 2;
-  const windowTop = (window.innerHeight - windowHeight) / 2;
-
-  window.open(url, '우편번호 찾기', `width=${windowWidth}, height=${windowHeight}, left=${windowLeft}, top=${windowTop}`);
+searchAddNum.addEventListener('click', () => {
+  window.open('https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm', '_blank')
 });
+
 
 // 산후조리원 주소
 const careCenter = document.querySelector('.mypage_userInfo_edit .careCenter');
@@ -158,6 +151,9 @@ addressCenterDetail.addEventListener('input', () => {
   } else {
     errorAddCenter.style.display = 'inline-block';
   }
+});
+searchCenterNum.addEventListener('click', () => {
+  window.open('https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm', '_blank')
 });
 
 
@@ -228,6 +224,7 @@ btn.addEventListener('click', (e) => {
         alert('인증이 완료되었습니다.');
       } else {
         alert('인증번호가 일치하지 않습니다.');
+        location.reload();
       }
     });
   }

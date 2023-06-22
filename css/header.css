@@ -216,6 +216,21 @@
   position: relative;
   padding-bottom: 3px;
 }
+.user_info .user_name span {
+  font-family: var(--kor);
+}
+.user_info .user_name .logout_btn {
+  display: none;
+}
+.user_info .user_name .logout_btn {
+  text-decoration: underline;
+  font-family: var(--kor);
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+.user_info .user_name .logout_btn:hover {
+  color: var(--main-green);
+}
 .user_info .user_name i {
   display: inline-block;
   margin-left: 5px;
@@ -371,18 +386,6 @@
     background-size: contain;
     background-color: var(--white);
   }
-  /* 로그인시 나오는 유저네임...임시로 */
-  /* .header_menu_list::after {
-    content: "홍길동님";
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: var(--black);
-    font-family: var(--kor);
-    font-size: 16px;
-    font-weight: normal;
-  } */
   /* 각 메뉴 탭 */
   .header_menu_list > ul {
     background-color: var(--white);
@@ -551,6 +554,17 @@
 
   /* 로그인시 나오는 메뉴 */
   .user_info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .user_info .user_name i {
     display: none;
+  }
+  .user_info .user_name:hover .user_info_menu {
+    display: none;
+  }
+  .user_info .user_name .logout_btn {
+    display: inline-block;
   }
 }

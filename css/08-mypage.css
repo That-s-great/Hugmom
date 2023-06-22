@@ -77,7 +77,7 @@
 .mypage_userInfo .mypage_article,
 .mypage_shoppingInfo .mypage_article {
   width: calc(100% - 127px);
-  margin: 100px 0 100px 126px;
+  margin: 100px 0 150px 126px;
   /* margin: 100px 0 100vh 126px; */
 }
 .mypage_article h2 {

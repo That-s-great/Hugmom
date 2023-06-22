@@ -104,7 +104,7 @@
   font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: ㅜㅐ그미;
+  white-space: normal;
 }
 .hot_live_video_title p {
   margin: 5px 0;

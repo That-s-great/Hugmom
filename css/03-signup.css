@@ -1,0 +1,841 @@
+
+.container.signup_page {
+  width: 100%;
+  height: 100%;
+}
+/* ### Signup Page Main ### */
+.signup_page_main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1280px;
+}
+/* signup_form_wrap */
+.signup_form_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 3px solid var(--main-green);
+}
+/* ### Signup Page Logo Section ### */
+.signup_page_logobox_section {
+  width: 100%;
+  /* height: 440px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup_page_logo {
+  width: 520px;
+  height: 11.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Signup Page User Info Main Title Section */
+.signup_page_user_info_main_tit_section {
+  border-bottom: 3px solid var(--main-green);
+  width: 100%;
+  height: 4.375rem;
+  display: flex;
+  align-items: flex-end;
+}
+.signup_page_user_info_main_tit_section h1 {
+  font-size: 2rem;
+  color: var(--main-green);
+  padding: 0 0.875rem 1rem 0;
+  margin-left: 0.625rem;
+}
+.signup_page_user_info_main_tit_section span {
+  font-size: 1.125rem;
+  color: var(--black);
+  padding-bottom: 1rem;
+}
+.signup_page_user_info_main_tit_section span strong {
+  color: var(--red);
+}
+
+/* ### Signup Page User Info Form Section ### */
+.signup_page_user_info_form_section {
+  border-bottom: 1px solid var(--main-green);
+  width: 1180px;
+  display: flex;
+  flex-direction: column;
+}
+/* Signup Page User Info Form Sub Title */
+.user_info_sub_tit {
+  width: 100%;
+  margin: 1.75rem 0 3.125rem 6.6875rem;
+}
+.user_info_sub_tit h1 {
+  color: var(--main-green);
+}
+/* Signup Page User Info Form  */
+.user_info_form {
+width: 73.75rem;
+height: 46.5625rem;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-left: 12.8125rem;
+}
+/* ## User Info Form Line ## */
+.user_info_form_line.line_name,
+.user_info_form_line.line_pw,
+.user_info_form_line.line_confirm_pw,
+.user_info_form_line.line_birth_date,
+.user_info_form_line.line_email {
+  width: 32.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+/* # User Info Form Line Common Input & Label # */
+.user_info_form_line.line_name input,
+.user_info_form_line.line_id input,
+.user_info_form_line.line_pw input,
+.user_info_form_line.line_confirm_pw input,
+.user_info_form_line.line_birth_date input,
+.user_info_form_line.line_email input,
+.user_info_form_line.line_pregnant_women_code input {
+  width: 19.0625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+}
+.user_info_form_line label {
+  font-size: 1.125rem;
+  color: var(--black);
+}
+.user_info_form_line label strong {
+  color: var(--red);
+}
+.user_info_form_line input:focus {
+  border-color: var(--main-green);
+}
+
+/* # User Info Form Line line ID # */
+.user_info_form_line.line_id {
+  display: flex;
+}
+.user_info_form_line.line_id input {
+  margin: 0 1.125rem 0 9.5rem;
+}
+.line_id_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line_id_check button {
+  margin-right: 1.375rem;
+  width: 5.4375rem;
+  height: 2.1875rem;
+  background-color: var(--gray);
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+/* # User Info Form Line line Tel # */
+.user_info_form_line.line_tel {
+  width: 39.5625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_info_form_line.line_tel div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_info_form_line.line_tel div div {
+  width: 19.0625rem;
+  margin-right: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+.user_info_form_line.line_tel input[type="tel"] {
+  width: 5.5625rem;
+  height: 2.1875rem;
+  outline: 0;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+  text-align: center;
+}
+.user_info_form_line.line_tel input[type="tel"]:focus {
+  border-color: var(--main-green);
+}
+.line_tel_certified {
+  width: 39.5625rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 11.25rem;
+}
+.line_tel_certified input {
+  width: 19.0625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+  margin-right: 1.125rem;
+}
+.line_tel_certified button {
+  width: 5.5625rem;
+  height: 2.1875rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 1rem;
+}
+.user_info_form_line.line_tel button {
+  width: 5.5625rem;
+  height: 2.1875rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 1rem;
+}
+/* # User Info Form Line line Address # */
+.user_info_form_line.line_address {
+  width: 32.875rem;
+  height: 8.5625rem;
+  display: flex;
+  justify-content: space-between;
+}
+.user_info_form_line.line_address div {
+  width: 19.0625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user_info_form_line.line_address div div {
+  display: flex;
+  flex-direction: row ;
+}
+.user_info_form_line.line_address div div:first-child  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_info_form_line.line_address div div:first-child input {
+  width: 9.75rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+}
+.user_info_form_line.line_address div div:first-child button {
+  width: 7.5625rem;
+  height: 2.1875rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 1rem;
+}
+.user_info_form_line.line_address div div:nth-child(2) input {
+  width: 19.0625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+}
+.user_info_form_line.line_address div div:last-child input {
+  width: 19.0625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+}
+/* # User Info Form Line Address # */
+.user_info_form_line.line_pregnant_women_code {
+  width: 44.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.user_info_form_line.line_pregnant_women_code div {
+  width: 30.4375rem;
+}
+.pregnant_women_code_result {
+  margin-top: 0.625rem;
+  color: var(--red);
+}
+
+/* ### Carecenter Info Section ### */
+.signup_page_carecenter_info_section {
+  display: flex;
+  flex-direction: column;
+  width: 1180px;
+  border-bottom: 1px solid var(--main-green);
+}
+.carecenter_info_wrap {
+  margin-left: 12.8125rem;
+  display: flex;
+  margin-bottom: 4.75rem;
+}
+.carecenter_info_wrap label {
+  font-size: 1.125rem;
+  color: var(--black);
+  margin-right: 4.75rem;
+}
+.carecenter_info_wrap label strong {
+  color: var(--red);
+}
+.carecenter_info_content {
+  width: 32.5625rem;
+}
+.carecenter_info_content div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+.carecenter_info_content input[name="carecenter_info"] {
+  width: 19.0625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+  margin: 0 1.375rem 0.9375rem 0;
+}
+.carecenter_info_content button {
+  width: 11.875rem;
+  height: 2.1875rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  color: var(--white);
+  font-size: 1rem;
+}
+.carecenter_info_content input[name="carecenter_info_sub"] {
+  width: 32.5625rem;
+  height: 2.1875rem;
+  outline: 0;
+  padding-left: 0.625rem;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+  margin-right: 1.375rem;
+}
+
+/* ### Signup Page Guardian Info Section ### */
+.signup_page_guardian_info_section {
+  width: 1180px;
+  display: flex;
+  flex-direction: column;
+}
+.guardian_info_tit {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 1.75rem 0 3.125rem 6.6875rem;
+  position: relative;
+  
+}
+.guardian_info_tit h1 {
+  color: var(--main-green);
+}
+.guardian_info_tit h1 span {
+  position: absolute;
+  top: 0.1875rem;
+  color: var(--black);
+  font-size: 1.125rem;
+  margin-left: 0.625rem;
+}
+.guardian_info_tit p {
+  font-size: 1.125rem;
+  color: var(--dark-gray);
+  margin-top: 0.9375rem;
+}
+.guardian_info_wrap {
+  margin: 0 0 4.75rem 12.8125rem;
+}
+.guardian_info_content {
+  margin-bottom: 1.375rem;
+}
+.guardian_info_content:last-child {
+  margin-bottom: 0;
+}
+
+/* 여기까지 알아ㅣ엠 알이엠 */
+.guardian_info_content label {
+  font-size: 1.125rem;
+  margin-right: 108px;
+}
+.guardian_info_content:first-child label {
+  margin-right: 125px;
+}
+.guardian_info_content input {
+  width: 305px;
+  height: 35px;
+  outline: 0;
+  padding-left: 10px;
+  border: 2px solid var(--light-gray); 
+  border-radius: 5px;
+}
+/* ### Signup Page Agreement Section ### */
+.signup_page_agreement_section {
+  width: 100%;
+  height: 642px;
+  /* border: 1px solid blue; */
+  margin-top: 30px;
+}
+.agreement_tit {
+  width: 1094px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.agreement_tit h1 {
+  color: var(--main-green);
+}
+.agreement_tit button {
+  width: 120px;
+  height: 35px;
+  background-color: var(--main-green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.agreement_tit + hr {
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 33px;
+  border: 1px solid var(--main-green);
+}
+.agreement_contents_wrap {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--gray);
+  font-size: 18px;
+}
+.agreement_contents_item {
+  padding: 10px 0;
+  position: relative;
+}
+.agreement_contents_item input[type="checkbox"] {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 1;
+}
+.agreement_contents_item input[type="checkbox"]:checked + .fa-circle-check {
+  color: var(--main-green);
+}
+.agreement_contents_item label {
+  margin-left: 9px;
+}
+
+.agreement_contents_item .fa-circle-check {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: -1;
+  font-size: 25px;
+  color: var(--dark-gray);
+}
+.agreement_contents_item a {
+  color: var(--black);
+}
+.agreement_contents_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 82px;
+}
+.agreement_contents_btn  button {
+  width: 414px;
+  height: 70px;
+  background-color: var(--main-green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+@media all and (max-width:768px) {
+  .signup_form_wrap {
+    width: 100%;
+  }
+  /* Main */
+  .signup_page_main {
+    width: 100%;
+  }
+  /* Logo */
+  .signup_page_logobox_section {
+    width: 100%;
+  }
+  .signup_page_user_info_main_tit_section {
+    justify-content: center;
+  }
+  /* #### Form Section #### */
+  .signup_page_user_info_form_section {
+    width: 100%;
+  }
+  .user_info_sub_tit {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .user_info_form {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    border: 2px solid var(--gray);
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  /* Form Line */
+  .user_info_form_line.line_name,
+  .user_info_form_line.line_pw,
+  .user_info_form_line.line_confirm_pw,
+  .user_info_form_line.line_birth_date,
+  .user_info_form_line.line_email {
+    border-bottom: 1px solid var(--gray);
+    width: 100%;
+}
+/* From Id Line */
+  .user_info_form_line.line_id {
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .user_info_form_line.line_id input {
+    margin: 0;
+  }
+  .line_id_check {
+    position: absolute;
+    right: 0;
+  }
+  .line_id_check button {
+    display: none;
+  }
+  .id_check_result {
+    display: none;
+  }
+  .user_info_form_line.line_id label {
+
+  } 
+  /* Form Tel Line */
+  .user_info_form_line.line_tel {
+    justify-content: flex-start;
+  }
+  .user_info_form_line.line_tel div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user_info_form_line.line_tel div div {
+    width: 19.0625rem;
+    margin-right: 1.125rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .user_info_form_line.line_tel input[type="tel"] {
+    width: 5.5625rem;
+    height: 2.1875rem;
+    outline: 0;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+    text-align: center;
+  }
+  .user_info_form_line.line_tel input[type="tel"]:focus {
+    border-color: var(--main-green);
+  }
+  .line_tel_certified {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left:  0;
+  }
+  .line_tel_certified input {
+    width: 19.0625rem;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625rem;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+    margin-right: 1.125rem;
+  }
+  .line_tel_certified button {
+    width: 5.5625rem;
+    height: 2.1875rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font-size: 1rem;
+  }
+  .user_info_form_line.line_tel button {
+    width: 5.5625rem;
+    height: 2.1875rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font-size: 1rem;
+  }
+  /* Form Address Line */
+  .user_info_form_line.line_address {
+    border-bottom: 1px solid var(--gray);
+  }
+  .user_info_form_line.line_address {
+    width: 100%;
+    height: 8.5625rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .user_info_form_line.line_address div {
+    width: 19.0625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .user_info_form_line.line_address div div {
+    display: flex;
+    flex-direction: row ;
+  }
+  .user_info_form_line.line_address div div:first-child  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user_info_form_line.line_address div div:first-child input {
+    width: 9.75rem;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625rem;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+  }
+  .user_info_form_line.line_address div div:first-child button {
+    width: 7.5625rem;
+    height: 2.1875rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font-size: 1rem;
+  }
+  .user_info_form_line.line_address div div:nth-child(2) input {
+    width: 19.0625rem;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+  }
+  .user_info_form_line.line_address div div:last-child input {
+    width: 19.0625rem;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625rem;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+  }
+  /* Form Code Line */
+  .user_info_form_line.line_pregnant_women_code {
+    border-bottom: 1px solid var(--gray);
+  }
+  .user_info_form_line.line_pregnant_women_code {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .user_info_form_line.line_pregnant_women_code div {
+    width: 100%;
+  }
+  .pregnant_women_code_result {
+    margin-top: 0;
+    color: var(--red);
+  }
+  /* ### Carecenter Info Section ### */
+  .signup_page_carecenter_info_section {
+    width: 100%;
+  }
+  .carecenter_info_wrap {
+    width: 90%;
+    margin-left: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.75rem;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+  }
+  .carecenter_info_wrap label {
+    font-size: 1.125rem;
+    color: var(--black);
+    margin-right: 4.75rem;
+  }
+  .carecenter_info_wrap label strong {
+    color: var(--red);
+  }
+  .carecenter_info_content {
+    width: 100%;
+  }
+  .carecenter_info_content div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .carecenter_info_content input[name="carecenter_info"] {
+    width: 100%;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625rem;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+    margin: 0 1.375rem 0.9375rem 0;
+  }
+  .carecenter_info_content button {
+    width: 11.875rem;
+    height: 2.1875rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-green);
+    color: var(--white);
+    font-size: 1rem;
+  }
+  .carecenter_info_content input[name="carecenter_info_sub"] {
+    width: 100%;
+    height: 2.1875rem;
+    outline: 0;
+    padding-left: 0.625rem;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+    margin-right: 1.375rem;
+  }
+  /* 보호자 정보 */
+  .signup_page_guardian_info_section {
+    width: 100%;
+  }
+  .guardian_info_tit {
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+  }
+  .guardian_info_tit h1 {
+    color: var(--main-green);
+  }
+  .guardian_info_tit p {
+    font-size: 14px;
+  }
+  .guardian_info_wrap {
+    margin-left: 0;
+    margin: 0 auto;
+    margin-bottom: 4.75rem;
+    width: 90%;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+  }
+  .guardian_info_content {
+    width: 100%;
+    margin-bottom: 1.375rem;
+    border-bottom: 2px solid var(--gray);
+  }
+  .guardian_info_content:last-child {
+    margin-bottom: 0;
+    border-bottom: none
+  }
+  .guardian_info_content label {
+    font-size: 1.125rem;
+    margin-right: 0;
+  }
+  .guardian_info_content:first-child label {
+    margin-right: 0;
+  }
+  .guardian_info_content input {
+    width: 305px;
+    height: 35px;
+    outline: 0;
+    padding-left: 10px;
+    border: 2px solid var(--light-gray); 
+    border-radius: 5px;
+  }
+    /* 약관동의 */
+  .signup_page_agreement_section {
+    width: 100%;
+}
+  .agreement_tit {
+    width: 100%;
+  }
+  .agreement_tit h1 {
+    color: var(--main-green);
+    margin-left: 10px;
+  }
+  .agreement_tit button {
+    width: 120px;
+    height: 35px;
+    background-color: var(--main-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+
+    margin-right: 10px;
+  }
+  .agreement_tit + hr {
+    width: 100%;
+  }
+  .agreement_contents_wrap {
+    width: 90%;
+  }
+  .agreement_contents_item {
+    padding: 10px 0;
+    position: relative;
+  }
+  .agreement_contents_item input[type="checkbox"] {
+    opacity: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+  }
+  .agreement_contents_item input[type="checkbox"]:checked + .fa-circle-check {
+    color: var(--main-green);
+  }
+  .agreement_contents_item label {
+    margin-left: 9px;
+  }
+
+  .agreement_contents_item .fa-circle-check {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+    font-size: 25px;
+    color: var(--dark-gray);
+  }
+  .agreement_contents_item a {
+    color: var(--black);
+  }
+  .agreement_contents_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 82px;
+  }
+  .agreement_contents_btn  button {
+    width: 414px;
+    height: 70px;
+    background-color: var(--main-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+  }
+}
+
+

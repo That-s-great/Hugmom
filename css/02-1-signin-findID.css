@@ -137,8 +137,30 @@ input.signin_find_radio:nth-of-type(2):checked
 
 /* Mobile ver */
 @media all and (max-width: 768px) {
+  .container.signin_findId {
+    width: 100vw;
+  }
   .signin_findId_main {
     width: 100vw;
-    height: 900px;
+    height: 800px;
+  }
+  .singin_find_logo {
+    width: 85%;
+    height: 220px;
+  }
+  .singin_find_logo img {
+    width: inherit;
+  }
+  .signin_find_form {
+    width: 90%;
+  }
+  nav.find_buttons {
+    width: 100%;
+    /* border: 1px solid tomato; */
+    display: flex;
+    justify-content: center;
+  }
+  nav.find_buttons > label {
+    width: 150px;
   }
 }

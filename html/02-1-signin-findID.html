@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom CSS & JS -->
-    <script defer src="/js/04-usermall.js"></script>
+    <script defer src="/js/02-1-siginin-findID.js"></script>
     <script defer src="/js/header.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>02-singin-find</title>
@@ -22,7 +22,7 @@
         <div class="header_inner">
           <!-- Logo -->
           <div class="hugmom_logo">
-            <a href="#">
+            <a href="/html/01-intro.html">
               <img src="/img/hugmom_logo_type_1.png" alt="" />
             </a>
           </div>
@@ -36,7 +36,7 @@
               <h1>Hugmom</h1>
             </div>
             <div class="cart_btn">
-              <a href="/html/08-4-mypage-cart.html">
+              <a href="/html/02-signin.html">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart_count">0</span>
               </a>
@@ -49,40 +49,38 @@
             </div>
             <ul>
               <li class="header_menu hugmomInfo">
-                <a href="#">Hugmom<span>소개</span></a>
+                <a href="/html/02-signin.html">Hugmom<span>소개</span></a>
               </li>
               <li class="header_menu shop">
-                <a href="#">SHOP</a>
+                <a href="/html/02-signin.html">SHOP</a>
                 <ul class="shop_malls">
                   <li class="user_mall">
-                    <a href="/html/04-usermall.html">산후조리원 회원 몰</a>
+                    <a href="/html/02-signin.html">산후조리원 회원 몰</a>
                   </li>
                   <li class="graduate_user_mall">
-                    <a href="/html/05-graduate-usermall.html"
-                      >산후조리원 졸업회원
-                    </a>
+                    <a href="/html/02-signin.html">산후조리원 졸업회원 </a>
                   </li>
                 </ul>
               </li>
               <li class="header_menu live">
-                <a href="/html/07-live.html">LIVE</a>
+                <a href="/html/02-signin.html">LIVE</a>
               </li>
               <li class="header_menu cs">
-                <a href="#">고객센터</a>
+                <a href="/html/02-signin.html">고객센터</a>
                 <ul class="cs_menu_list">
-                  <li><a href="/html/9-1-cs-FAQ.html">자주하는 질문</a></li>
-                  <li><a href="/html/9-2-cs-inform.html">공지사항</a></li>
+                  <li><a href="/html/02-signin.html">자주하는 질문</a></li>
+                  <li><a href="/html/02-signin.html">공지사항</a></li>
                 </ul>
               </li>
               <!-- Mobile 전용 메뉴 추가 -->
               <li class="header_menu mobile_myFage">
-                <a href="#">마이페이지</a>
+                <a href="/html/02-signin.html">마이페이지</a>
                 <ul class="mobile_myFage_list">
-                  <li><a href="/html/08-1-mypage.html">회원정보 확인</a></li>
+                  <li><a href="/html/02-signin.html">회원정보 확인</a></li>
                   <li>
-                    <a href="/html/08-2-mypage-edit(1).html">회원정보 수정</a>
+                    <a href="/html/02-signin.html">회원정보 수정</a>
                   </li>
-                  <li><a href="/html/08-3-mypage-order.html">주문내역</a></li>
+                  <li><a href="/html/02-signin.html">주문내역</a></li>
                 </ul>
               </li>
             </ul>
@@ -96,8 +94,8 @@
             <!-- Login & Join Btn -->
             <div class="login_join_btns">
               <ul>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
+                <li><a href="/html/02-signin.html">로그인</a></li>
+                <li><a href="/html/03-signup.html">회원가입</a></li>
               </ul>
             </div>
           </nav>
@@ -119,8 +117,19 @@
         <div class="signin_find_form">
           <!-- signin find tap menu -->
           <div class="signin_find_tapMenu">
-            <input class="signin_find_radio" type="radio" id="for_phone" name="findbtn" checked />
-            <input class="signin_find_radio" type="radio" id="for_email" name="findbtn" />
+            <input
+              class="signin_find_radio"
+              type="radio"
+              id="for_phone"
+              name="findbtn"
+              checked
+            />
+            <input
+              class="signin_find_radio"
+              type="radio"
+              id="for_email"
+              name="findbtn"
+            />
             <nav class="find_buttons">
               <label class="tap_phone" for="for_phone">휴대폰 인증</label>
               <label class="tap_email" for="for_email">이메일 인증</label>
@@ -128,12 +137,24 @@
             <div class="tap for_phone">
               <ul>
                 <li class="name_box">
-                  <input class="signin_find_name" type="text" placeholder="이름을 입력해주세요" />
-                  <span>가입 시 등록한 이름을 입력해주세요</span>
+                  <input
+                    class="signin_find_name"
+                    type="text"
+                    placeholder="이름을 입력해주세요"
+                  />
+                  <span class="error_m_1"
+                    >가입 시 등록한 이름을 입력해주세요</span
+                  >
                 </li>
                 <li class="email_box">
-                  <input class="signin_find_phone" type="text" placeholder="휴대폰번호를 입력해주세요" />
-                  <span>가입 시 등록한 핸드폰 번호를 입력해 주세요</span>
+                  <input
+                    class="signin_find_phone"
+                    type="text"
+                    placeholder="'-'를 제외한 핸드폰 번호를 입력해 주세요"
+                  />
+                  <span class="error_m_2"
+                    >가입 시 등록한 핸드폰 번호를 입력해 주세요</span
+                  >
                 </li>
               </ul>
               <button class="find_get_token">인증번호 받기</button>
@@ -141,15 +162,27 @@
             <div class="tap for_email">
               <ul>
                 <li class="name_box">
-                  <input class="signin_find_name" type="text" placeholder="이름을 입력해주세요" />
-                  <span>가입 시 등록한 이름을 입력해주세요</span>
+                  <input
+                    class="signin_find_name"
+                    type="text"
+                    placeholder="이름을 입력해주세요"
+                  />
+                  <span class="error_m_3"
+                    >가입 시 등록한 이름을 입력해주세요</span
+                  >
                 </li>
                 <li class="email_box">
-                  <input class="signin_find_email" type="text" placeholder="이메일을 입력해주세요" />
-                  <span>가입 시 등록한 이메일을 입력해 주세요</span>
+                  <input
+                    class="signin_find_email"
+                    type="text"
+                    placeholder="이메일을 입력해주세요"
+                  />
+                  <span class="error_m_4"
+                    >가입 시 등록한 이메일을 입력해 주세요</span
+                  >
                 </li>
               </ul>
-              <button class="find_get_email">인증 이메일 받기</button>
+              <button class="find_get_email">인증메일 받기</button>
             </div>
           </div>
         </div>

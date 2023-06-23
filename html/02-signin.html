@@ -8,6 +8,7 @@
   <script defer src="https://kit.fontawesome.com/4d91dbe517.js" crossorigin="anonymous"></script>
   <!-- header & foorer JS -->
   <script defer src="/js/header.js"></script>
+  <script defer src="/js/02-signin.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <title>2.Signin</title>
@@ -110,13 +111,13 @@
       <!-- Signin Page login Form -->
       <div class="signin_page_login_form">
         <div class="login_id_line">
-          <input type="text" placeholder="아이디">
+          <input id="idInput" type="text" placeholder="아이디">
           <span class="login_id_user_icon">
             <i class="fa-solid fa-user"></i>
           </span>
         </div>
         <div class="login_pw_line">
-          <input type="password" placeholder="비밀번호">
+          <input id="pwInput" type="password" placeholder="비밀번호">
           <span class="login_pw_user_icon">
             <i class="fa-solid fa-lock"></i>
           </span>
@@ -140,10 +141,11 @@
       <div class="signin_page_login_find_join">
         <div class="login_find_id_pw">
           <div class="find_id"><a href="">아이디 찾기</a></div>
+          <div class="find_id_pw_bar"></div>
           <div class="find_pw"><a href="">비밀번호 찾기</a></div>
         </div>
         <p class="login_join">
-          아직 회원이 아니신가요? <a href="">회원가입</a>
+          아직 회원이 아니신가요? <a href="/html/03-signup.html">회원가입</a>
         </p>
       </div>
       <!-- Signin Page Login SNS Icon  -->

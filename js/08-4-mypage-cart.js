@@ -63,7 +63,6 @@ deleteSelect.addEventListener('click', function(e) {
     const contents = product.closest('.contents');
     contents.remove();
   });
-  
   updateOrderPrice()
 });
 
@@ -71,23 +70,18 @@ deleteProduct1.addEventListener('click', function(e) {
   e.preventDefault();
   const product1 = document.querySelector('.mypage_shoppingInfo_cart_select .product1');
   product1.remove();
-
   updateOrderPrice();
 });
-
 deleteProduct2.addEventListener('click', function(e) {
   e.preventDefault();
   const product2 = document.querySelector('.mypage_shoppingInfo_cart_select .product2');
   product2.remove();
-
   updateOrderPrice();
 });
-
 deleteProduct3.addEventListener('click', function(e) {
   e.preventDefault();
   const product3 = document.querySelector('.mypage_shoppingInfo_cart_select .product3');
   product3.remove();
-
   updateOrderPrice();
 });
 
@@ -102,7 +96,6 @@ const p2TotalPrice = document.querySelector('.product2 #totalPrice');
 
 const p3Select = document.querySelector('.product3 select');
 const p3TotalPrice = document.querySelector('.product3 #totalPrice');
-const orderPrice = document.querySelector('#orderPrice');
 
 p1Select.addEventListener('change', function() {
   const selectedOption = p1Select.options[p1Select.selectedIndex];
@@ -131,30 +124,31 @@ p3Select.addEventListener('change', function() {
   updateOrderPrice();
 });
 
-
+const orderPrice = document.querySelector('#orderPrice');
+const deliveryPrice = document.querySelector('#deliveryPrice');
 // 최종 결제 금액
 function updateOrderPrice() {
   const p1Price = parseInt(p1TotalPrice.innerText.replace(/[^0-9]/g, ''));
   const p2Price = parseInt(p2TotalPrice.innerText.replace(/[^0-9]/g, ''));
   const p3Price = parseInt(p3TotalPrice.innerText.replace(/[^0-9]/g, ''));
 
-  const totalPrice = p1Price + p2Price + p3Price;
-  orderPrice.innerText = totalPrice.toLocaleString();
+  const finalTotalPrice = p1Price + p2Price + p3Price;
+  orderPrice.innerText = finalTotalPrice.toLocaleString();
 
   let deliveryP1 = 0;
   let deliveryP2 = 2500;
 
-  if(totalPrice >= 100000) {
-    let finalP = totalPrice + deliveryP1;
+  if(finalTotalPrice >= 100000) {
+    let finalP = finalTotalPrice + deliveryP1;
     deliveryPrice.innerText = deliveryP1;
     finalPrice.innerText = finalP.toLocaleString();
   } else {
-    let finalP = totalPrice + deliveryP2;
+    let finalP = finalTotalPrice + deliveryP2;
     deliveryPrice.innerText = deliveryP2.toLocaleString();
     finalPrice.innerText = finalP.toLocaleString();
   }
 
-  point.innerText = Math.floor(totalPrice/100).toLocaleString();
+  point.innerText = Math.floor(finalTotalPrice/100).toLocaleString();
 }
 
 

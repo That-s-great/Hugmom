@@ -49,14 +49,10 @@ btn.forEach((e) => {
 function colorchange(e) {
   let change = e.currentTarget.classList;
 
-  if (change.contains("on")) {
-    change.remove("on");
-  } else {
-    btn.forEach(function (e) {
-      e.classList.remove("on");
-    });
-    change.add("on");
-  }
+  btn.forEach(function (e) {
+    e.classList.remove("on");
+  });
+  change.add("on");
 }
 
 const livePrevBtn = document.querySelector(".live_slide_prev_btn");

@@ -1,6 +1,6 @@
 .container.signin_findId {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: var(--kor);
   color: var(--black);
 }
@@ -8,7 +8,7 @@
 /* singin find main */
 .signin_findId_main {
   width: 1280px;
-
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@
 
 /* Hugmom logo */
 .singin_find_logo {
-  height: 280px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +113,7 @@ input.signin_find_radio:nth-of-type(2):checked
 .tap.for_phone ul li input:focus,
 .tap.for_email ul li input:focus {
   outline: none;
+  border: 2px solid var(--main-green);
 }
 /* 입력 없을 시 쓰는 문장 */
 .tap.for_phone ul li span,
@@ -138,5 +139,6 @@ input.signin_find_radio:nth-of-type(2):checked
 @media all and (max-width: 768px) {
   .signin_findId_main {
     width: 100vw;
+    height: 900px;
   }
 }

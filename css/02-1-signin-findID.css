@@ -62,10 +62,14 @@ nav.find_buttons > label {
   font-size: 18px;
   margin-bottom: 30px;
 }
-input.signin_find_radio:nth-of-type(1):checked ~ nav.find_buttons > label:nth-of-type(1) {
+input.signin_find_radio:nth-of-type(1):checked
+  ~ nav.find_buttons
+  > label:nth-of-type(1) {
   border-bottom: 2px solid var(--main-green);
 }
-input.signin_find_radio:nth-of-type(2):checked ~ nav.find_buttons > label:nth-of-type(2) {
+input.signin_find_radio:nth-of-type(2):checked
+  ~ nav.find_buttons
+  > label:nth-of-type(2) {
   border-bottom: 2px solid var(--main-green);
 }
 .signin_find_radio:nth-of-type(1) {
@@ -128,4 +132,11 @@ input.signin_find_radio:nth-of-type(2):checked ~ nav.find_buttons > label:nth-of
   background-color: var(--main-green);
   color: var(--white);
   font-size: 20px;
+}
+
+/* Mobile ver */
+@media all and (max-width: 768px) {
+  .signin_findId_main {
+    width: 100vw;
+  }
 }

@@ -21,11 +21,11 @@
 }
 .hot_live_video_container {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .hot_live_video_wrap {
   overflow: hidden;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .hot_live_videos {
   width: 100vw;

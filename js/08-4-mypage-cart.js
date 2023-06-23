@@ -8,15 +8,45 @@ const productsNum = document.querySelector('.selectNum');
 
 // 전체선택 옆에 총 개수 표시
 productsNum.innerText = products.length;
-// 전체선택 눌렀을 때 모든 상품이 check되는 기능
+
+// 전체선택 기능
 selectAllBtn.addEventListener('change', function() {
   const isChecked = selectAllBtn.checked;
 
-  for(let i = 0; i < products.length; i++) {
+  for (let i = 0; i < products.length; i++) {
     const checkBox = products[i].querySelector('input[type="checkbox"]');
     checkBox.checked = isChecked;
   }
 });
+
+// 하나라도 체크되지 않은지 확인하는 함수
+function checkIfAnyUnchecked() {
+  for (let i = 0; i < products.length; i++) {
+    const checkBox = products[i].querySelector('input[type="checkbox"]');
+    if (!checkBox.checked) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// selectAllBtn 상태 업데이트하는 함수
+function updateSelectAllBtn() {
+  selectAllBtn.checked = checkIfAnyUnchecked();
+}
+
+// 체크박스 상태 변화 감지
+for (let i = 0; i < products.length; i++) {
+  const checkBox = products[i].querySelector('input[type="checkbox"]');
+  checkBox.addEventListener('change', function() {
+    updateSelectAllBtn();
+    const allChecked = checkIfAnyUnchecked();
+    selectAllBtn.checked = allChecked;
+  });
+}
+
+
+
 
 // 체크박스는 오로지 선택삭제를 위해 있는 기능!!! 체크한 것만 가격에 합쳐지는 시스템 아님!!!
 // 선택 삭제 기능
@@ -34,6 +64,7 @@ deleteSelect.addEventListener('click', function(e) {
     contents.remove();
   });
   
+  updateOrderPrice()
 });
 
 deleteProduct1.addEventListener('click', function(e) {
@@ -59,9 +90,6 @@ deleteProduct3.addEventListener('click', function(e) {
 
   updateOrderPrice();
 });
-
-
-
 
 
 

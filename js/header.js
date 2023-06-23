@@ -40,8 +40,15 @@ window.addEventListener("load", () => {
     headerTitle.innerText = "SHOP";
   } else if (urlEl.includes("live")) {
     headerTitle.innerText = "LIVE";
-  } else if (urlEl.includes("login")) {
+  } else if (urlEl.includes("signin")) {
     headerTitle.innerText = "로그인";
+    headerTitle.style.fontSize = "21px";
+    headerTitle.style.fontFamily = "var(--kor)";
+  } else if (urlEl.includes("mypage")) {
+  } else if (urlEl.includes("signup")) {
+    headerTitle.innerText = "회원가입";
+    headerTitle.style.fontSize = "21px";
+    headerTitle.style.fontFamily = "var(--kor)";
   } else if (urlEl.includes("mypage")) {
     headerTitle.innerText = "마이페이지";
     headerTitle.style.fontSize = "21px";

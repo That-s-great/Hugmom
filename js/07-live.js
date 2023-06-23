@@ -59,71 +59,33 @@ function colorchange(e) {
   }
 }
 
-const container = document.querySelector(".hot_live_video_container");
-const slides = document.querySelector(".hot_live_videos");
-const slide = document.querySelectorAll(".hot_live_v");
-const slideWidth = slide[0].offsetWidth;
-const slidegap = 20;
-const slideCount = slide.length;
-let currentIndex = 0;
-const prevButton = document.querySelector(".fa-chevron-left");
-const nextButton = document.querySelector(".fa-chevron-right");
+const livePrevBtn = document.querySelector(".live_slide_prev_btn");
+const liveNextBtn = document.querySelector(".live_slide_next_btn");
+const liveSlideWrapper = document.querySelector(".live_broadcast_items");
+const liveSlides = document.querySelectorAll(".live_item");
 
-function makeClone() {
-  for (let i = 0; i < slideCount; i++) {
-    let cloneSlide = slide[i].cloneNode(true);
-    cloneSlide.classList.add("clone");
-    slides.appendChild(cloneSlide);
-  }
-  for (let i = slideCount - 1; i >= 0; i--) {
-    let cloneSlide = slide[i].cloneNode(true);
-    cloneSlide.classList.add("clone");
-    slides.prepend(cloneSlide);
-  }
-  updateWidth();
-  setInitialPos();
-}
-makeClone();
+let liveCurrentIdx = 0;
+const liveSlideCount = liveSlides.length;
+const liveSlideWidth = liveSlides[0].offsetWidth;
+const liveSlideMargin = 20;
 
-function updateWidth() {
-  let currentSlides = document.querySelectorAll(".hot_live_v");
-  let newSlideCount = currentSlides.length;
-  let newWidth = (slideWidth + slidegap) * newSlideCount + "px";
-  slides.style.width = newWidth;
-}
-function setInitialPos() {
-  let initialTranslateValue = -(slideWidth + slidegap) * slideCount;
-  slides.style.transform = `translateX( ${initialTranslateValue}px)`;
-}
-
-nextButton.addEventListener("click", function () {
-  if (currentIndex === 0) {
-    currentIndex++;
-    hot_live_videos.style.transform = `translateX(-${
-      currentIndex * slideWidth * newSlideCount + 60
-    }px)`;
-  }
-});
-prevButton.addEventListener("click", function () {
-  if (currentIndex === 1) {
-    currentIndex--;
-    hot_live_videos.style.transform = `translateX(+${
-      currentIndex * slideWidth * newSlideCount
-    }px)`;
+livePrevBtn.addEventListener("click", () => {
+  if (liveCurrentIdx > 0) {
+    liveCurrentIdx--;
+    moveLiveSlide();
   }
 });
 
-// function slideLayout() {
-//   const newSlide = document.querySelector(".hot_live_v");
-//   newSlide.forEach((item, index) => {
-//     item.style.left = moveAmt * index + "px";
-//   });
-// }
-// slideLayout();
+liveNextBtn.addEventListener("click", () => {
+  if (liveCurrentIdx < liveSlideCount - 1) {
+    liveCurrentIdx++;
+    moveLiveSlide();
+  }
+});
 
-// function setSlide() {
-//   const ulMoveAmt = -slideCount * moveAmt + "px";
-//   slides.style.transform = `translateX('+ulMoveAmt +';
-//   slides.classList.add('animated))`;
-// }
-// setSlide();
+function moveLiveSlide() {
+  const translateX = -liveCurrentIdx * (liveSlideWidth + liveSlideMargin);
+  liveSlides.forEach((liveSlide) => {
+    liveSlide.style.transform = `translateX(${translateX}px)`;
+  });
+}

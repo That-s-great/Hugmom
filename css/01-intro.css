@@ -1,0 +1,536 @@
+/* Container */
+.container.intro_page {
+  width: 100%;
+  height: 100%;
+}
+
+/* ### Main ### */
+.intro_page_main {
+  width: 1280px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+}
+
+/* ### Intro Page Banner Section ### */
+.intro_page_banner_section {
+  width: 100%;
+  height: 566px;
+  position: relative; 
+}
+/* Banner Slide */
+.intro_page_banner_section_slide_wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  overflow: hidden;
+}
+.intro_page_banner_section_slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  transition: all 0.9s ease-in-out;
+}
+.intro_page_banner_section_slide img {
+  width: 100%;
+  height: inherit;
+}
+
+/* Banner Slide Text */
+.intro_page_banner_section_inner {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  transform: translate(-40%, -33%);
+}
+.banner_inner_top {
+  margin-bottom: 2.375rem;
+
+  font-family: var(--kor);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: var(--black);
+}
+.banner_inner_top p:first-child {
+  font-weight: bold;
+}
+.banner_inner_top p:first-child strong {
+  color: var(--main-green);
+  font-size: 2rem;
+}
+.banner_inner_txt {
+  /* 19px / 16px */
+  margin-bottom: 1.1875rem;
+
+  color: var(--main-green);
+  font-weight: bold;
+  /* 18px / 16px */
+  font-size: 1.125rem;
+}
+/* Banner Slide Text Button */
+.banner_slide_sign_up_btn {
+  /* 239px / 16px */
+  width: 14.9375rem;
+  /* 60px / 16px */
+  height: 3.75rem;
+  color: #fff;
+  background-color: var(--main-green);
+  border: none;
+  border-radius: 5px;
+  /* 18px / 16px */
+  font-size: 1.125rem;
+  /* 20px / 16px */
+  margin-top: 3.125rem;
+  cursor: pointer;
+}
+.banner_slide_sign_up_btn i {
+  /* 5px / 16px */
+  margin-left: 0.3125rem;
+}
+
+
+/* Slide Prev & Next Button */
+.banner_slide_btn_wrap {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+.intro_page_banner_section:hover .banner_slide_btn_wrap {
+  opacity: 1;
+}
+.banner_slide_prev_btn {
+  margin-right: 350px;
+}
+.banner_slide_next_btn {
+  margin-left: 350px;
+}
+.banner_slide_prev_btn i{
+  font-size: 70px;
+  color: var(--dark-gray);
+}
+.banner_slide_prev_btn:hover i {
+  color: var(--gray);
+}
+.banner_slide_next_btn i{
+  font-size: 70px;
+  color: var(--dark-gray);
+}
+.banner_slide_next_btn:hover i {
+  color: var(--gray);
+}
+
+/* Banner Slide Index */
+.banner_slide_index_number {
+  width: 75px;
+  height: 35px;
+
+  position: absolute;
+  bottom: 10%;
+  right: 30%;
+
+  background-color: var(--gray);
+  border-radius: 5px;
+
+  text-align: center;
+  line-height: 2;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ### Intro Page Introduce Section ### */
+.intro_page_introduce_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-top: 100px;
+}
+.intro_page_introduce_article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.intro_page_introduce_article.show {
+  opacity: 1;
+}
+/* Introduce Article Text */
+.introduce_txt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.introduce_txt h3 {
+  font-size: 24px;
+  color: var(--black);
+}
+.introduce_txt h1 {
+  font-size: 32px;
+  color: var(--main-green);
+}
+.introduce_txt p {
+  font-size: 18px;
+  color: var(--black);
+}
+/* Introduce Article Image */
+.introduce_img {
+  flex: 1;
+}
+.introduce_img img {
+  width: 100%;
+  flex: 1;
+}
+
+/* ### Intro Page LIVE Section ### */
+.intro_page_live_section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.intro_page_live_article {
+  width: 100%;
+  height: 536px;
+  overflow: hidden;
+}
+/* Live Section Title */
+.intro_page_live_article h1 {
+  text-align: center;
+  font-size: 32px;
+}
+.intro_page_live_article h1 strong{
+  color: var(--red);
+}
+/* Live Slide Button */
+.live_slide_btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.live_slide_prev_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  border: 1px solid var(--black);
+  border-radius: 5px 0px 0px 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.live_slide_next_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  border: 1px solid var(--black);
+  border-radius: 0px 5px 5px 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/* Live Slide */
+.live_broadcast_items {
+  width: 1260px;
+  height: 260px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.live_item {
+  border: 1px solid var(--dark-gray);
+  width: 300px;
+  height: 100%;
+  margin-right: 20px;
+  transition: all 0.7s ease-in-out;
+  flex: 0 0 auto; 
+  border-radius: 5px;
+}
+.live_broadcast_show {
+  width: 100%;
+  height: 168px;
+  /* border: 1px solid var(--black); */
+  position: relative;
+}
+.live_broadcast_tag {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 25px;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 5px;
+}
+/* Live Slide Text */
+.live_title {
+  color: var(--black);
+  font-size: 18px;
+}
+.live_bj_name {
+  font-size: 16px;
+  color: var(--black);
+  margin-right: 10px;
+}
+.fa-user-group {
+  font-size: 16px;
+  color: var(--dark-gray);
+}
+.live_user_viewer {
+  font-size: 16px;
+  color: var(--dark-gray);
+}
+
+/* Live Slide Bottom Button */
+.live_more_view_btn_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.live_more_view_btn {
+  width: 150px;
+  height: 45px;
+  background-color: var(--red);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile */
+@media all and (max-width: 768px) {
+  /* Container */
+  .container.intro_page {
+    width: 100vw;
+    height: 100vh;
+  }
+  /* ### Main ### */
+  .intro_page_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  /* ### Intro Page Banner Section ### */
+  .intro_page_banner_section {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  /* Banner Slide */
+  .intro_page_banner_section_slide_wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+  }
+  .intro_page_banner_section_slide {
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%;
+    transition: all 0.9s ease-in-out;
+  }
+  .intro_page_banner_section_slide img {
+    width: 100%;
+    height: 100%;
+  }
+  /* Banner Slide Text */
+  .intro_page_banner_section_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+  }
+  .banner_inner_top {
+    font-family: var(--kor);
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+    margin-bottom: 2.375rem;
+    color: var(--black);
+  }
+  .banner_inner_top p:first-child {
+    font-weight: bold;
+  }
+  .banner_inner_top p:first-child strong {
+    color: var(--main-green);
+    font-size: 2rem;
+  }
+  .banner_inner_txt {
+    margin-bottom: 1.1875rem;
+    color: var(--main-green);
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+
+  /* Banner Slide Text Button */
+  .banner_slide_sign_up_btn {
+    width: 14.9375rem;
+    height: 3.75rem;
+    color: #fff;
+    background-color: var(--main-green);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    margin-top: 3.125rem;
+    cursor: pointer;
+  }
+  .banner_slide_sign_up_btn i {
+    margin-left: 0.3125rem;
+  }
+  
+  /* Slide Prev & Next Button */
+  .banner_slide_btn_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+  }
+  .intro_page_banner_section:hover .banner_slide_btn_wrap {
+    opacity: 1;
+  }
+  .banner_slide_prev_btn {
+    margin-right: 15px;
+  }
+  .banner_slide_next_btn {
+    margin-left: 15px;
+  }
+  .banner_slide_prev_btn i {
+    font-size: 30px;
+    color: var(--dark-gray);
+  }
+  .banner_slide_prev_btn:hover i {
+    color: var(--gray);
+  }
+  .banner_slide_next_btn i {
+    font-size: 30px;
+    color: var(--dark-gray);
+  }
+  .banner_slide_next_btn:hover i {
+    color: var(--gray);
+  }
+
+  /* Banner Slide Index */
+  .banner_slide_index_number {
+    width: 75px;
+    height: 35px;
+
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+
+    background-color: var(--gray);
+    border-radius: 5px;
+
+    text-align: center;
+    line-height: 2;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* ### Intro Page Introduce Section ### */
+  .intro_page_introduce_section {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .intro_page_introduce_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  /* Introduce Article Text */
+  .introduce_txt {
+    order: 1;
+    margin-top: 20px;
+  }
+  .introduce_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Introduce Article Image */
+  .introduce_img img {
+    order: 2;
+    width: 100%;
+  }
+  .introduce_txt p {
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  /* ### Intro Page LIVE Section ### */
+  .intro_page_live_section {
+    width: 100%;
+  }
+  .intro_page_live_article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+  }
+  /* Live Slide Button */
+  .live_slide_btn {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  }
+  /* Live Slide */
+  .live_broadcast_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .live_item {
+    height: 100%;
+  }
+}

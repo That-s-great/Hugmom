@@ -1,6 +1,6 @@
 .live_title {
   width: 100%;
-  border: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
   padding: 15px;
   text-align: center;
 }

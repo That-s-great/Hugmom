@@ -193,7 +193,7 @@
 .save_id_box input[type="checkbox"]:checked + label::before {
   color: var(--main-green);
 }
-/* Signin Page login Button */
+/* login Button Wrap */
 .signin_page_login_btn_wrap {
   display: flex;
   justify-content: center;
@@ -211,40 +211,53 @@
   border-radius: 5px;
   cursor: pointer;
 }
+/* Find Id  */
 .signin_page_login_find_join {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+/* Find Pw */
 .login_find_id_pw {
-  display: flex;
   margin-top: 15px;
   margin-bottom: 66px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
 }
+/* Find Id */
 .login_find_id_pw .find_id {
   font-size: 18px;
-  padding-right: 10px;
+
+  display: flex;
+  justify-content: flex-end;
 }
 .login_find_id_pw .find_id a {
-  padding-right: 10px;
   color: var(--dark-gray);
+}
+/* Find Pw */
+.login_find_id_pw .find_pw {
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 18px;
 }
 .login_find_id_pw .find_pw a {
   color: var(--dark-gray);
 }
-.login_find_id_pw .find_pw {
-  font-size: 18px;
-}
-.login_find_id_pw .find_id::after{
-  content: ''; 
-  padding: 1px;
-  background-color: var(--dark-gray);
-  border-radius: 5px;
+.find_id_pw_bar {
+  width: 2px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  background-color: var(--gray);
 }
 
-/* Login Join Box */
+/* Sign Up Box */
 .login_join {
   color: var(--black);
   font-size: 18px;

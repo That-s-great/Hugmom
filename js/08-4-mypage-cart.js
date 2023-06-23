@@ -45,6 +45,43 @@ for (let i = 0; i < products.length; i++) {
   });
 }
 
+// 개수에 따라 변하는 상품들의 가격
+const p1Select = document.querySelector('.product1 select');
+const p1TotalPrice = document.querySelector('.product1 #totalPrice');
+
+const p2Select = document.querySelector('.product2 select');
+const p2TotalPrice = document.querySelector('.product2 #totalPrice');
+
+const p3Select = document.querySelector('.product3 select');
+const p3TotalPrice = document.querySelector('.product3 #totalPrice');
+
+p1Select.addEventListener('change', function() {
+  const selectedOption = p1Select.options[p1Select.selectedIndex];
+  const price = parseInt(selectedOption.value);
+  const totalPrice = 9980 * price;
+  p1TotalPrice.innerText = totalPrice.toLocaleString();
+
+  updateOrderPrice();
+});
+
+p2Select.addEventListener('change', function() {
+  const selectedOption = p2Select.options[p2Select.selectedIndex];
+  const price = parseInt(selectedOption.value);
+  const totalPrice = 60000 * price;
+  p2TotalPrice.innerText = totalPrice.toLocaleString();
+
+  updateOrderPrice();
+});
+
+p3Select.addEventListener('change', function() {
+  const selectedOption = p3Select.options[p3Select.selectedIndex];
+  const price = parseInt(selectedOption.value);
+  const totalPrice = 11900 * price;
+  p3TotalPrice.innerText = totalPrice.toLocaleString();
+
+  updateOrderPrice();
+});
+
 
 
 
@@ -93,42 +130,7 @@ deleteProduct3.addEventListener('click', function(e) {
 
 
 
-// 개수에 따라 변하는 상품들의 가격
-const p1Select = document.querySelector('.product1 select');
-const p1TotalPrice = document.querySelector('.product1 #totalPrice');
 
-const p2Select = document.querySelector('.product2 select');
-const p2TotalPrice = document.querySelector('.product2 #totalPrice');
-
-const p3Select = document.querySelector('.product3 select');
-const p3TotalPrice = document.querySelector('.product3 #totalPrice');
-
-p1Select.addEventListener('change', function() {
-  const selectedOption = p1Select.options[p1Select.selectedIndex];
-  const price = parseInt(selectedOption.value);
-  const totalPrice = 9980 * price;
-  p1TotalPrice.innerText = totalPrice.toLocaleString();
-
-  updateOrderPrice();
-});
-
-p2Select.addEventListener('change', function() {
-  const selectedOption = p2Select.options[p2Select.selectedIndex];
-  const price = parseInt(selectedOption.value);
-  const totalPrice = 60000 * price;
-  p2TotalPrice.innerText = totalPrice.toLocaleString();
-
-  updateOrderPrice();
-});
-
-p3Select.addEventListener('change', function() {
-  const selectedOption = p3Select.options[p3Select.selectedIndex];
-  const price = parseInt(selectedOption.value);
-  const totalPrice = 11900 * price;
-  p3TotalPrice.innerText = totalPrice.toLocaleString();
-
-  updateOrderPrice();
-});
 
 
 // 최종 결제 금액

@@ -3,7 +3,7 @@
 /* Top Bar */
 .mypage_nav {
   border-bottom: 1px solid var(--gray);
-  width: 100vw;
+  width: 100%;
   height: 40px;
 }
 .mypage_nav_wrap {

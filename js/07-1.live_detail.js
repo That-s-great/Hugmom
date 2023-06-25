@@ -22,21 +22,26 @@ buyboxclose.addEventListener("click", () => {
 const chat = document.querySelector("#comment_chat");
 const send = document.querySelector(".fa-paper-plane");
 
+chat.focus();
 send.addEventListener("click", () => {
-  const commentdiv = document.createElement("div");
-  commentdiv.className = "live_comment";
-  const idp = document.createElement("p");
-  let randomNum = Math.floor(Math.random() * 999);
-  const idnum = String(randomNum).padStart(3, "0");
-  idp.className = "id";
-  idp.textContent = ` Hugmom${idnum}`;
-  const qid = document.createElement("p");
-  qid.className = "live_q";
-  qid.textContent = chat.value;
+  if (chat.value === "") {
+    alert("채팅을 작성해주세요.");
+  } else {
+    const commentdiv = document.createElement("div");
+    commentdiv.className = "live_comment";
+    const idp = document.createElement("p");
+    let randomNum = Math.floor(Math.random() * 999);
+    const idnum = String(randomNum).padStart(3, "0");
+    idp.className = "id";
+    idp.textContent = ` Hugmom${idnum}`;
+    const qid = document.createElement("p");
+    qid.className = "live_q";
+    qid.textContent = chat.value;
 
-  commentdiv.appendChild(idp);
-  commentdiv.appendChild(qid);
-  live_comments.appendChild(commentdiv);
+    commentdiv.appendChild(idp);
+    commentdiv.appendChild(qid);
+    live_comments.appendChild(commentdiv);
+  }
 });
 
 chat.addEventListener("keyup", (e) => {

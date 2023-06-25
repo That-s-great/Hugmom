@@ -4,35 +4,27 @@
   padding: 15px;
   text-align: center;
 }
-
-/* hot live slider */
 .hot_live .hot_live_title {
   font-size: 24px;
   text-align: center;
   padding: 15px;
   margin-top: 30px;
 }
-.lives {
-  width: 1280px;
-  margin: 0 auto;
+.wrap {
+  overflow: hidden;
 }
-.hot_live {
-  width: 100%;
-}
-.hot_live_video_container {
+.lives_container {
   display: flex;
+  width: 1300px;
+  margin: 0 auto;
   /* border: 1px solid red; */
 }
-.hot_live_video_wrap {
+.hot_live_container {
+  display: flex;
   overflow: hidden;
   /* border: 1px solid blue; */
 }
-.hot_live_videos {
-  width: 100vw;
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  gap: 20px;
-}
+
 .fa-chevron-left,
 .fa-chevron-right {
   cursor: pointer;
@@ -44,6 +36,8 @@
 
 /* live_container */
 .live_container {
+  width: 1280px;
+  margin: 0 auto;
   border-top: 2px solid var(--gray);
   margin-top: 50px;
   padding-top: 50px;
@@ -60,7 +54,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 /* live_video */
@@ -69,7 +62,11 @@
   height: 492px;
 }
 .hot_live_video.hot_live_v {
-  width: 280px;
+  margin: 0 6px;
+}
+
+.hot_live_video.hot_live_v .live_img {
+  width: inherit;
 }
 .live_img {
   width: 100%;
@@ -228,9 +225,11 @@
 }
 
 @media all and (max-width: 767px) {
-  .hot_live_video_container {
-    width: 90%;
-    margin: 0 auto;
+  .lives_container {
+    width: 100vw;
+  }
+  .hot_lives_container {
+    margin: 0 10px;
   }
   .hot_live {
     width: 100vw;
@@ -245,9 +244,16 @@
   .hot_live_video {
     width: 46%;
   }
+  .hot_live_video.hot_live_v {
+    margin: 0 10px;
+  }
   .live_img {
     width: 100%;
     height: 320px;
+  }
+  .fa-chevron-left,
+  .fa-chevron-right {
+    margin-top: 35%;
   }
   .schdulebtn_box {
     width: 100vw;

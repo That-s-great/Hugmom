@@ -1,4 +1,3 @@
-
 /* Container */
 .container.signin_page {
   width: 100vw;
@@ -47,13 +46,13 @@
   border: 1px solid var(--main-green);
   border-radius: 5px;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 .login_id_line input[type="text"] {
   width: 100%;
 
-  padding-left: 30px;
-  
+  padding-left: 50px;
+
   outline: 0;
   border: none;
 
@@ -61,6 +60,7 @@
   color: var(--dark-gray);
   font-family: var(--kor);
 }
+
 .login_id_line input[type="text"]:focus {
   color: var(--black);
 }
@@ -69,7 +69,8 @@
 }
 .login_id_user_icon {
   position: absolute;
-  left: 10px;
+  left: 20px;
+  top: 23px;
 }
 .login_id_user_icon i {
   font-size: 18px;
@@ -93,8 +94,8 @@
 .login_pw_line input[type="password"] {
   width: 100%;
 
-  padding-left: 30px;
-  
+  padding-left: 50px;
+
   outline: 0;
   border: none;
 
@@ -110,7 +111,8 @@
 }
 .login_pw_user_icon {
   position: absolute;
-  left: 10px;
+  left: 20px;
+  top: 23px;
 }
 .login_pw_user_icon i {
   font-size: 18px;
@@ -151,7 +153,7 @@
   font-family: var(--kor);
 }
 .keep_login_box label::before {
-  content: '\f058';
+  content: "\f058";
   font-family: fontawesome;
   width: 22px;
   height: 22px;
@@ -189,7 +191,7 @@
   font-family: var(--kor);
 }
 .save_id_box label::before {
-  content: '\f058';
+  content: "\f058";
   font-family: fontawesome;
   width: 22px;
   height: 22px;
@@ -234,7 +236,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-
 }
 /* Find Id */
 .login_find_id_pw .find_id {

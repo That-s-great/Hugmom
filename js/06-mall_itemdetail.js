@@ -5,23 +5,54 @@ const num = document.querySelector(".num");
 const total = document.querySelector(".total");
 const comment = document.querySelectorAll(".comment");
 
-const pricecal = price.innerText.split(",").join("");
+const item = document.getElementById("item");
+
+item.addEventListener("change", () => {
+  num.innerText = "1";
+  const value = item.options[item.selectedIndex].value;
+  if (value === "no_select") {
+    total.innerText = 0;
+  } else {
+    total.innerText = parseInt(value).toLocaleString();
+  }
+});
+
 let i = 1;
 minus.addEventListener("click", () => {
+  let value = item.options[item.selectedIndex].value;
   if (i > 1) {
     i--;
     num.innerText = i;
-    total.innerText = (parseInt(pricecal) * i).toLocaleString();
+    total.innerText = (parseInt(value) * i).toLocaleString();
   } else {
     minus.setAttribute("disabled", "disabled");
+    alert("1개 이상 주문해야합니다.");
   }
 });
 plus.addEventListener("click", () => {
-  i++;
-  num.innerText = i;
-  total.innerText = (parseInt(pricecal) * i).toLocaleString();
+  const value = item.options[item.selectedIndex].value;
+  if (value === "no_select") {
+    plus.setAttribute("disabled", "disabled");
+    alert("상품을 선택해주세요.");
+  } else {
+    let value = item.options[item.selectedIndex].value;
+    i++;
+    num.innerText = i;
+    total.innerText = (parseInt(value) * i).toLocaleString();
+  }
 });
 
+const cartButton = document.querySelector(".cartbtn");
+
+cartButton.addEventListener("click", function () {
+  const value = item.options[item.selectedIndex].value;
+  if (value === "no_select") {
+    alert("상품을 선택해주세요");
+  } else {
+    alert("장바구니에 상품이 담겼습니다.");
+    item.selectedIndex = 0;
+  }
+});
 comment.forEach(function (e) {
   e.addEventListener("click", toggleAccordion);
 });
@@ -139,24 +170,8 @@ const select_itemwrap = document.querySelector(".select_itemwrap");
 const buyboxclose = document.querySelector(".closeline");
 
 buybtn.addEventListener("click", () => {
-  // select_itemwrap.style.display = "block";
   select_itemwrap.classList.add("buybox_open");
-  // buybtn_box.style.display = "none";
 });
 buyboxclose.addEventListener("click", () => {
-  // select_itemwrap.style.display = "none";
   select_itemwrap.classList.remove("buybox_open");
-});
-
-const item = document.getElementById("item");
-const cartButton = document.querySelector(".cartbtn");
-
-cartButton.addEventListener("click", function () {
-  const value = item.options[item.selectedIndex].value;
-  if (value === "no_select") {
-    alert("상품을 선택해주세요");
-  } else {
-    alert("장바구니에 상품이 담겼습니다.");
-    item.selectedIndex = 0;
-  }
 });

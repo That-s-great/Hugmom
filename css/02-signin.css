@@ -3,6 +3,7 @@
 .container.signin_page {
   width: 100vw;
   height: 100vh;
+  font-family: var(--kor);
 }
 
 /* ### Signin Page Main ### */
@@ -58,6 +59,7 @@
 
   font-size: 18px;
   color: var(--dark-gray);
+  font-family: var(--kor);
 }
 .login_id_line input[type="text"]:focus {
   color: var(--black);
@@ -98,6 +100,7 @@
 
   font-size: 18px;
   color: var(--dark-gray);
+  font-family: var(--kor);
 }
 .login_pw_line input[type="password"]:focus {
   color: var(--black);
@@ -139,11 +142,13 @@
 
   opacity: 0;
   cursor: pointer;
+  font-family: var(--kor);
 }
 .keep_login_box label {
   padding-left: 10px;
   cursor: pointer;
   font-size: 18px;
+  font-family: var(--kor);
 }
 .keep_login_box label::before {
   content: '\f058';
@@ -175,11 +180,13 @@
 
   opacity: 0;
   cursor: pointer;
+  font-family: var(--kor);
 }
 .save_id_box label {
   padding-left: 10px;
   cursor: pointer;
   font-size: 18px;
+  font-family: var(--kor);
 }
 .save_id_box label::before {
   content: '\f058';
@@ -210,6 +217,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: var(--kor);
 }
 /* Find Id  */
 .signin_page_login_find_join {
@@ -237,6 +245,7 @@
 }
 .login_find_id_pw .find_id a {
   color: var(--dark-gray);
+  font-family: var(--kor);
 }
 /* Find Pw */
 .login_find_id_pw .find_pw {
@@ -247,6 +256,7 @@
 }
 .login_find_id_pw .find_pw a {
   color: var(--dark-gray);
+  font-family: var(--kor);
 }
 .find_id_pw_bar {
   width: 2px;
@@ -261,10 +271,12 @@
 .login_join {
   color: var(--black);
   font-size: 18px;
+  font-family: var(--kor);
 }
 .login_join a {
   color: var(--black);
   margin-left: 16px;
+  font-family: var(--kor);
 }
 
 /* SNS Icon Wrap */
@@ -279,6 +291,8 @@
 .login_sns_tit {
   font-size: 18px;
   margin-bottom: 24px;
+  font-family: var(--kor);
+  color: var(--black);
 }
 .login_sns_icon_items {
   width: 434px;

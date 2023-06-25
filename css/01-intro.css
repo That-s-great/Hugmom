@@ -2,6 +2,7 @@
 .container.intro_page {
   width: 100%;
   height: 100%;
+  font-family: var(--kor);
 }
 
 /* ### Main ### */
@@ -58,16 +59,19 @@
 }
 .banner_inner_top p:first-child {
   font-weight: bold;
+  font-family: var(--kor);
 }
 .banner_inner_top p:first-child strong {
   color: var(--main-green);
   font-size: 2rem;
+  font-family: var(--eng);
 }
 .banner_inner_txt {
   /* 19px / 16px */
   margin-bottom: 1.1875rem;
 
   color: var(--main-green);
+  font-family: var(--kor);
   font-weight: bold;
   /* 18px / 16px */
   font-size: 1.125rem;
@@ -80,6 +84,7 @@
   height: 3.75rem;
   color: #fff;
   background-color: var(--main-green);
+  font-family: var(--kor);
   border: none;
   border-radius: 5px;
   /* 18px / 16px */
@@ -146,6 +151,7 @@
   text-align: center;
   line-height: 2;
   color: var(--white);
+  font-family: var(--kor);
   font-size: 18px;
   font-weight: bold;
 }
@@ -183,14 +189,17 @@
 .introduce_txt h3 {
   font-size: 24px;
   color: var(--black);
+  font-family: var(--kor);
 }
 .introduce_txt h1 {
   font-size: 32px;
   color: var(--main-green);
+  font-family: var(--kor);
 }
 .introduce_txt p {
   font-size: 18px;
   color: var(--black);
+  font-family: var(--kor);
 }
 /* Introduce Article Image */
 .introduce_img {
@@ -219,9 +228,11 @@
 .intro_page_live_article h1 {
   text-align: center;
   font-size: 32px;
+  font-family: var(--kor);
 }
 .intro_page_live_article h1 strong{
   color: var(--red);
+  font-family: var(--eng);
 }
 /* Live Slide Button */
 .live_slide_btn {
@@ -287,16 +298,19 @@
   height: 25px;
   background-color: var(--red);
   color: var(--white);
+  font-family: var(--eng);
   border-radius: 5px;
 }
 /* Live Slide Text */
 .live_title {
   color: var(--black);
+  font-family: var(--kor);
   font-size: 18px;
 }
 .live_bj_name {
   font-size: 16px;
   color: var(--black);
+  font-family: var(--kor);
   margin-right: 10px;
 }
 .fa-user-group {
@@ -306,6 +320,7 @@
 .live_user_viewer {
   font-size: 16px;
   color: var(--dark-gray);
+  font-family: var(--kor);
 }
 
 /* Live Slide Bottom Button */
@@ -323,6 +338,7 @@
   border-radius: 5px;
   font-size: 18px;
   color: var(--white);
+  font-family: var(--kor);
   cursor: pointer;
   display: flex;
   justify-content: center;

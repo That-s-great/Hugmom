@@ -55,33 +55,68 @@ function colorchange(e) {
   change.add("on");
 }
 
-const livePrevBtn = document.querySelector(".live_slide_prev_btn");
-const liveNextBtn = document.querySelector(".live_slide_next_btn");
-const liveSlideWrapper = document.querySelector(".live_broadcast_items");
-const liveSlides = document.querySelectorAll(".live_item");
+const prevBtn = document.querySelector(".fa-chevron-left");
+const nextBtn = document.querySelector(".fa-chevron-right");
+const live_video = document.querySelectorAll(".hot_live_v");
 
 let liveCurrentIdx = 0;
-const liveSlideCount = liveSlides.length;
-const liveSlideWidth = liveSlides[0].offsetWidth;
-const liveSlideMargin = 20;
+const liveSlideCount = live_video.length;
+const liveSlideWidth = live_video[0].offsetWidth;
+const liveSlideMargin = 10;
+const liveSlideMarginM = 15;
 
-livePrevBtn.addEventListener("click", () => {
+prevBtn.addEventListener("click", () => {
   if (liveCurrentIdx > 0) {
     liveCurrentIdx--;
     moveLiveSlide();
+    console.log(liveCurrentIdx);
   }
 });
 
-liveNextBtn.addEventListener("click", () => {
-  if (liveCurrentIdx < liveSlideCount - 1) {
-    liveCurrentIdx++;
-    moveLiveSlide();
+nextBtn.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    if (liveCurrentIdx < liveSlideCount - 2) {
+      liveCurrentIdx++;
+      updateButtonState();
+      moveLiveSlideM();
+      console.log(liveCurrentIdx);
+    }
+  } else {
+    if (liveCurrentIdx < liveSlideCount - 4) {
+      liveCurrentIdx++;
+      updateButtonState();
+      moveLiveSlide();
+      console.log(liveCurrentIdx);
+    }
   }
 });
+
+function moveLiveSlideM() {
+  const translateX = -(
+    liveCurrentIdx * (liveSlideWidth + liveSlideMarginM) +
+    liveSlideMarginM
+  );
+
+  live_video.forEach((e) => {
+    e.style.transform = `translateX(${translateX}px)`;
+  });
+}
 
 function moveLiveSlide() {
-  const translateX = -liveCurrentIdx * (liveSlideWidth + liveSlideMargin);
-  liveSlides.forEach((liveSlide) => {
-    liveSlide.style.transform = `translateX(${translateX}px)`;
+  const translateX = -(
+    liveCurrentIdx * (liveSlideWidth + liveSlideMargin) +
+    liveSlideMargin
+  );
+
+  live_video.forEach((e) => {
+    e.style.transform = `translateX(${translateX}px)`;
   });
+}
+
+function updateButtonState() {
+  if (liveCurrentIdx === liveSlideCount - 1) {
+    nextBtn.disabled = true;
+  } else {
+    nextBtn.disabled = false;
+  }
 }

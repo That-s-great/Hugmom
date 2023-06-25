@@ -1,21 +1,22 @@
 .live_detail_wrap {
   display: flex;
   justify-content: center;
-  width: 100%;
+
   height: 100vh;
   background-color: var(--black);
 }
 .live_detail_wrap .background {
-  width: 630px;
+  width: 500px;
   object-fit: cover;
 }
 .live_detail {
   position: absolute;
-  width: 630px;
+  width: 500px;
   height: 100%;
   overflow: hidden;
 }
 .live_header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
@@ -37,12 +38,7 @@
   height: 60px;
   margin-top: 5px;
 }
-.live_detail_title h1 {
-  font-size: 18px;
-  color: var(--white);
-  margin-left: 20px;
-  padding-top: 7px;
-}
+
 .live_detail_view {
   display: flex;
   flex-direction: column;
@@ -51,7 +47,11 @@
   color: var(--white);
   font-size: 18px;
   white-space: nowrap;
-  margin-bottom: 5px;
+  margin: 10px 0 5px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 380px;
 }
 .live_detail_view_bottom {
   display: flex;
@@ -59,7 +59,7 @@
 }
 .live_detail_view_bottom h3 {
   color: var(--red);
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .live_detail_view em {
   font-style: normal;
@@ -83,20 +83,27 @@
   height: 200px;
   overflow-y: scroll;
   display: block;
+  background-color: rgba(59, 59, 59, 0.5);
 }
 .live_comment {
+  width: 100%;
   display: flex;
   align-items: center;
+  white-space: normal;
 }
 .live_comment .id {
   font-weight: bold;
-  margin-right: 10px;
+  margin: 0 10px;
+  color: var(--white);
+}
+.live_comment .live_q {
+  color: var(--white);
 }
 
 #comment_chat {
   position: inherit;
   bottom: 20px;
-  width: 75%;
+  width: 68%;
   height: 50px;
   border-radius: 5px;
   border: none;

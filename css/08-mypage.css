@@ -31,7 +31,7 @@
   margin: 0 auto;
   display: flex;
   font-family: var(--kor);
-  /* overflow: auto; */
+  /* box-sizing: border-box; */
 }
 
 /* Left Content */
@@ -77,8 +77,8 @@
 .mypage_userInfo .mypage_article,
 .mypage_shoppingInfo .mypage_article {
   width: calc(100% - 127px);
-  margin: 100px 0 150px 126px;
-  /* margin: 100px 0 100vh 126px; */
+  margin: 60px 0 150px 126px;
+  /* overflow-x: hidden; */
 }
 .mypage_article h2 {
   font-size: 24px;

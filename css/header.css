@@ -190,6 +190,9 @@
   outline: none;
   border: none;
 }
+.search_box input:focus {
+  outline: none;
+}
 .search_box button {
   background-color: transparent;
   border: none;

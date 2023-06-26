@@ -106,16 +106,14 @@ deleteSelect.addEventListener('click', function(e) {
 p1Delete.addEventListener("click", () => {
   product1[0].remove();
   p1TotalPrice.innerText = '0';
+  productsNum.innerText = products.length-1;
   products.length -= 1;
-  productsNum.innerText = products.length;
   updateOrderPrice();
 });
 // product2 삭제
 p2Delete.addEventListener("click", () => {
   product2[0].remove();
   p2TotalPrice.innerText = '0';
-  products.length -= 1;
-  productsNum.innerText = products.length;
   updateOrderPrice();
 });
 // product3 삭제

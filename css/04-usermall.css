@@ -121,20 +121,21 @@
   width: 100%;
   padding: 7px;
   margin-bottom: 30px;
+  margin-top: 10px;
   background-color: rgba(114, 152, 30, 0.1);
-
+  border-radius: 5px;
   /* border: 1px solid var(--main-green);
   border-radius: 0 0 5px 5px;
   border-top: 0; */
 
   display: flex;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 .user_mall_menu li {
   display: flex;
   /* border: 1px solid var(--main-green); */
-  width: 80px;
+  width: 95px;
   padding: 5px;
   border-radius: 5px;
   align-items: center;
@@ -147,17 +148,17 @@
   font-size: 16px;
   color: var(--black);
 }
-/* .user_mall_menu li::after {
+.user_mall_menu li::after {
   content: "";
   display: inline-block;
   width: 1px;
   height: 16px;
   background-color: var(--gray);
   margin-left: 10px;
-} */
-/* .user_mall_menu li:last-child::after {
+}
+.user_mall_menu li:last-child::after {
   display: none;
-} */
+}
 /* 식품, 육아용품, 산모용품 탭 체크되었을때! */
 .user_mall_menu li a.checked {
   color: var(--main-green);

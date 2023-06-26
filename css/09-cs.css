@@ -38,7 +38,6 @@ main {
   color: var(--main-green);
 }
 
-
 /* All Contents */
 /* ### 수정한 부분 ### */
 .cs_contents {
@@ -47,7 +46,6 @@ main {
   display: flex;
   justify-content: center;
 }
-
 
 /* ### 수정한 부분 ### */
 /* Left Content */
@@ -88,17 +86,11 @@ main {
   width: calc(100% - 197px);
   height: 100%;
   border-left: 1px solid var(--gray);
-
 }
 .cs_FAQ_inner .cs_article {
   /* 1083 - 127 = 956 */
   width: calc(100% - 127px);
-<<<<<<< HEAD
-  margin: 30px 0 100px 126px;
-
-=======
   margin: 60px 0 60px 126px;
->>>>>>> e7bf89304879deccc2f069350a7d160fc11d2ded
 }
 .cs_article .cs_chapbot_tit {
   color: var(--black);
@@ -149,7 +141,7 @@ main {
 .cs_chapbot_content_left h1 {
   color: var(--black);
   font-size: 32px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 .cs_chapbot_content_left h1 + p {
   margin-bottom: 17px;
@@ -175,7 +167,8 @@ main {
 
   color: var(--white);
   font-family: var(--kor);
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* FAQ 자주하는 질문 박스 */
@@ -218,6 +211,7 @@ main {
   border: 1px solid var(--gray);
   border-radius: 5px;
   outline: 0;
+  padding-left: 15px;
 }
 .cs_ask_ques_search button {
   width: 78px;
@@ -236,14 +230,16 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  border-top: 1px solid var(--main-green);
 }
 .cs_ask_ques_accordion .cs_ask_ques_accordion_item {
   /* padding: 25px 0 25px 0; */
   display: flex;
   flex-direction: column;
 
-  border-top: 1px solid var(--main-green);
+  border-bottom: 1px solid var(--main-green);
 }
+
 .cs_ask_ques_accordion_item .accordionTitle {
   color: var(--black);
   padding-left: 19px;
@@ -262,16 +258,28 @@ main {
   padding: 32px 220px 42px 67px;
 
   background-color: var(--lightest-gray);
-  border-top:1px solid var(--main-green);
+  border-top: 1px solid var(--main-green);
   /* border-bottom: 1px solid var(--main-green); */
 
-  /* display: none; */
+  display: none;
 }
+.cs_ask_ques_accordion_item.open .text {
+  display: block;
+}
+
 .cs_ask_ques_accordion_item .text p {
   font-size: 18px;
   color: var(--black);
 }
-
+.err {
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+  display: none;
+}
+.err h1 {
+  color: var(--gray);
+}
 /* 공지사항 */
 .cs_notice {
   /* border: 1px solid blue; */
@@ -288,7 +296,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 .cs_notice_menu_item {
   width: 909px;
@@ -339,7 +346,7 @@ main {
   margin-bottom: 12px;
   margin-right: 19px;
 
-  background-image: url('/img/9-3-cs-inform-detail_7_thum_img.jpg');
+  background-image: url("/img/9-3-cs-inform-detail_7_thum_img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -436,7 +443,7 @@ main {
 
 /* 9-1-cs-FAQ */
 @media all and (max-width: 768px) {
-   /* Common CSS */
+  /* Common CSS */
   .container.cs-FAQ {
     width: 100%;
   }
@@ -455,7 +462,7 @@ main {
     font-weight: 400;
   }
   .cs_nav_wrap i {
-    color: var(--dark-gray)
+    color: var(--dark-gray);
   }
   .cs_nav_wrap .cs_nav_first {
     color: var(--dark-gray);
@@ -476,7 +483,7 @@ main {
   .cs_article .cs_chapbot_tit {
     padding: 0;
     margin-bottom: 0;
-    border-bottom: none
+    border-bottom: none;
   }
   .cs_article .cs_title {
     font-size: 18px;
@@ -491,7 +498,7 @@ main {
     width: 16px;
     height: 8px;
     background-color: var(--sub-green);
-  
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -514,21 +521,21 @@ main {
     margin-bottom: 30px;
   }
   .cs_chapbot_content_left {
-    margin: 0;
+    margin: 20px;
   }
   .cs_chapbot_content_right {
     width: 100%;
   }
   .cs_chapbot_content_right button {
-    width: 283px;
-    height: 70px;
-  
+    width: 200px;
+    height: 50px;
+
     background-color: var(--main-green);
     border: none;
     border-radius: 5px;
-  
+
     color: var(--white);
-    font-size: 24px;
+    font-size: 18px;
   }
   /*   */
   .cs_ask_ques {
@@ -537,7 +544,7 @@ main {
   .cs_article .cs_ask_ques_tit {
     padding: 0;
     margin-bottom: 0;
-    border-bottom: none
+    border-bottom: none;
   }
   .cs_ask_ques_contents {
     width: 100%;
@@ -549,7 +556,7 @@ main {
   .cs_ask_ques_search label {
     font-size: 14px;
     color: var(--black);
-  
+
     margin: 44px 25px 43px 10px;
   }
   .cs_ask_ques_search input {
@@ -558,7 +565,7 @@ main {
     border-radius: 5px;
     outline: 0;
   }
-  
+
   /* 아코디언 */
   .cs_ask_ques_accordion {
     width: 100%;
@@ -566,8 +573,11 @@ main {
   .cs_ask_ques_accordion .cs_ask_ques_accordion_item {
     width: 100%;
   }
+  .cs_ask_ques_accordion .cs_ask_ques_accordion_item h2 {
+    font-size: 14px;
+  }
   .cs_ask_ques_accordion_item .accordionTitle {
-
+    margin: 20px 0;
   }
   .cs_ask_ques_accordion_item .accIcon {
     float: right;
@@ -579,7 +589,7 @@ main {
     padding: 20px 0;
     display: flex;
     justify-content: center;
-    /* display: none; */
+    display: none;
   }
   .cs_ask_ques_accordion_item .text p {
     font-size: 14px;
@@ -587,14 +597,14 @@ main {
   }
   /* ### 9-2-cs-inform ### */
   /* 공지사항 */
-  .cs_notice { 
+  .cs_notice {
     width: 100%;
     margin: 0 auto;
   }
   .cs_article .cs_notice_tit {
     padding: 0;
     margin-bottom: 0;
-    border-bottom: none
+    border-bottom: none;
   }
   .cs_notice_menu {
     width: 100%;
@@ -610,7 +620,7 @@ main {
     margin-bottom: 22px;
     margin-top: 25px;
     margin-left: 19px;
-    flex: 1;    
+    flex: 1;
   }
   .cs_notice_item_left h2 {
     margin-top: 10px;

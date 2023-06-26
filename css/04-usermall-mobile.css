@@ -15,7 +15,7 @@
   /* User_mall Main > header */
   .user_mall_header {
     width: 100vw;
-    height: 300px;
+    height: 320px;
   }
   .user_mall_title {
     width: 100vw;
@@ -32,7 +32,8 @@
     margin-left: 0;
     padding: 20px 20px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
   /* Graduate_User_Mall Banner */
   .user_mall_banner.graduate {
@@ -53,7 +54,24 @@
     height: 100%;
   }
   .user_mall_menu {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+  }
+  .user_mall_menu li {
+    width: 75px;
+  }
+  .user_mall_menu li a {
+    font-size: 16px;
+  }
+  .user_mall_menu_title {
+    margin-bottom: 30px;
+  }
+  .user_mall_menu_title.best-title {
+    padding-bottom: 0;
+    margin-bottom: 30px;
+  }
+  .user_mall_menu_title.co-buying-title {
+    padding-bottom: 0;
+    margin-bottom: 30px;
   }
   .user_mall_menu_title p {
     margin-bottom: 20px;
@@ -68,13 +86,15 @@
     justify-content: center;
   }
   .user_mall_item {
-    width: 46%;
+    width: 45%;
+    height: 400px;
+    margin-bottom: 30px;
   }
   /* User_mall Item */
   /* Item Image 영역 */
   .user_mall_item_img {
     width: 100%;
-    height: 320px;
+    height: 280px;
   }
 
   .more_view_hotitem_btn {
@@ -98,5 +118,8 @@
   .user_mall_item:nth-child(11),
   .user_mall_item:nth-child(12) {
     display: none;
+  }
+  .user_mall_item_img .co-timer {
+    font-size: 16px;
   }
 }

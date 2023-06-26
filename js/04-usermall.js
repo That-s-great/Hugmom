@@ -7,7 +7,8 @@ addCartIconBtn.forEach((btn) => {
 
     // 카트 아이콘 클릭시 헤더-카트아이콘에 숫자 추가
     cartCount += 1;
-    document.querySelector(".cart_count").innerText = cartCount;
+    document.querySelectorAll(".cart_count")[0].innerText = cartCount;
+    document.querySelectorAll(".cart_count")[1].innerText = cartCount;
   });
 });
 

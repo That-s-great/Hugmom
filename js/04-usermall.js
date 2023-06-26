@@ -1,6 +1,6 @@
 // 카트 아이콘 클릭시 알림창 뜨기
 const addCartIconBtn = document.querySelectorAll(".add_cart_icon_btn");
-let cartCount = 0;
+let cartCount = 3;
 addCartIconBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     alert("선택하신 상품이 장바구니에 담겼습니다");

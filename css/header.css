@@ -34,8 +34,9 @@
 }
 .header_menu_list > ul {
   width: 600px;
+  margin-left: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 31px;
 }
 .header_menu_list > ul > .header_menu > a {
@@ -397,6 +398,7 @@
     position: absolute;
     top: 60px;
     gap: 0;
+      margin-left: 0;
   }
   .header_menu_list > ul > li {
     width: 100%;
@@ -404,9 +406,9 @@
     padding: 15px 0;
     border-bottom: 1px solid var(--gray);
   }
-  .header_menu_list > ul > li:nth-child(2),
-  .header_menu_list > ul > li:nth-child(4),
-  .header_menu_list > ul > li:nth-child(5) {
+  .header_menu_list > ul > li:nth-child(1),
+  .header_menu_list > ul > li:nth-child(3),
+  .header_menu_list > ul > li:nth-child(4) {
     padding: 15px 0 0;
   }
   .header_menu_list > ul > li > a {

@@ -1,6 +1,7 @@
 .footer {
   width: 100%;
-  height: 275px;
+  height: 200px;
+  /* height: 275px; */
 }
 .footer_inner {
   width: 1280px;
@@ -14,7 +15,7 @@
 /* Footer_Left */
 .footer_left h4 {
   font-family: var(--eng);
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .footer_left h4 span {
@@ -24,10 +25,12 @@
 .footer_info {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
   color: var(--dark-gray);
 }
-
+.footer_info p {
+  font-size: 14px;
+}
 /* Footer_Right */
 
 .footer_cs {
@@ -36,11 +39,14 @@
   flex-direction: column;
   gap: 10px;
   color: var(--dark-gray);
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
-.cs_tel {
-  font-size: 32px;
+.footer_cs p {
+  font-size: 14px;
+}
+.footer_cs p.cs_tel {
+  font-size: 20px;
   color: var(--black);
   font-weight: bold;
 }
@@ -50,8 +56,8 @@
 }
 .footer_sns_btn a {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-left: 10px;
   /* color: var(--white); */
@@ -66,7 +72,7 @@
 @media all and (max-width: 768px) {
   .footer {
     width: 100vw;
-    height: 360px;
+    height: 300px;
     padding: 10px 20px;
   }
   .footer_inner {
@@ -79,30 +85,41 @@
   }
 
   /* Footer_Right */
+  .footer_sns_btn {
+    display: flex;
+    justify-content: flex-start;
+  }
   .footer_sns_btn a {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    margin-right: 10px;
   }
   .footer_right {
     display: flex;
     flex-direction: column-reverse;
   }
   .footer_cs {
-    font-size: 14px;
+    align-items: flex-start;
+    font-size: 12px;
     margin-top: 10px;
+    gap: 7px;
   }
   .cs_tel {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   /* Footer_Left */
   .footer_left h4 {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
   .footer_info {
-    gap: 14px;
+    gap: 8px;
     font-size: 14px;
+  }
+  .footer_info p {
+    font-size: 12px;
   }
   .copyright {
     width: 100vw;

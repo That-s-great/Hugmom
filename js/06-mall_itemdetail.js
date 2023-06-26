@@ -50,7 +50,9 @@ cartButton.addEventListener("click", function () {
     alert("상품을 선택해주세요");
   } else {
     alert("장바구니에 상품이 담겼습니다.");
-    item.selectedIndex = 0;
+    // item.selectedIndex = 0;
+    num.innerText = 1;
+    total.innerText = 0;
   }
 });
 comment.forEach(function (e) {

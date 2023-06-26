@@ -81,6 +81,8 @@ cartButton.addEventListener("click", () => {
     alert("상품을 선택해주세요");
   } else {
     alert("공동 구매하기 모집이 진행됩니다.");
+    num.innerText = 1;
+    total.innerText = 0;
     const div = document.createElement("div");
     div.className = "in";
 

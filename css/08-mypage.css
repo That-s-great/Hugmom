@@ -21,6 +21,10 @@
   font-size: 18px;
   font-weight: 600;
 }
+.mypage_nav_wrap i {
+  font-size: 18px;
+  font-weight: bold;
+}
 .mypage_nav_wrap .mypage_nav_first {
   color: var(--main-green);
 }

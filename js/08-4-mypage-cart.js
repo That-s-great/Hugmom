@@ -45,7 +45,7 @@ for (let i = 0; i < products.length; i++) {
   });
 }
 
-// // 개수에 따라 변하는 상품들의 가격
+// 개수에 따라 변하는 상품들의 가격
 const p1Select = document.querySelector('.product1 select');
 const p1TotalPrice = document.querySelector('.product1 #totalPrice');
 const p1Delete = document.querySelector('.product1 #deleteProduct');
@@ -63,7 +63,7 @@ const finalPrice = document.querySelector("#finalPrice");
 const point = document.querySelector("#point");
 
 
-// Helper function to update order price
+// 즉각적으로 변동하는 최종결제금액
 function updateOrderPrice() {
   const p1Price = parseInt(p1TotalPrice.innerText.replace(',', ''));
   const p2Price = parseInt(p2TotalPrice.innerText.replace(',', ''));
@@ -73,7 +73,7 @@ function updateOrderPrice() {
 
   orderPrice.innerText = totalPrice.toLocaleString();
 
-  if (totalPrice < 100000) {
+  if (totalPrice > 0 && totalPrice < 100000) {
     deliveryPrice.innerText = '2,500';
   } else {
     deliveryPrice.innerText = '0';
@@ -84,50 +84,56 @@ function updateOrderPrice() {
   point.innerText = Math.floor(totalPrice / 100).toLocaleString();
 }
 
+
+// 선택삭제 기능
 deleteSelect.addEventListener('click', function(e) {
   e.preventDefault();
 
   const checkedProducts = document.querySelectorAll('.mypage_shoppingInfo_cart_select .contents input[type="checkbox"]:checked');
   checkedProducts.forEach(function(product) {
     const contents = product.closest('.contents');
+    const totalPrice = contents.querySelector('p span#totalPrice').innerText.replace(',', '');
     contents.remove();
+    updateOrderPrice();
   });
-  orderPrice.innerText = '0';
-  deliveryPrice.innerText = '0';
-  finalPrice.innerText = '0';
-  point.innerText = '0';
+  orderPrice.addEventListener("change", () => {
+    updateOrderPrice();
+  })
 });
 
-// Event listener for p1Delete
+
+// product1 삭제
 p1Delete.addEventListener("click", () => {
   product1[0].remove();
   p1TotalPrice.innerText = '0';
+  products.length -= 1;
+  productsNum.innerText = products.length;
   updateOrderPrice();
 });
-// Event listener for p2Delete
+// product2 삭제
 p2Delete.addEventListener("click", () => {
   product2[0].remove();
   p2TotalPrice.innerText = '0';
+  products.length -= 1;
+  productsNum.innerText = products.length;
   updateOrderPrice();
 });
-// Event listener for p3Delete
+// product3 삭제
 p3Delete.addEventListener("click", () => {
   product3[0].remove();
   p3TotalPrice.innerText = '0';
   updateOrderPrice();
 });
 
-// Event listener for p1Select
+// 개수에 따라 각 상품마다 가격변동
 p1Select.addEventListener("change", () => {
   p1TotalPrice.innerText = (p1Select.value * 9980).toLocaleString();
   updateOrderPrice();
 });
-// Event listener for p2Select
 p2Select.addEventListener("change", () => {
   p2TotalPrice.innerText = (p2Select.value * 60000).toLocaleString();
   updateOrderPrice();
 });
-// Event listener for p3Select
 p3Select.addEventListener("change", () => {
   p3TotalPrice.innerText = (p3Select.value * 11900).toLocaleString();
   updateOrderPrice();

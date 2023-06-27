@@ -17,8 +17,10 @@
     font-size: 14px;
     font-weight: 400;
   }
-  .mypage_nav_wrap i {
-    color: var(--dark-gray)
+  .mypage_nav_wrap  .fas{
+    color: var(--dark-gray);
+    font-size: 16px;
+    margin: 0;
   }
   .mypage_nav_wrap .mypage_nav_first {
     color: var(--dark-gray);
@@ -48,7 +50,7 @@
   .mypage_shoppingInfo {
     width: 100%;
     /* height: auto; */
-    padding: 40px 20px;
+    padding: 20px 20px;
   }
   .mypage_userInfo .mypage_article,
   .mypage_shoppingInfo .mypage_article {
@@ -100,7 +102,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 140px;
+    top: 120px;
     left: 0;
   }
   .mypage_userInfo_detail_profile p:nth-of-type(2),
@@ -453,6 +455,9 @@
 
 
   /* 08-4 Mypage - Cart */
+  .mypage_shoppingInfo_cart_select .top_nav {
+    height: 45px;
+  }
   .mypage_shoppingInfo_cart_select .contents {
     padding: 20px 10px 50px 10px;
   }
@@ -506,16 +511,16 @@
   }
   /* total price */
   .mypage_shoppingInfo_cart_payment {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
     margin-top: 40px;
     margin-bottom: 20px;
   }
   .mypage_shoppingInfo_cart_payment .final_payment_price {
-    margin: 20px;
+    margin: 15px 20px;
   }
   .mypage_shoppingInfo_cart_payment .order_box {
-    padding: 30px 20px;
+    padding: 20px 20px;
     border-top: 1px solid var(--gray);
     border-bottom: 1px solid var(--gray);
   
@@ -524,7 +529,7 @@
     gap: 20px;
   }
   .mypage_shoppingInfo_cart_payment .final_box {
-    padding: 30px 20px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -532,9 +537,9 @@
   }
   .mypage_shoppingInfo_cart #orderBtn {
     width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
     font-weight: 700;
   }
 }

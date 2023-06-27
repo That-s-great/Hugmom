@@ -70,7 +70,7 @@ function updateOrderPrice() {
   const p3Price = parseInt(p3TotalPrice.innerText.replace(',', ''));
 
   const totalPrice = p1Price + p2Price + p3Price;
-
+  
   orderPrice.innerText = totalPrice.toLocaleString();
 
   if (totalPrice > 0 && totalPrice < 100000) {
@@ -85,29 +85,87 @@ function updateOrderPrice() {
 }
 
 
+
+
 // 선택삭제 기능
 deleteSelect.addEventListener('click', function(e) {
   e.preventDefault();
 
   const checkedProducts = document.querySelectorAll('.mypage_shoppingInfo_cart_select .contents input[type="checkbox"]:checked');
+  let totalPrice = 0;
+
   checkedProducts.forEach(function(product) {
     const contents = product.closest('.contents');
-    const totalPrice = contents.querySelector('p span#totalPrice').innerText.replace(',', '');
+    const productPrice = parseInt(contents.querySelector('p span#totalPrice').innerText.replace(',', ''));
+
+    totalPrice += productPrice;
     contents.remove();
+  });
+
+  updateOrderPrice();
+
+  if (!isNaN(totalPrice)) {
+    const currentOrderPrice = parseInt(orderPrice.innerText.replace(',', ''));
+    const newOrderPrice = currentOrderPrice - totalPrice;
+    orderPrice.innerText = newOrderPrice.toLocaleString();
+    deliveryPrice.innerText = calculateDeliveryPrice(newOrderPrice).toLocaleString();
+    finalPrice.innerText = calculateFinalPrice(newOrderPrice).toLocaleString();
+    point.innerText = calculatePoint(newOrderPrice).toLocaleString();
+  }
+});
+
+// 체크박스 상태 변화 감지
+for (let i = 0; i < products.length; i++) {
+  const checkBox = products[i].querySelector('input[type="checkbox"]');
+  const select = products[i].querySelector('select');
+
+  checkBox.addEventListener('change', function () {
+    updateSelectAllBtn();
+    const allChecked = checkIfAnyUnchecked();
+    selectAllBtn.checked = allChecked;
+  });
+
+  select.addEventListener('change', function () {
+    const product = this.closest('.contents');
+    const productPrice = parseInt(product.querySelector('p span#totalPrice').innerText.replace(',', ''));
+    const quantity = parseInt(this.value);
+
+    const updatedProductPrice = productPrice * quantity;
+    product.querySelector('p span#totalPrice').innerText = updatedProductPrice.toLocaleString();
+
     updateOrderPrice();
   });
-  orderPrice.addEventListener("change", () => {
-    updateOrderPrice();
-  })
-});
+}
+
+// 가격 계산 함수들
+function calculateDeliveryPrice(totalPrice) {
+  if (totalPrice > 0 && totalPrice < 100000) {
+    return 2500;
+  } else {
+    return 0;
+  }
+}
+
+function calculateFinalPrice(totalPrice) {
+  const delivery = calculateDeliveryPrice(totalPrice);
+  return totalPrice + delivery;
+}
+
+function calculatePoint(totalPrice) {
+  return Math.floor(totalPrice / 100);
+}
+
+
+
+
+
+
 
 
 // product1 삭제
 p1Delete.addEventListener("click", () => {
   product1[0].remove();
   p1TotalPrice.innerText = '0';
-  productsNum.innerText = products.length-1;
-  products.length -= 1;
   updateOrderPrice();
 });
 // product2 삭제
@@ -122,6 +180,7 @@ p3Delete.addEventListener("click", () => {
   p3TotalPrice.innerText = '0';
   updateOrderPrice();
 });
+
 
 // 개수에 따라 각 상품마다 가격변동
 p1Select.addEventListener("change", () => {

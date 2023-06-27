@@ -9,7 +9,7 @@
 }
 .mypage_nav_wrap {
   width: 1280px;
-  padding: 15px 0;
+  padding: 10px 0;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
@@ -19,7 +19,7 @@
 .mypage_nav_wrap span {
   font-family: var(--kor);
   color: var(--black);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 }
 .mypage_nav_wrap i {
@@ -77,7 +77,7 @@
 .mypage_userInfo,
 .mypage_shoppingInfo {
   width: calc(100% - 197px);
-  min-height: calc(100vh - 406px);
+  min-height: calc(100vh - 331px);
 }
 .mypage_userInfo .mypage_article,
 .mypage_shoppingInfo .mypage_article {
@@ -585,7 +585,7 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 
   cursor: pointer;
@@ -604,7 +604,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
 }
@@ -624,7 +624,7 @@
   flex: 1;
 }
 .mypage_shoppingInfo_order_history .contents {
-  padding: 20px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--gray);
 
   display: none;
@@ -896,9 +896,9 @@
   font-weight: 400;
 }
 .mypage_shoppingInfo_cart #orderBtn {
-  width: 470px;
-  height: 70px;
-  line-height: 70px;
+  width: 380px;
+  height: 60px;
+  /* line-height: 70px; */
   text-align: center;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -907,7 +907,7 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   cursor: pointer;
 }

@@ -1,51 +1,48 @@
-const prevButton = document.querySelector(".fa-chevron-left");
-const nextButton = document.querySelector(".fa-chevron-right");
-const slideItems = document.querySelectorAll(".live_items .live_item");
+const slideItems = document.querySelectorAll(".live_items .live_item_");
+let currentIndex = 0;
+let slidePosition = 0;
+let slideInterval;
 
-let currentIndex = 0; // 현재 보여지고 있는 아이템의 인덱스
-let slidePosition = 0; // 슬라이더의 위치
+function showSlide() {
+  slideItems.forEach((item, index) => {
+    if (index === currentIndex) {
+      item.classList.add("mainslider");
+      item.style.display = "flex";
+    } else {
+      item.classList.remove("mainslider");
+      item.style.display = "none";
+    }
+  });
+}
 
-prevButton.addEventListener("click", () => {
-  currentIndex--;
+function nextSlide() {
+  currentIndex++;
 
-  // 첫 번째 아이템 이상으로 감소하지 않도록 처리
-  if (currentIndex < 0) {
+  if (currentIndex >= slideItems.length) {
     currentIndex = 0;
   }
 
-  slideItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add("mainslide");
-      item.style.transform = `translateX(-${slidePosition}px)`;
-    } else {
-      item.classList.remove("mainslide");
-      item.style.transform = `translateX(-${slidePosition}px)`;
-    }
-  });
+  slidePosition = currentIndex * 50;
+  showSlide();
+}
 
-  slidePosition = currentIndex * 500;
-});
+function startSlideShow() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
 
-nextButton.addEventListener("click", () => {
-  currentIndex++;
+function stopSlideShow() {
+  clearInterval(slideInterval);
+}
 
-  // 마지막 아이템 이상으로 증가하지 않도록 처리
-  if (currentIndex >= slideItems.length) {
-    currentIndex = slideItems.length - 1;
-  }
+startSlideShow();
 
-  slideItems.forEach((item, index) => {
-    if (index === currentIndex) {
-      item.classList.add("mainslide");
-      item.style.transform = `translateX(${slidePosition}px)`;
-    } else {
-      item.classList.remove("mainslide");
-      item.style.transform = `translateX(${slidePosition}px)`;
-    }
-  });
+document
+  .querySelector(".lives_container")
+  .addEventListener("mouseover", stopSlideShow);
 
-  slidePosition = currentIndex * 970;
-});
+document
+  .querySelector(".lives_container")
+  .addEventListener("mouseleave", startSlideShow);
 
 const foodbtn = document.querySelector(".foodbtn");
 const babybtn = document.querySelector(".babybtn");

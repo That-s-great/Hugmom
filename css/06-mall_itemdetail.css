@@ -5,13 +5,13 @@
 }
 .item_detail_nav {
   width: 100vw;
-  padding: 15px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--gray);
 }
 .item_detail_nav p {
   margin: 0 auto;
   width: 1280px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 .item_detail_nav p i {

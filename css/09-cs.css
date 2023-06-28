@@ -529,13 +529,8 @@ main {
     width: 100%;
   }
   .cs_chapbot_content_right button {
-<<<<<<< HEAD
-    width: 200px;
-    height: 50px;
-=======
     width: 283px;
     height: 70px;
->>>>>>> f94d1cc94383e895641754843c018b00d1bd3cb7
 
     background-color: var(--main-green);
     border: none;
@@ -584,10 +579,7 @@ main {
     font-size: 14px;
   }
   .cs_ask_ques_accordion_item .accordionTitle {
-<<<<<<< HEAD
     margin: 20px 0;
-=======
->>>>>>> f94d1cc94383e895641754843c018b00d1bd3cb7
   }
   .cs_ask_ques_accordion_item .accIcon {
     float: right;

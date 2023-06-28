@@ -38,7 +38,7 @@
           <div class="cart_btn">
             <a href="/html/08-4-mypage-cart.html">
               <i class="fa-solid fa-cart-shopping"></i>
-              <span class="cart_count">0</span>
+              <span class="cart_count">3</span>
             </a>
           </div>
         </div>
@@ -48,11 +48,8 @@
             <i class="fas fa-xmark"></i>
           </div>
           <ul>
-            <li class="header_menu hugmomInfo">
-              <a href="/html/01-intro.html">Hugmom<span>소개</span></a>
-            </li>
             <li class="header_menu shop">
-              <a href="/html/04-usermall.html">SHOP</a>
+              <a href="#">SHOP</a>
               <ul class="shop_malls">
                 <li class="user_mall">
                   <a href="/html/04-usermall.html">산후조리원 회원 몰</a>
@@ -68,7 +65,7 @@
               <a href="/html/07-live.html">LIVE</a>
             </li>
             <li class="header_menu cs">
-              <a href="/html/9-1-cs-FAQ.html">고객센터</a>
+              <a href="#">고객센터</a>
               <ul class="cs_menu_list">
                 <li><a href="/html/9-1-cs-FAQ.html">자주하는 질문</a></li>
                 <li><a href="/html/9-2-cs-inform.html">공지사항</a></li>
@@ -76,7 +73,7 @@
             </li>
             <!-- Mobile 전용 메뉴 추가 -->
             <li class="header_menu mobile_myFage">
-              <a href="/html/08-1-mypage.html">마이페이지</a>
+              <a href="#">마이페이지</a>
               <ul class="mobile_myFage_list">
                 <li><a href="/html/08-1-mypage.html">회원정보 확인</a></li>
                 <li>
@@ -94,16 +91,22 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
+          <!-- Mobile Logo -->
+          <div class="mobile_menu_logo">
+            <a href="/html/01-intro.html"
+              ><img src="/img/hugmom_logo_2.png" alt=""
+            /></a>
+          </div>
           <!-- user info -->
           <div class="user_info">
             <div class="user_name">
-              <span>홍길동님</span>
+              <a href="/html/08-1-mypage.html"><span>홍길동님</span></a>
               <a class="logout_btn" href="#">로그아웃</a>
               <i class="fas fa-chevron-down"></i>
               <ul class="user_info_menu">
                 <li>
                   <a href="/html/08-4-mypage-cart.html">장바구니</a>
-                  <span class="cart_count" data-cart-count="0">0</span>
+                  <span class="cart_count" data-cart-count="0">3</span>
                 </li>
                 <li><a href="/html/08-1-mypage.html">마이페이지</a></li>
                 <li><a href="#">로그아웃</a></li>
@@ -157,7 +160,8 @@
         <!-- Main Content Section -->
           <section class="main_content_section">
             <div class="main_content_title">
-              <h2>이 상품 어때요 ?</h2>
+              <h2>이 상품 어때요?</h2>
+              <p>지금 허그맘에서 가장 인기있는 제품을 만나보세요!</p>
             </div>
             <div class="main_content_items">
             <div class="user_mall_item">
@@ -358,125 +362,171 @@
                 </span>
               </div>
               <div class="live_broadcast_items">
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_baby_1.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail01.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_1.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>
+                        제주 감귤 무료배송🍊고당도 하우스귤 산지직송 오픈🍊
+                      </h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>8.4만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_baby_2.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail02.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_2.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>💛성주 꿀참외💛세상 시원한 달콤 참외!</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>10.4만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_mom_3.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail03.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_3.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>
+                        🚚무배특가🚚신비복숭아&천도복숭아&달콤자두 라이브핫딜
+                      </h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>7.1만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_food_3.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail04.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_4.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>여름의 초입에서 맛보는 제철 복숭아🍑</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>8.8만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_food_1.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail05.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_5.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>재구매율100% 황토밭 꿀뚝뚝 속이쫀쫀한 꿀고구마📰</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>11.4만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_food_4.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail06.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_6.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>
+                        제스프리 달콤 썬골드키위,상큼 그린키위 라이브 특가
+                      </h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>10.7만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_food_6.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail07.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_7.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>💥주문폭주💥매실 라이브 특가+무료배송까지!</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>3.5만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_mom_6.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail08.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_8.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>스테비아토마토 40만팩 판매! 7만건의 압도적인 후기</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>18.4만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_mom_7.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail09.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_9.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>2023년 첫출하 초당옥수수가 돌아왔다!🌽</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>16.2만</span>
+                    </div>
+                  </a>
                 </div>
-                <div class="live_item">
-                  <div class="live_broadcast_show live_broadcast_img">
-                    <div class="live_broadcast_tag">LIVE</div>
-                    <img src="/img/live_mom_9.png" alt="">
-                  </div>
-                  <div class="live_txt">
-                    <p class="live_item_title">홈러브Homeluv의 쇼핑 라이브</p>
-                    <span class="live_bj_name">홈러브Homeluv</span>
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="live_user_viewer">9.9만</span>
-                  </div>
+                <div class="live_item hot_live_video">
+                  <a
+                    href="/html/07-1 live_detail/07-1.live_detail10.html"
+                    class="hot_live_video_img"
+                  >
+                    <div class="live_img">
+                      <img src="/img/live_food_10.png" alt="" />
+                      <div class="live_banner">LIVE</div>
+                    </div>
+                    <div class="hot_live_video_title">
+                      <h3>💛프리미엄 꿀참외💛 입안 가득 아삭 달콤 파티</h3>
+                      <p><span>방송 출처</span> 식품</p>
+                      <span><i class="fas fa-play"></i>5.4만</span>
+                    </div>
+                  </a>
                 </div>
                 </div>
                 <div class="live_more_view_btn_box">
@@ -495,49 +545,49 @@
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_1.jpg" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>품질관리센터</h5>
+                  <div class="main_service_item_title">
+                    <h5>품질관리센터</h5>
+                  </div>
                 </div>
               </div>
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_2.png" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>매장안내</h5>
+                  <div class="main_service_item_title">
+                    <h5>매장안내</h5>
+                  </div>
                 </div>
               </div>
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_3.jpg" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>허그맘맴버스</h5>
+                  <div class="main_service_item_title">
+                    <h5>허그맘맴버스</h5>
+                  </div>
                 </div>
               </div>
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_4.jpg" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>허그맘레시피</h5>
+                  <div class="main_service_item_title">
+                    <h5>허그맘레시피</h5>
+                  </div>
                 </div>
               </div>
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_5.jpg" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>신규회원혜택</h5>
+                  <div class="main_service_item_title">
+                    <h5>신규회원혜택</h5>
+                  </div>
                 </div>
               </div>
               <div class="main_service_item">
                 <div class="main_service_item_img">
                   <img src="/img/01.main_service_item_img_6.jpg" alt="">
-                </div>
-                <div class="main_service_item_title">
-                  <h5>허그맘매거진</h5>
+                  <div class="main_service_item_title">
+                    <h5>허그맘매거진</h5>
+                  </div>
                 </div>
               </div>
             </div>

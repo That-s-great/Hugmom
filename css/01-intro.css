@@ -22,7 +22,8 @@
   height: 350px;
   position: relative; 
   border-radius: 5px;
-  margin-top: 20px;
+  box-sizing: border-box;
+  /* margin-top: 20px; */
 }
 /* Banner Slide */
 .intro_page_banner_section_slide_wrapper {
@@ -130,14 +131,14 @@
   margin-left: 350px;
 }
 .banner_slide_prev_btn i{
-  font-size: 45px;
+  font-size: 35px;
   color: var(--dark-gray);
 }
 .banner_slide_prev_btn:hover i {
   color: var(--gray);
 }
 .banner_slide_next_btn i{
-  font-size: 45px;
+  font-size: 35px;
   color: var(--dark-gray);
 }
 .banner_slide_next_btn:hover i {
@@ -153,12 +154,12 @@
   bottom: 10%;
   right: 5%;
 
-  background-color: var(--gray);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
 
   text-align: center;
   line-height: 2;
-  color: var(--white);
+  /* color: var(--white); */
   font-family: var(--kor);
   font-size: 18px;
   font-weight: bold;
@@ -169,12 +170,27 @@
   width: 1280px;
   height: 100%;
 }
-.main_content_section .main_content_title h2 {
+.main_content_title {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 60px 0 40px;
+}
+.main_content_title h2 {
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 30px;
-  /* font-size: 32px; */
+  margin: 50px 0 30px; */
+  font-size: 28px;
+}
+.main_content_title p {
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--dark-gray);
 }
 .main_content_items {
   width: 100%;
@@ -198,7 +214,7 @@
 /* ### Intro Page LIVE Section ### */
 .intro_page_live_section {
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,13 +222,15 @@
 }
 .intro_page_live_article {
   width: 1280px;
-  height: 536px;
+  /* height: 600px; */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 /* Live Section Title */
 .intro_page_live_article h1 {
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-family: var(--kor);
 }
 .intro_page_live_article h1 strong{
@@ -251,16 +269,16 @@
 /* Live Slide */
 .live_broadcast_items {
   width: 1260px;
-  height: 260px;
+  /* height: 260px; */
   display: flex;
   justify-content: flex-start;
   margin-top: 20px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 .live_item {
-  border: 1px solid var(--dark-gray);
-  width: 300px;
-  height: 230px;
+  /* border: 1px solid var(--dark-gray); */
+  /* width: 300px; */
+  /* height: 400px; */
   margin-right: 20px;
   transition: all 0.7s ease-in-out;
   flex: 0 0 auto; 
@@ -270,10 +288,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.live_broadcast_show {
+/* .live_broadcast_show {
   width: 100%;
   height: 168px;
-  /* border: 1px solid var(--black); */
+  border: 1px solid var(--black);
   position: relative;
 }
 .live_broadcast_tag {
@@ -294,10 +312,10 @@
   width: 100%;
   height: 100%;
   border-bottom: 1px solid var(--dark-gray);
-}
+} */
 
 /* Live Slide Text */
-.live_txt {
+/* .live_txt {
   margin-left: 5px;
 }
 .live_item_title {
@@ -320,14 +338,14 @@
   font-size: 16px;
   color: var(--dark-gray);
   font-family: var(--kor);
-}
+} */
 
 /* Live Slide Bottom Button */
 .live_more_view_btn_box {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-bottom: 50px;
 }
 .live_more_view_btn {
   width: 150px;
@@ -362,21 +380,30 @@
   align-items: center;
   gap: 10px ;
 }
+.main_service_title h4 {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--dark-gray);
+}
 .main_service_items {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 
   margin-top: 50px;
 }
 .main_service_item {
-  width: 100%;
-
+  /* width: 100%; */
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-.main_service_items .main_service_item_img img {
+.main_service_item_title {
+  text-align: center;
 }
 
 /* Mobile */
@@ -481,9 +508,9 @@
   .banner_slide_prev_btn {
     margin-right: 15px;
   }
-  .banner_slide_next_btn {
-    margin-left: 15px;
-  }
+  /* .banner_slide_next_btn {
+    margin-left: 30px;
+  } */
   .banner_slide_prev_btn i {
     font-size: 30px;
     color: var(--dark-gray);
@@ -513,12 +540,15 @@
     width: 100%;
   }
   .main_content_title h2 {
+    font-size: 24px;
+  }
+  .main_content_title p {
     font-size: 18px;
   }
   .main_content_items {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
-    
+    justify-content: space-evenly;
   }
   .main_content_banner {
     width: 95%;
@@ -531,10 +561,10 @@
 
   /* ### Intro Page LIVE Section ### */
   .intro_page_live_section {
-    width: 100%;
+    width: 100vw;
   }
   .intro_page_live_article {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -548,13 +578,13 @@
   /* Live Slide Button */
   .live_slide_btn {
     position: absolute;
-    top: 10%;
+    top: 4%;
     right: 2%;
   }
   /* Live Slide */
   .live_broadcast_items {
     width: 95%;
-    height: 100px;
+    /* height: 100px; */
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 40px;
@@ -563,7 +593,7 @@
     width: 175px;
     height: 100%;
   }
-  .live_item .live_txt p {
+  /* .live_item .live_txt p {
     font-size: 12px;
   }
   .live_item .live_txt .live_bj_name {
@@ -574,9 +604,9 @@
   }
   .live_item .live_txt .live_user_viewer {
     font-size: 12px;
-  }
+  } */
   .live_more_view_btn_box {
-    margin-top: 140px;
+    /* margin-top: 40px; */
     margin-right: 0;
   }
 
@@ -591,25 +621,27 @@
     font-size: 24px;
   }
   .main_service_title h4 {
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--dark-gray);
   }
   .main_service_item {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
   }
   .main_service_item_title h5 {
     font-size: 12px;
   }
-  .main_service_item .main_service_item_img {
+  /* .main_service_item .main_service_item_img {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  .main_service_item .main_service_item_img img {
+  } */
+  /* .main_service_item .main_service_item_img img {
     width: 40px;
-  }
-  .main_service_item .main_service_item_title h5 {
+  } */
+  /* .main_service_item .main_service_item_title h5 {
     font-size: 10px;
-  }
+  } */
 }

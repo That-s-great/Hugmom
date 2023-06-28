@@ -95,6 +95,7 @@
   padding: 10px 20px;
   color: var(--main-green);
   font-weight: bold;
+  transition: all 0.3s;
 }
 .hot_live_title a:hover button {
   background-color: var(--main-green);

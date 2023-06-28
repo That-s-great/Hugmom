@@ -67,10 +67,6 @@ slideWrapper.addEventListener('mouseout', handleMouseOut);
 startSlideInterval();
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6f19b714845eab1d5b82b3670f39d57d2fb46f31
 
 
 
@@ -100,13 +96,10 @@ liveNextBtn.addEventListener('click', () => {
     liveCurrentIdx++;
     moveLiveSlide();
     console.log(liveCurrentIdx);
-<<<<<<< HEAD
-=======
   }
   if(liveCurrentIdx > 6) {
     liveCurrentIdx--;
     moveLiveSlide();
->>>>>>> 6f19b714845eab1d5b82b3670f39d57d2fb46f31
   }
 });
 

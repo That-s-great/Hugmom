@@ -1,13 +1,14 @@
 // 카트 아이콘 클릭시 알림창 뜨기
 const addCartIconBtn = document.querySelectorAll(".add_cart_icon_btn");
-let cartCount = 0;
+let cartCount = 3;
 addCartIconBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     alert("선택하신 상품이 장바구니에 담겼습니다");
 
     // 카트 아이콘 클릭시 헤더-카트아이콘에 숫자 추가
     cartCount += 1;
-    document.querySelector(".cart_count").innerText = cartCount;
+    document.querySelectorAll(".cart_count")[0].innerText = cartCount;
+    document.querySelectorAll(".cart_count")[1].innerText = cartCount;
   });
 });
 

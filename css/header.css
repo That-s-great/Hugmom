@@ -34,8 +34,9 @@
 }
 .header_menu_list > ul {
   width: 600px;
+  margin-left: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 31px;
 }
 .header_menu_list > ul > .header_menu > a {
@@ -46,10 +47,7 @@
   font-size: 1.25rem;
   transition: 0.2s;
 }
-.header_menu_list ul li:nth-child(1) a span {
-  font-family: var(--kor);
-}
-.header_menu_list ul li:nth-child(4) > a {
+.header_menu_list .header_menu.cs > a {
   display: block;
   font-family: var(--kor);
   font-size: 19px; /*영문폰트와 맞추기위해 조정함*/
@@ -189,6 +187,9 @@
 .search_box input {
   outline: none;
   border: none;
+}
+.search_box input:focus {
+  outline: none;
 }
 .search_box button {
   background-color: transparent;
@@ -394,6 +395,7 @@
     position: absolute;
     top: 60px;
     gap: 0;
+    margin-left: 0;
   }
   .header_menu_list > ul > li {
     width: 100%;
@@ -401,9 +403,9 @@
     padding: 15px 0;
     border-bottom: 1px solid var(--gray);
   }
-  .header_menu_list > ul > li:nth-child(2),
-  .header_menu_list > ul > li:nth-child(4),
-  .header_menu_list > ul > li:nth-child(5) {
+  .header_menu_list > ul > li:nth-child(1),
+  .header_menu_list > ul > li:nth-child(3),
+  .header_menu_list > ul > li:nth-child(4) {
     padding: 15px 0 0;
   }
   .header_menu_list > ul > li > a {
@@ -433,9 +435,8 @@
   .header_menu_list > ul > .header_menu > a {
     font-size: 16px;
   }
-  .header_menu_list ul li:nth-child(4) > a {
+  .header_menu.cs > a {
     font-size: 16px;
-    margin-left: 20px;
   }
 
   /* shop 하위메뉴 */
@@ -468,6 +469,9 @@
   }
 
   /* 고객센터 하위메뉴 */
+  .header_menu_list .header_menu.cs > a {
+    font-size: 16px;
+  }
   .header_menu.cs .cs_menu_list {
     display: block;
     position: relative;
@@ -523,9 +527,9 @@
   .mobile_myFage_list li:first-child {
     border-top: 1px solid var(--gray);
   }
-  .mobile_myFage_list li:last-child {
+  /* .mobile_myFage_list li:last-child {
     border-bottom: none;
-  }
+  } */
   .mobile_myFage_list li a {
     padding-left: 30px;
     font-size: 14px;

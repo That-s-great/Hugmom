@@ -81,6 +81,8 @@ cartButton.addEventListener("click", () => {
     alert("상품을 선택해주세요");
   } else {
     alert("공동 구매하기 모집이 진행됩니다.");
+    num.innerText = 1;
+    total.innerText = 0;
     const div = document.createElement("div");
     div.className = "in";
 
@@ -208,4 +210,20 @@ document.addEventListener("DOMContentLoaded", () => {
         questionContentElement.style.display === "none" ? "block" : "none";
     });
   });
+});
+
+const sharebtn = document.querySelector(".sharebtn");
+sharebtn.addEventListener("click", () => {
+  const URL = window.location.href;
+
+  //input 요소를 임시로 생성하고, 해당 요소에 주소를 설정한 후에 사용자가 텍스트를 선택하고 복사할 수 있도록 함
+  const tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = URL;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  alert("링크가 복사되었습니다.");
 });

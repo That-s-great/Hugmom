@@ -51,6 +51,8 @@ cartButton.addEventListener("click", function () {
   } else {
     alert("장바구니에 상품이 담겼습니다.");
     item.selectedIndex = 0;
+    num.innerText = 1;
+    total.innerText = 0;
   }
 });
 comment.forEach(function (e) {
@@ -174,4 +176,20 @@ buybtn.addEventListener("click", () => {
 });
 buyboxclose.addEventListener("click", () => {
   select_itemwrap.classList.remove("buybox_open");
+});
+
+const sharebtn = document.querySelector(".sharebtn");
+sharebtn.addEventListener("click", () => {
+  const URL = window.location.href;
+
+  //input 요소를 임시로 생성하고, 해당 요소에 주소를 설정한 후에 사용자가 텍스트를 선택하고 복사할 수 있도록 함
+  const tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = URL;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  alert("링크가 복사되었습니다.");
 });

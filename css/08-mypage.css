@@ -4,11 +4,12 @@
 .mypage_nav {
   border-bottom: 1px solid var(--gray);
   width: 100%;
-  height: 40px;
+  /* height: 40px; */
+  /* padding: 15px 0; */
 }
 .mypage_nav_wrap {
   width: 1280px;
-  height: 40px;
+  padding: 10px 0;
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
@@ -18,8 +19,12 @@
 .mypage_nav_wrap span {
   font-family: var(--kor);
   color: var(--black);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+}
+.mypage_nav_wrap i {
+  font-size: 18px;
+  font-weight: bold;
 }
 .mypage_nav_wrap .mypage_nav_first {
   color: var(--main-green);
@@ -72,7 +77,7 @@
 .mypage_userInfo,
 .mypage_shoppingInfo {
   width: calc(100% - 197px);
-  min-height: calc(100vh - 406px);
+  min-height: calc(100vh - 331px);
 }
 .mypage_userInfo .mypage_article,
 .mypage_shoppingInfo .mypage_article {
@@ -109,7 +114,7 @@
 .mypage_userInfo .mypage_userInfo_detail {
   border: 1px solid var(--main-green);
   border-radius: 5px;
-  padding: 40px 0 40px 30px;
+  padding: 30px 0 30px 50px;
 
   display: flex;
   flex-direction: row;
@@ -138,19 +143,19 @@
 .mypage_userInfo_detail_profile span.badge {
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--kor);
-  font-weight: bold;
+  font-weight: 400;
 
   display: inline-block;
   text-align: center;
-  width: 140px;
-  height: 40px;
-  line-height: 40px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
   border-radius: 30px;
 }
 .mypage_userInfo_detail_profile p span.name {
-  font-size: 24px;
+  font-size: 22px;
 }
 .mypage_userInfo_detail_profile p span.name b {
   color: var(--main-green);
@@ -168,7 +173,8 @@
   align-items: center;
 }
 .mypage_userInfo_detail_item {
-  width: 208px;
+  /* width: 208px; */
+  width: 184px;
   height: 120px;
   text-align: center;
   border-right: 1px solid var(--main-green);
@@ -193,13 +199,13 @@
   display: inline-block;
 }
 .mypage_userInfo_detail_item .desc_top {
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--kor);
   font-weight: 800;
   color: var(--black);
 }
 .mypage_userInfo_detail_item .desc_bottom {
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--eng);
   font-weight: 700;
   color: var(--main-green);
@@ -468,12 +474,11 @@
 }
 .mypage_shoppingInfo_order_check {
   width: 100%;
-  height: 284px;
   border-radius: 5px;
 }
 .mypage_shoppingInfo_order_check .top {
   width: 100%;
-  height: 152px;
+  height: 132px;
   border: 1px solid var(--gray);
   border-bottom: none;
   border-radius: 5px 5px 0 0;
@@ -571,7 +576,6 @@
 .mypage_shoppingInfo_order .orderChk_btn {
   width: 100px;
   height: 35px;
-  line-height: 35px;
   text-align: center;
   margin: 20px 0;
   margin-left: 50%;
@@ -581,7 +585,7 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 
   cursor: pointer;
@@ -600,7 +604,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
 }
@@ -620,7 +624,7 @@
   flex: 1;
 }
 .mypage_shoppingInfo_order_history .contents {
-  padding: 25px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--gray);
 
   display: none;
@@ -892,9 +896,9 @@
   font-weight: 400;
 }
 .mypage_shoppingInfo_cart #orderBtn {
-  width: 470px;
-  height: 70px;
-  line-height: 70px;
+  width: 380px;
+  height: 60px;
+  /* line-height: 70px; */
   text-align: center;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -903,7 +907,7 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   cursor: pointer;
 }

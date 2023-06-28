@@ -45,7 +45,7 @@ for (let i = 0; i < products.length; i++) {
   });
 }
 
-// // 개수에 따라 변하는 상품들의 가격
+// 개수에 따라 변하는 상품들의 가격
 const p1Select = document.querySelector('.product1 select');
 const p1TotalPrice = document.querySelector('.product1 #totalPrice');
 const p1Delete = document.querySelector('.product1 #deleteProduct');
@@ -63,17 +63,17 @@ const finalPrice = document.querySelector("#finalPrice");
 const point = document.querySelector("#point");
 
 
-// Helper function to update order price
+// 즉각적으로 변동하는 최종결제금액
 function updateOrderPrice() {
   const p1Price = parseInt(p1TotalPrice.innerText.replace(',', ''));
   const p2Price = parseInt(p2TotalPrice.innerText.replace(',', ''));
   const p3Price = parseInt(p3TotalPrice.innerText.replace(',', ''));
 
   const totalPrice = p1Price + p2Price + p3Price;
-
+  
   orderPrice.innerText = totalPrice.toLocaleString();
 
-  if (totalPrice < 100000) {
+  if (totalPrice > 0 && totalPrice < 100000) {
     deliveryPrice.innerText = '2,500';
   } else {
     deliveryPrice.innerText = '0';
@@ -84,50 +84,113 @@ function updateOrderPrice() {
   point.innerText = Math.floor(totalPrice / 100).toLocaleString();
 }
 
+
+
+
+// 선택삭제 기능
 deleteSelect.addEventListener('click', function(e) {
   e.preventDefault();
 
   const checkedProducts = document.querySelectorAll('.mypage_shoppingInfo_cart_select .contents input[type="checkbox"]:checked');
+  let totalPrice = 0;
+
   checkedProducts.forEach(function(product) {
     const contents = product.closest('.contents');
+    const productPrice = parseInt(contents.querySelector('p span#totalPrice').innerText.replace(',', ''));
+
+    totalPrice += productPrice;
     contents.remove();
   });
-  orderPrice.innerText = '0';
-  deliveryPrice.innerText = '0';
-  finalPrice.innerText = '0';
-  point.innerText = '0';
+
+  updateOrderPrice();
+
+  if (!isNaN(totalPrice)) {
+    const currentOrderPrice = parseInt(orderPrice.innerText.replace(',', ''));
+    const newOrderPrice = currentOrderPrice - totalPrice;
+    orderPrice.innerText = newOrderPrice.toLocaleString();
+    deliveryPrice.innerText = calculateDeliveryPrice(newOrderPrice).toLocaleString();
+    finalPrice.innerText = calculateFinalPrice(newOrderPrice).toLocaleString();
+    point.innerText = calculatePoint(newOrderPrice).toLocaleString();
+  }
 });
 
-// Event listener for p1Delete
+// 체크박스 상태 변화 감지
+for (let i = 0; i < products.length; i++) {
+  const checkBox = products[i].querySelector('input[type="checkbox"]');
+  const select = products[i].querySelector('select');
+
+  checkBox.addEventListener('change', function () {
+    updateSelectAllBtn();
+    const allChecked = checkIfAnyUnchecked();
+    selectAllBtn.checked = allChecked;
+  });
+
+  select.addEventListener('change', function () {
+    const product = this.closest('.contents');
+    const productPrice = parseInt(product.querySelector('p span#totalPrice').innerText.replace(',', ''));
+    const quantity = parseInt(this.value);
+
+    const updatedProductPrice = productPrice * quantity;
+    product.querySelector('p span#totalPrice').innerText = updatedProductPrice.toLocaleString();
+
+    updateOrderPrice();
+  });
+}
+
+// 가격 계산 함수들
+function calculateDeliveryPrice(totalPrice) {
+  if (totalPrice > 0 && totalPrice < 100000) {
+    return 2500;
+  } else {
+    return 0;
+  }
+}
+
+function calculateFinalPrice(totalPrice) {
+  const delivery = calculateDeliveryPrice(totalPrice);
+  return totalPrice + delivery;
+}
+
+function calculatePoint(totalPrice) {
+  return Math.floor(totalPrice / 100);
+}
+
+
+
+
+
+
+
+
+// product1 삭제
 p1Delete.addEventListener("click", () => {
   product1[0].remove();
   p1TotalPrice.innerText = '0';
   updateOrderPrice();
 });
-// Event listener for p2Delete
+// product2 삭제
 p2Delete.addEventListener("click", () => {
   product2[0].remove();
   p2TotalPrice.innerText = '0';
   updateOrderPrice();
 });
-// Event listener for p3Delete
+// product3 삭제
 p3Delete.addEventListener("click", () => {
   product3[0].remove();
   p3TotalPrice.innerText = '0';
   updateOrderPrice();
 });
 
-// Event listener for p1Select
+
+// 개수에 따라 각 상품마다 가격변동
 p1Select.addEventListener("change", () => {
   p1TotalPrice.innerText = (p1Select.value * 9980).toLocaleString();
   updateOrderPrice();
 });
-// Event listener for p2Select
 p2Select.addEventListener("change", () => {
   p2TotalPrice.innerText = (p2Select.value * 60000).toLocaleString();
   updateOrderPrice();
 });
-// Event listener for p3Select
 p3Select.addEventListener("change", () => {
   p3TotalPrice.innerText = (p3Select.value * 11900).toLocaleString();
   updateOrderPrice();

@@ -13,14 +13,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 /* ### Intro Page Banner Section ### */
 .intro_page_banner_section {
   width: 1900px;
   height: 350px;
-  position: relative; 
+  position: relative;
   border-radius: 5px;
   box-sizing: border-box;
   /* margin-top: 20px; */
@@ -86,7 +85,7 @@
 .banner_slide_sign_up_btn {
   width: 239px;
   height: 60px;
-  
+
   border: none;
   border-radius: 5px;
   background-color: var(--main-green);
@@ -98,14 +97,11 @@
   margin-top: 20px;
 
   cursor: pointer;
-
-
 }
 .banner_slide_sign_up_btn .sign_up_i {
   margin-left: 5px;
   color: #fff;
 }
-
 
 /* Slide Prev & Next Button */
 .banner_slide_btn_wrap {
@@ -130,14 +126,14 @@
 .banner_slide_next_btn {
   margin-left: 350px;
 }
-.banner_slide_prev_btn i{
+.banner_slide_prev_btn i {
   font-size: 35px;
   color: var(--dark-gray);
 }
 .banner_slide_prev_btn:hover i {
   color: var(--gray);
 }
-.banner_slide_next_btn i{
+.banner_slide_next_btn i {
   font-size: 35px;
   color: var(--dark-gray);
 }
@@ -233,7 +229,7 @@
   font-size: 28px;
   font-family: var(--kor);
 }
-.intro_page_live_article h1 strong{
+.intro_page_live_article h1 strong {
   color: var(--red);
   font-family: var(--eng);
 }
@@ -281,7 +277,7 @@
   /* height: 400px; */
   margin-right: 20px;
   transition: all 0.7s ease-in-out;
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   border-radius: 5px;
 
   display: flex;
@@ -378,7 +374,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px ;
+  gap: 10px;
 }
 .main_service_title h4 {
   font-size: 20px;
@@ -405,7 +401,9 @@
 .main_service_item_title {
   text-align: center;
 }
-
+.item_price.logout {
+  color: var(--red);
+}
 /* Mobile */
 @media all and (max-width: 768px) {
   /* Container */
@@ -490,7 +488,7 @@
     margin-top: 3.125rem;
     cursor: pointer;
   }
-  
+
   /* Slide Prev & Next Button */
   .banner_slide_btn_wrap {
     width: 100%;
@@ -558,7 +556,6 @@
     width: 100%;
   }
 
-
   /* ### Intro Page LIVE Section ### */
   .intro_page_live_section {
     width: 100vw;
@@ -612,8 +609,7 @@
 
   .main_service_section {
     width: 100%;
-
-  };
+  }
   .main_service_title {
     width: 100%;
   }

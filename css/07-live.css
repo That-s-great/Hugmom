@@ -139,6 +139,7 @@
 .user_mall_menu li a.on {
   color: var(--main-green);
   font-weight: bold;
+  border-bottom: 2px solid var(--main-green);
 }
 .live_wrap_baby,
 .live_wrap_mom {
@@ -322,6 +323,9 @@
 }
 
 @media all and (max-width: 767px) {
+  .live_title {
+    display: none;
+  }
   .lives_container {
     width: 100%;
     height: 300px;
@@ -341,7 +345,7 @@
   }
   .hot_live .hot_live_headtitle {
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 18px;
   }
   .live_item_ {

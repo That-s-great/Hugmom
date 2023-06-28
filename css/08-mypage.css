@@ -107,9 +107,6 @@
   position: relative;
 }
 
-
-
-
 /* Mypage - Check */
 .mypage_userInfo .mypage_userInfo_detail {
   border: 1px solid var(--main-green);
@@ -211,9 +208,6 @@
   color: var(--main-green);
 }
 
-
-
-
 /* Mypage - Edit(1) */
 .mypage_userInfo_identification {
   display: flex;
@@ -291,9 +285,6 @@
   cursor: pointer;
 }
 
-
-
-
 /* Mypage - Edit(2) */
 .mypage_userInfo_edit {
   display: flex;
@@ -324,7 +315,6 @@
   width: 186px;
   height: 27px;
   padding: 0 10px;
-  
 
   outline: none;
   border: 1px solid var(--more-light-gray);
@@ -463,9 +453,6 @@
   margin-left: 5px;
 }
 
-
-
-
 /* Mypage - Order */
 .mypage_shoppingInfo_order {
   display: flex;
@@ -520,7 +507,7 @@
   font-size: 18px;
 }
 .mypage_shoppingInfo_order_check .top .desc span:nth-child(2) {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 .mypage_shoppingInfo_order_check .bottom .order_type,
@@ -658,25 +645,25 @@
   height: 100px;
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic1 {
-  background-image: url('/img/user_mall_best_item_6.jpeg');
+  background-image: url("/img/user_mall_best_item_6.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic2 {
-  background-image: url('/img/user_mall_baby_item_8.jpeg');
+  background-image: url("/img/user_mall_baby_item_8.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic3 {
-  background-image: url('/img/user_mall_best_item_5.jpeg');
+  background-image: url("/img/user_mall_best_item_5.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic4 {
-  background-image: url('/img/user_mall_best_item_4.jpeg');
+  background-image: url("/img/user_mall_best_item_4.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic5 {
-  background-image: url('/img/user_mall_best_item_7.jpeg');
+  background-image: url("/img/user_mall_best_item_7.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic6 {
-  background-image: url('/img/user_mall_mom_item_3.jpeg');
+  background-image: url("/img/user_mall_mom_item_3.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .orderInfo div.pic7 {
-  background-image: url('/img/user_mall_food_item_1.jpeg');
+  background-image: url("/img/user_mall_food_item_1.jpeg");
 }
 .mypage_shoppingInfo_order_history .contents .desc {
   display: flex;
@@ -693,9 +680,6 @@
   position: absolute;
   bottom: 0;
 }
-
-
-
 
 /* Mypage - Cart */
 .mypage_shoppingInfo_cart_select {
@@ -720,17 +704,21 @@
   cursor: pointer;
 }
 /* Custom checkbox - select all */
-.mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] {
+.mypage_shoppingInfo_cart_select .top_nav .left input[type="checkbox"] {
   display: none;
 }
-.mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] + em {
+.mypage_shoppingInfo_cart_select .top_nav .left input[type="checkbox"] + em {
   width: 18px;
   height: 18px;
   display: inline-block;
   margin-right: 3px;
 }
-.mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox] + em::before {
-  content: '\f058';
+.mypage_shoppingInfo_cart_select
+  .top_nav
+  .left
+  input[type="checkbox"]
+  + em::before {
+  content: "\f058";
   font-family: fontawesome;
   font-size: 18px;
   font-style: normal;
@@ -738,25 +726,33 @@
   display: inline-block;
   transform: translateY(1px);
 }
-.mypage_shoppingInfo_cart_select .top_nav .left input[type=checkbox]:checked + em::before {
+.mypage_shoppingInfo_cart_select
+  .top_nav
+  .left
+  input[type="checkbox"]:checked
+  + em::before {
   color: var(--main-green);
 }
 .mypage_shoppingInfo_cart_select .top_nav .right span.delete {
   cursor: pointer;
 }
 /* Custom checkbox - select one */
-.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] {
+.mypage_shoppingInfo_cart_select .contents label input[type="checkbox"] {
   display: none;
 }
-.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] + em {
+.mypage_shoppingInfo_cart_select .contents label input[type="checkbox"] + em {
   width: 18px;
   height: 18px;
   display: inline-block;
   margin-right: 3px;
   cursor: pointer;
 }
-.mypage_shoppingInfo_cart_select .contents label input[type=checkbox] + em::before {
-  content: '\f058';
+.mypage_shoppingInfo_cart_select
+  .contents
+  label
+  input[type="checkbox"]
+  + em::before {
+  content: "\f058";
   font-family: fontawesome;
   font-size: 18px;
   font-style: normal;
@@ -764,7 +760,11 @@
   display: inline-block;
   transform: translateY(1px);
 }
-.mypage_shoppingInfo_cart_select .contents label input[type=checkbox]:checked + em::before {
+.mypage_shoppingInfo_cart_select
+  .contents
+  label
+  input[type="checkbox"]:checked
+  + em::before {
   color: var(--main-green);
 }
 
@@ -790,14 +790,14 @@
   width: 120px;
   height: 120px;
 }
-.mypage_shoppingInfo_cart_select .contents .productBox div.pic1{
-  background-image: url('/img/user_mall_best_item_8.jpeg');
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic1 {
+  background-image: url("/img/user_mall_best_item_8.jpeg");
 }
-.mypage_shoppingInfo_cart_select .contents .productBox div.pic2{
-  background-image: url('/img/user_mall_mom_item_4.jpeg');
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic2 {
+  background-image: url("/img/user_mall_mom_item_4.jpeg");
 }
-.mypage_shoppingInfo_cart_select .contents .productBox div.pic3{
-  background-image: url('/img/user_mall_best_item_2.jpeg');
+.mypage_shoppingInfo_cart_select .contents .productBox div.pic3 {
+  background-image: url("/img/user_mall_best_item_2.jpeg");
 }
 .mypage_shoppingInfo_cart_select .contents .productBox div.desc {
   position: relative;
@@ -808,7 +808,11 @@
   font-size: 16px;
   font-weight: 700;
 }
-.mypage_shoppingInfo_cart_select .contents .productBox div.desc .product_detail {
+.mypage_shoppingInfo_cart_select
+  .contents
+  .productBox
+  div.desc
+  .product_detail {
   position: absolute;
   bottom: 0;
 
@@ -819,13 +823,18 @@
   padding: 0 10px;
   border-radius: 5px;
   font-weight: 400;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.mypage_shoppingInfo_cart_select .contents .productBox div.desc .product_detail select {
+.mypage_shoppingInfo_cart_select
+  .contents
+  .productBox
+  div.desc
+  .product_detail
+  select {
   width: 100px;
   height: 35px;
   border-radius: 5px;
@@ -845,7 +854,7 @@
   position: absolute;
   bottom: 20px;
   right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--main-green);
 }
@@ -907,7 +916,7 @@
   border-radius: 5px;
   background-color: var(--main-green);
   color: var(--white);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
 }

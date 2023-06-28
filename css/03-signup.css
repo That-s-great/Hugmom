@@ -78,12 +78,12 @@
 }
 /* Signup Page User Info Form  */
 .user_info_form {
-width: 73.75rem;
-height: 46.5625rem;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-margin-left: 12.8125rem;
+  width: 73.75rem;
+  height: 46.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 12.8125rem;
 }
 /* ## User Info Form Line ## */
 .user_info_form_line.line_name,
@@ -107,7 +107,7 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
 }
 .user_info_form_line label {
@@ -165,7 +165,7 @@ margin-left: 12.8125rem;
   width: 5.5625rem;
   height: 2.1875rem;
   outline: 0;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
   text-align: center;
 }
@@ -212,7 +212,7 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
   margin-right: 1.125rem;
 }
@@ -250,9 +250,9 @@ margin-left: 12.8125rem;
 }
 .user_info_form_line.line_address div div {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
 }
-.user_info_form_line.line_address div div:first-child  {
+.user_info_form_line.line_address div div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -262,7 +262,7 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
 }
 .user_info_form_line.line_address div div:first-child input:focus {
@@ -283,19 +283,18 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
 }
 .user_info_form_line.line_address div div:nth-child(2) input:focus {
   border-color: var(--main-green);
-
 }
 .user_info_form_line.line_address div div:last-child input {
   width: 19.0625rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
 }
 .user_info_form_line.line_address div div:last-child input:focus {
@@ -318,7 +317,7 @@ margin-left: 12.8125rem;
 .error {
   margin-left: 250px;
   color: var(--red);
-  
+
   font-size: 14px;
 
   /* display: none; */
@@ -374,7 +373,7 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
   margin: 0 1.375rem 0.9375rem 0;
 }
@@ -396,7 +395,7 @@ margin-left: 12.8125rem;
   height: 2.1875rem;
   outline: 0;
   padding-left: 0.625rem;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
   margin-right: 1.375rem;
 }
@@ -418,7 +417,6 @@ margin-left: 12.8125rem;
 
   margin: 1.75rem 0 3.125rem 6.6875rem;
   position: relative;
-  
 }
 .guardian_info_tit h1 {
   color: var(--main-green);
@@ -460,7 +458,7 @@ margin-left: 12.8125rem;
   height: 35px;
   outline: 0;
   padding-left: 10px;
-  border: 2px solid var(--light-gray); 
+  border: 2px solid var(--light-gray);
   border-radius: 5px;
 }
 .guardian_info_content input:focus {
@@ -552,7 +550,7 @@ margin-left: 12.8125rem;
   align-items: center;
   margin-top: 82px;
 }
-.agreement_contents_btn  button {
+.agreement_contents_btn button {
   width: 414px;
   height: 70px;
   background-color: var(--main-green);
@@ -563,10 +561,7 @@ margin-left: 12.8125rem;
   font-size: 24px;
 }
 
-
-
-
-@media all and (max-width:768px) {
+@media all and (max-width: 768px) {
   /* Container */
   .container.signup_page {
     width: 100vw;
@@ -626,46 +621,44 @@ margin-left: 12.8125rem;
     border-bottom: 1px solid var(--gray);
     width: 100%;
     height: 100%;
-}
-.user_info_form_line {
-  display: flex;
-  flex-direction: column;
-}
-/* # User Info Form Line Common Input & Label # */
-.user_info_form_line.line_name input,
-.user_info_form_line.line_pw input,
-.user_info_form_line.line_confirm_pw input,
-.user_info_form_line.line_birth_date input,
-.user_info_form_line.line_email input,
-.user_info_form_line.line_pregnant_women_code input {
-  width: 97%;
-  text-align: center;
-  margin-bottom: 5px;
-  padding: 10px 0;
-  margin-left: 5px;
-}
-.user_info_form_line label strong {
-  
-}
-.user_info_form label {
-  width: 100px;
-}
-.user_info_form_line label {
-  font-size: 14px;
-  padding: 10px 0 10px 10px;
-}
-.user_info_form_line label strong {
-  color: var(--red);
-}
-.user_info_form_line input:focus {
-  border-color: var(--main-green);
-}
-/* From Id Line */
+  }
+  .user_info_form_line {
+    display: flex;
+    flex-direction: column;
+  }
+  /* # User Info Form Line Common Input & Label # */
+  .user_info_form_line.line_name input,
+  .user_info_form_line.line_pw input,
+  .user_info_form_line.line_confirm_pw input,
+  .user_info_form_line.line_birth_date input,
+  .user_info_form_line.line_email input,
+  .user_info_form_line.line_pregnant_women_code input {
+    width: 97%;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    margin-left: 5px;
+  }
+  .user_info_form_line label strong {
+  }
+  .user_info_form label {
+    width: 100px;
+  }
+  .user_info_form_line label {
+    font-size: 14px;
+    padding: 10px 0 10px 10px;
+  }
+  .user_info_form_line label strong {
+    color: var(--red);
+  }
+  .user_info_form_line input:focus {
+    border-color: var(--main-green);
+  }
+  /* From Id Line */
   .user_info_form_line.line_id {
     border-bottom: 1px solid var(--gray);
   }
-  .user_info_form_line.line_id label  {
-
+  .user_info_form_line.line_id label {
   }
   .user_info_form_line.line_id input {
     margin: 0;
@@ -690,13 +683,12 @@ margin-left: 12.8125rem;
     margin-bottom: 10px;
     font-size: 14px;
     color: var(--main-green);
-
   }
   /* Form Tel Line */
   .user_info_form_line.line_tel {
     width: 100%;
     margin-bottom: 5px;
-  } 
+  }
   .user_info_form_line.line_tel input:first-child {
     margin-left: 5px;
   }
@@ -707,7 +699,7 @@ margin-left: 12.8125rem;
   }
   .line_tel_certified {
     width: 100%;
-    padding-left:  0;
+    padding-left: 0;
     border-bottom: 1px solid var(--gray);
     padding-bottom: 5px;
   }
@@ -724,9 +716,8 @@ margin-left: 12.8125rem;
     width: 97%;
     margin-left: 5px;
     margin-bottom: 5px;
-
   }
-  .token_wrapper .token_number{
+  .token_wrapper .token_number {
     margin-right: 0;
   }
 
@@ -845,7 +836,6 @@ margin-left: 12.8125rem;
   }
   .carecenter_info_content input[name="carecenter_info"] {
     margin-left: 5px;
-
   }
   .carecenter_info_content button {
     margin-right: 5px;
@@ -881,7 +871,7 @@ margin-left: 12.8125rem;
     margin-left: 0;
     margin: 0 auto;
     margin-bottom: 4.75rem;
-    
+
     /* border: 2px solid var(--gray); */
     border-radius: 5px;
   }
@@ -913,13 +903,13 @@ margin-left: 12.8125rem;
     margin-left: 5px;
   }
 
-    /* 약관동의 */
+  /* 약관동의 */
   .signup_page_agreement_section {
     width: 100%;
     height: 90%;
-}
+  }
 
-/* Title */
+  /* Title */
   .agreement_tit {
     width: 95%;
   }
@@ -939,13 +929,12 @@ margin-left: 12.8125rem;
     width: 95%;
   }
   .agreement_contents_item {
-
   }
 
   /* Check Box */
   .agreement_contents_item input[type="checkbox"] {
     opacity: 0;
-    width: 18px; 
+    width: 18px;
     height: 18px;
     z-index: 1;
   }
@@ -979,10 +968,7 @@ margin-left: 12.8125rem;
     width: 100%;
     margin-bottom: 50px;
   }
-  .agreement_contents_btn  button {
+  .agreement_contents_btn button {
     width: 95%;
   }
 }
-
-
-

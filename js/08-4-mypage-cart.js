@@ -7,7 +7,7 @@ const selectAllBtn = document.querySelector('#selectAll');
 const productsNum = document.querySelector('.selectNum');
 
 // 전체선택 옆에 총 개수 표시
-productsNum.innerText = products.length;
+// productsNum.innerText = products.length;
 
 // 전체선택 기능
 selectAllBtn.addEventListener('change', function() {

@@ -18,7 +18,6 @@ selectAllBtn.addEventListener('change', function() {
     checkBox.checked = isChecked;
   }
 });
-
 // 하나라도 체크되지 않은지 확인하는 함수
 function checkIfAnyUnchecked() {
   for (let i = 0; i < products.length; i++) {
@@ -29,12 +28,10 @@ function checkIfAnyUnchecked() {
   }
   return true;
 }
-
 // selectAllBtn 상태 업데이트하는 함수
 function updateSelectAllBtn() {
   selectAllBtn.checked = checkIfAnyUnchecked();
 }
-
 // 체크박스 상태 변화 감지
 for (let i = 0; i < products.length; i++) {
   const checkBox = products[i].querySelector('input[type="checkbox"]');
@@ -44,6 +41,9 @@ for (let i = 0; i < products.length; i++) {
     selectAllBtn.checked = allChecked;
   });
 }
+
+
+
 
 // 개수에 따라 변하는 상품들의 가격
 const p1Select = document.querySelector('.product1 select');
@@ -82,9 +82,34 @@ function updateOrderPrice() {
   const finalPriceValue = totalPrice + parseInt(deliveryPrice.innerText.replace(',', ''));
   finalPrice.innerText = finalPriceValue.toLocaleString();
   point.innerText = Math.floor(totalPrice / 100).toLocaleString();
+
+  productsNum.innerText = products.length;
 }
 
 
+
+
+
+
+
+
+// 가격 계산 함수들
+function calculateDeliveryPrice(totalPrice) {
+  if (totalPrice > 0 && totalPrice < 100000) {
+    return 2500;
+  } else {
+    return 0;
+  }
+}
+
+function calculateFinalPrice(totalPrice) {
+  const delivery = calculateDeliveryPrice(totalPrice);
+  return totalPrice + delivery;
+}
+
+function calculatePoint(totalPrice) {
+  return Math.floor(totalPrice / 100);
+}
 
 
 // 선택삭제 기능
@@ -102,8 +127,6 @@ deleteSelect.addEventListener('click', function(e) {
     contents.remove();
   });
 
-  updateOrderPrice();
-
   if (!isNaN(totalPrice)) {
     const currentOrderPrice = parseInt(orderPrice.innerText.replace(',', ''));
     const newOrderPrice = currentOrderPrice - totalPrice;
@@ -113,6 +136,13 @@ deleteSelect.addEventListener('click', function(e) {
     point.innerText = calculatePoint(newOrderPrice).toLocaleString();
   }
 });
+
+
+
+
+
+
+
 
 // 체크박스 상태 변화 감지
 for (let i = 0; i < products.length; i++) {
@@ -135,24 +165,6 @@ for (let i = 0; i < products.length; i++) {
 
     updateOrderPrice();
   });
-}
-
-// 가격 계산 함수들
-function calculateDeliveryPrice(totalPrice) {
-  if (totalPrice > 0 && totalPrice < 100000) {
-    return 2500;
-  } else {
-    return 0;
-  }
-}
-
-function calculateFinalPrice(totalPrice) {
-  const delivery = calculateDeliveryPrice(totalPrice);
-  return totalPrice + delivery;
-}
-
-function calculatePoint(totalPrice) {
-  return Math.floor(totalPrice / 100);
 }
 
 
@@ -195,6 +207,8 @@ p3Select.addEventListener("change", () => {
   p3TotalPrice.innerText = (p3Select.value * 11900).toLocaleString();
   updateOrderPrice();
 });
+
+
 
 
 

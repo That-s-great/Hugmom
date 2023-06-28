@@ -37,11 +37,6 @@ main {
 .cs_nav_wrap .cs_nav_first {
   color: var(--main-green);
 }
-<<<<<<< HEAD
-=======
-.cs_nav_wrap .fa-chevron-right {
-}
->>>>>>> f94d1cc94383e895641754843c018b00d1bd3cb7
 
 /* All Contents */
 /* ### 수정한 부분 ### */
@@ -95,11 +90,9 @@ main {
 .cs_FAQ_inner .cs_article {
   /* 1083 - 127 = 956 */
   width: calc(100% - 127px);
-<<<<<<< HEAD
+
   margin: 60px 0 60px 126px;
-=======
-  margin: 30px 0 100px 126px;
->>>>>>> f94d1cc94383e895641754843c018b00d1bd3cb7
+
 }
 .cs_article .cs_chapbot_tit {
   color: var(--black);

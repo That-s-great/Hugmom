@@ -622,8 +622,8 @@
     color: var(--dark-gray);
   }
   .main_service_item {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     flex-direction: column;
   }
   .main_service_item_title h5 {

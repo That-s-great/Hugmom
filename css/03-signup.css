@@ -528,9 +528,17 @@ margin-left: 12.8125rem;
 }
 
 .agreement_contents_item .fa-circle-check {
-  z-index: -1;
-  font-size: 24px;
-  color: var(--dark-gray);
+  font-size: 32px;
+  color: var(--light-gray);
+}
+#agreement_circle_1.check {
+  color: var(--main-green);
+}
+#agreement_circle_2.check {
+  color: var(--main-green);
+}
+#agreement_circle_3.check {
+  color: var(--main-green);
 }
 .agreement_contents_item .fa-chevron-right {
   font-size: 18px;

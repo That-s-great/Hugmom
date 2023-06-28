@@ -13,13 +13,19 @@
   font-size: 24px;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.hot_live .hot_live_headtitle em {
+  color: var(--red);
+  font-style: normal;
 }
 .lives_container {
   width: 1280px;
   height: 300px;
   margin: 0 auto;
   border-radius: 5px;
+  position: relative;
 }
 
 .live_items {
@@ -56,6 +62,7 @@
 }
 .hot_live_title_bottom {
   display: flex;
+  flex-direction: column;
 }
 .hot_live_title h3 {
   font-size: 24px;
@@ -85,7 +92,7 @@
   background-color: transparent;
   border: 1px solid var(--main-green);
   border-radius: 50px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   color: var(--main-green);
   font-weight: bold;
 }
@@ -98,14 +105,35 @@
   overflow: hidden;
   /* border: 1px solid blue; */
 }
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  bottom: -40px;
+  background-color: var(--light-gray);
+  padding: 10px;
+  border-radius: 10px;
+}
+.arrows p {
+  font-weight: bold;
+  font-size: 16px;
+}
+.lives_container .fa-chevron-left,
+.lives_container .fa-chevron-right {
+  margin: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
 
 /* live_container */
 .live_container {
   width: 1280px;
   margin: 0 auto;
-  border-top: 2px solid var(--gray);
-  margin-top: 50px;
-  padding-top: 50px;
+  border-top: 1px solid var(--gray);
+  margin-top: 100px;
+  padding-top: 20px;
 }
 .user_mall_menu li a.on {
   color: var(--main-green);
@@ -310,12 +338,17 @@
     align-items: center;
     margin: 30px;
   }
-
+  .hot_live .hot_live_headtitle {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
   .live_item_ {
     margin: 0;
 
     width: 100%;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .videobox video {
     width: 100%;
@@ -328,12 +361,18 @@
     /* border: 1px solid green; */
   }
   .hot_live_title h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     word-break: keep-all;
   }
   .hot_live_title .liveheart {
     margin-left: 0;
+  }
+  .hot_live_title_bottom {
+    flex-direction: row;
+  }
+  .hot_live_title_bottom span {
+    font-size: 14px;
   }
   .hot_live_title button {
     position: absolute;
@@ -345,6 +384,7 @@
   }
   .live_container {
     width: 100vw;
+    margin-top: 80px;
   }
   .live_videos {
     width: 100vw;
@@ -360,7 +400,24 @@
     width: 100%;
     height: 320px;
   }
-
+  .arrows {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -50px;
+    background-color: var(--light-gray);
+    padding: 3px;
+    border-radius: 10px;
+  }
+  .arrows p {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .lives_container .fa-chevron-left,
+  .lives_container .fa-chevron-right {
+    margin: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
   .schdulebtn_box {
     width: 100vw;
     margin: 50px 0;

@@ -147,6 +147,7 @@
   font-family: var(--kor);
   font-size: 16px;
   color: var(--black);
+  padding: 5px 0;
 }
 .user_mall_menu li::after {
   content: "";
@@ -163,6 +164,7 @@
 .user_mall_menu li a.checked {
   color: var(--main-green);
   font-weight: bold;
+  border-bottom: 2px solid var(--main-green);
 }
 
 /* user_mall_menu_title  */

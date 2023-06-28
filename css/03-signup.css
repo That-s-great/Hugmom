@@ -93,7 +93,9 @@ margin-left: 12.8125rem;
 .user_info_form_line.line_email {
   width: 32.875rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
 }
 /* # User Info Form Line Common Input & Label # */
 .user_info_form_line.line_name input,
@@ -124,6 +126,7 @@ margin-left: 12.8125rem;
 /* # User Info Form Line line ID # */
 .user_info_form_line.line_id {
   display: flex;
+  align-items: center;
 }
 .user_info_form_line.line_id input {
   margin: 0 1.125rem 0 9.5rem;
@@ -149,7 +152,7 @@ margin-left: 12.8125rem;
   width: 39.5625rem;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
 }
 .user_info_form_line.line_tel div {
   display: flex;
@@ -241,6 +244,7 @@ margin-left: 12.8125rem;
   width: 32.875rem;
   height: 8.5625rem;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .user_info_form_line.line_address div {
@@ -541,7 +545,9 @@ margin-left: 12.8125rem;
   color: var(--main-green);
 }
 .agreement_contents_item .fa-chevron-right {
-  font-size: 18px;
+  font-size: 14px;
+  color: var(--black);
+  margin-right: 5px;
 }
 .agreement_contents_item a {
   color: var(--black);
@@ -574,19 +580,20 @@ margin-left: 12.8125rem;
   }
   /* Main */
   .signup_page_main {
-    width: 100%;
+    width: 100vw;
   }
   .signup_form_wrap {
-    width: 100%;
+    width: 100vw;
+    border-bottom: 0;
   }
   /* Logo */
   .signup_page_logobox_section {
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
   }
   /* Main Title */
   .signup_page_user_info_main_tit_section {
-    width: 95%;
+    width: 90%;
     height: 100%;
     justify-content: flex-start;
   }
@@ -599,17 +606,18 @@ margin-left: 12.8125rem;
 
   /* #### Form Section #### */
   .signup_page_user_info_form_section {
-    width: 100%;
+    width: 100vw;
+    border-bottom: 0;
   }
   .user_info_sub_tit {
-    margin-left: 15px;
-    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
   .user_info_form {
     margin: 0 auto;
-    width: 95%;
+    width: 90%;
     height: 100%;
-    border: 2px solid var(--gray);
+    /* border: 2px solid var(--gray); */
     margin-bottom: 20px;
     border-radius: 5px;
     position: relative;
@@ -623,9 +631,10 @@ margin-left: 12.8125rem;
   .user_info_form_line.line_confirm_pw,
   .user_info_form_line.line_birth_date,
   .user_info_form_line.line_email {
-    border-bottom: 1px solid var(--gray);
+    /* border-bottom: 1px solid var(--gray); */
     width: 100%;
     height: 100%;
+    align-items: flex-start;
 }
 .user_info_form_line {
   display: flex;
@@ -639,14 +648,12 @@ margin-left: 12.8125rem;
 .user_info_form_line.line_email input,
 .user_info_form_line.line_pregnant_women_code input {
   width: 97%;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 5px;
-  padding: 10px 0;
+  padding: 10px;
   margin-left: 5px;
 }
-.user_info_form_line label strong {
-  
-}
+
 .user_info_form label {
   width: 100px;
 }
@@ -662,16 +669,15 @@ margin-left: 12.8125rem;
 }
 /* From Id Line */
   .user_info_form_line.line_id {
+    align-items: flex-start;
     border-bottom: 1px solid var(--gray);
   }
-  .user_info_form_line.line_id label  {
 
-  }
   .user_info_form_line.line_id input {
     margin: 0;
     width: 97%;
     margin-bottom: 10px;
-    text-align: center;
+    /* text-align: center; */
     margin-left: 5px;
   }
   .line_id_check {
@@ -679,10 +685,9 @@ margin-left: 12.8125rem;
     justify-content: space-between;
   }
   .line_id_check button {
-    margin: 0;
-    order: 2;
-    margin-right: 5px;
+    margin-left: 5px;
     margin-bottom: 10px;
+    font-size: 14px;
   }
   .id_check_result {
     order: 1;
@@ -694,30 +699,40 @@ margin-left: 12.8125rem;
   }
   /* Form Tel Line */
   .user_info_form_line.line_tel {
+    align-items: flex-start;
     width: 100%;
-    margin-bottom: 5px;
-  } 
+    margin-bottom: 10px;
+  }
   .user_info_form_line.line_tel input:first-child {
     margin-left: 5px;
   }
+  .user_info_form_line.line_tel div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .user_info_form_line.line_tel div div {
+    width: 300px;
+  }
   .user_info_form_line.line_tel button {
     margin-right: 10px;
-    font-size: 11px;
+    font-size: 14px;
     padding: 5px;
   }
   .line_tel_certified {
     width: 100%;
-    padding-left:  0;
+    margin-top: 5px;
+    padding-left: 5px;
     border-bottom: 1px solid var(--gray);
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    justify-content: space-between;
   }
   .line_tel_certified input {
-    text-align: center;
-    margin-left: 5px;
+    width: 300px;
   }
   .line_tel_certified button {
-    font-size: 14px;
     margin-right: 10px;
+    font-size: 14px;
+
   }
   /* Token */
   .token_wrap {
@@ -752,7 +767,7 @@ margin-left: 12.8125rem;
     flex: 1;
     margin-left: 5px;
     margin-right: 5px;
-    text-align: center;
+    /* text-align: center; */
   }
   .user_info_form_line.line_address div div:first-child button {
     font-size: 14px;
@@ -761,13 +776,13 @@ margin-left: 12.8125rem;
   .address_wrap .address_wrap_second input {
     width: 100%;
     flex: 1;
-    text-align: center;
+    /* text-align: center; */
     margin-left: 5px;
     margin-right: 5px;
   }
   .address_wrap .address_wrap_third input {
     flex: 1;
-    text-align: center;
+    /* text-align: center; */
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -790,9 +805,9 @@ margin-left: 12.8125rem;
     margin-left: 5px;
   }
   .error {
-    margin-left: 0;
+    margin-left: 10px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 
     /* display: none; */
   }
@@ -816,7 +831,7 @@ margin-left: 12.8125rem;
   } */
   /* ### Carecenter Info Section ### */
   .signup_page_carecenter_info_section {
-    width: 100%;
+    width: 95%;
   }
   .carecenter_info_wrap {
     width: 95%;
@@ -824,8 +839,8 @@ margin-left: 12.8125rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 4.75rem;
-    border: 2px solid var(--gray);
+    margin-bottom: 40px;
+    /* border: 2px solid var(--gray); */
     border-radius: 5px;
   }
   .carecenter_info_wrap label {
@@ -848,7 +863,7 @@ margin-left: 12.8125rem;
 
   }
   .carecenter_info_content button {
-    margin-right: 5px;
+    margin-right: 10px;
     font-size: 14px;
   }
   .carecenter_info_content input[name="carecenter_info_sub"] {
@@ -858,12 +873,14 @@ margin-left: 12.8125rem;
   }
   /* 보호자 정보 */
   .signup_page_guardian_info_section {
-    width: 100%;
+    width: 95%;
+    border-bottom: 0;
   }
   /* Title */
   .guardian_info_tit {
     width: 100%;
     margin-left: 0;
+    margin-bottom: 20px;
   }
   .guardian_info_tit h1 {
     margin: 0;
@@ -871,8 +888,8 @@ margin-left: 12.8125rem;
     /* margin-bottom: 30px; */
   }
   .guardian_info_tit p {
-    font-size: 11px;
-    margin-left: 5px;
+    font-size: 14px;
+    margin-left: 15px;
   }
   /* Content */
   .guardian_info_wrap {
@@ -880,7 +897,7 @@ margin-left: 12.8125rem;
 
     margin-left: 0;
     margin: 0 auto;
-    margin-bottom: 4.75rem;
+    margin-bottom: 40px;
     
     /* border: 2px solid var(--gray); */
     border-radius: 5px;
@@ -890,7 +907,7 @@ margin-left: 12.8125rem;
     height: 85px;
     margin-bottom: 0;
     margin-bottom: 10px;
-    border: 2px solid var(--gray);
+    /* border: 2px solid var(--gray); */
     border-radius: 5px;
     padding-top: 10px;
     /* border: 1px solid red; */
@@ -915,7 +932,7 @@ margin-left: 12.8125rem;
 
     /* 약관동의 */
   .signup_page_agreement_section {
-    width: 100%;
+    width: 95%;
     height: 90%;
 }
 
@@ -981,6 +998,9 @@ margin-left: 12.8125rem;
   }
   .agreement_contents_btn  button {
     width: 95%;
+    height: 40px;
+    padding: 0;
+    font-size: 18px;
   }
 }
 

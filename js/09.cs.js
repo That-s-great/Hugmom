@@ -1,3 +1,8 @@
+const chatbotbtn = document
+  .querySelector(".chatbotbtn")
+  .addEventListener("click", () => {
+    alert("챗봇 페이지로 연결됩니다.");
+  });
 const list_item = document.querySelectorAll(".cs_ask_ques_accordion_item");
 const text = document.querySelectorAll(".text");
 

@@ -440,6 +440,7 @@
 
   .header_menu_list > ul > .header_menu > a {
     font-size: 16px;
+    font-family: var(--kor);
   }
   .header_menu.cs > a {
     font-size: 16px;

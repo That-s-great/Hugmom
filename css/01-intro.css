@@ -12,6 +12,7 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
 }
 
@@ -41,6 +42,9 @@
   width: 100%;
   height: inherit;
   border-radius: 5px;
+}
+.intro_page_banner_section_slide .mobile_img {
+  display: none;
 }
 
 /* Banner Slide Text */
@@ -94,9 +98,7 @@
 
   cursor: pointer;
 
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+
 }
 .banner_slide_sign_up_btn .sign_up_i {
   margin-left: 5px;
@@ -115,6 +117,8 @@
   transform: translateY(-50%);
   transition: all 0.6s ease-in-out;
   opacity: 0;
+  border: 1px solid red;
+  border-color: transparent;
 }
 .intro_page_banner_section:hover .banner_slide_btn_wrap {
   opacity: 1;
@@ -160,8 +164,36 @@
   font-weight: bold;
 }
 
-/* ### Intro Page Introduce Section ### */
-
+/* ### Main Content Section ### */
+.main_content_section {
+  width: 1280px;
+  height: 100%;
+}
+.main_content_section .main_content_title h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 30px;
+  /* font-size: 32px; */
+}
+.main_content_items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main_content_items + .main_content_items {
+  margin-top: 50px;
+}
+.main_content_banner {
+  width: 100%;
+  margin-top: 50px;
+}
+.main_content_banner img {
+  width: 100%;
+  height: auto;
+}
 
 /* ### Intro Page LIVE Section ### */
 .intro_page_live_section {
@@ -173,7 +205,7 @@
   margin-top: 100px;
 }
 .intro_page_live_article {
-  width: 100%;
+  width: 1280px;
   height: 536px;
   overflow: hidden;
 }
@@ -228,11 +260,15 @@
 .live_item {
   border: 1px solid var(--dark-gray);
   width: 300px;
-  height: 100%;
+  height: 230px;
   margin-right: 20px;
   transition: all 0.7s ease-in-out;
   flex: 0 0 auto; 
   border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .live_broadcast_show {
   width: 100%;
@@ -254,11 +290,21 @@
   font-family: var(--eng);
   border-radius: 5px;
 }
+.live_broadcast_img img {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
 /* Live Slide Text */
-.live_title {
+.live_txt {
+  margin-left: 5px;
+}
+.live_item_title {
   color: var(--black);
   font-family: var(--kor);
   font-size: 18px;
+  margin-bottom: 5px;
 }
 .live_bj_name {
   font-size: 16px;
@@ -266,7 +312,7 @@
   font-family: var(--kor);
   margin-right: 10px;
 }
-.fa-user-group {
+.live_txt .fa-user-group {
   font-size: 16px;
   color: var(--dark-gray);
 }
@@ -281,7 +327,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .live_more_view_btn {
   width: 150px;
@@ -296,6 +342,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.live_more_view_btn i {
+  color: var(--white);
+  margin-left: 10px;
+}
+
+/* ### Main Service Section ### */
+.main_service_section {
+  width: 1280px;
+  height: 100%;
+  margin-bottom: 100px;
+}
+.main_service_title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px ;
+}
+.main_service_items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+.main_service_item {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_service_items .main_service_item_img img {
 }
 
 /* Mobile */
@@ -332,10 +413,13 @@
     flex: 0 0 100%;
     transition: all 0.9s ease-in-out;
   }
-  .intro_page_banner_section_slide img {
-    width: 100%;
-    height: 100%;
+  .intro_page_banner_section_slide .normal_img {
+    display: none;
   }
+  .intro_page_banner_section_slide .mobile_img {
+    display: block;
+  }
+
   /* Banner Slide Text */
   .intro_page_banner_section_inner {
     position: absolute;
@@ -417,56 +501,33 @@
 
   /* Banner Slide Index */
   .banner_slide_index_number {
-    width: 75px;
-    height: 35px;
+    right: 5%;
+    bottom: 5%;
+  }
 
-    position: absolute;
-    bottom: 10%;
-    right: 30%;
-
-    background-color: var(--gray);
-    border-radius: 5px;
-
-    text-align: center;
-    line-height: 2;
-    color: var(--white);
+  /* ###  Main Content Section ### */
+  .main_content_section {
+    width: 100%;
+  }
+  .main_content_title {
+    width: 100%;
+  }
+  .main_content_title h2 {
     font-size: 18px;
-    font-weight: bold;
+  }
+  .main_content_items {
+    width: 95%;
+    margin: 0 auto;
+    
+  }
+  .main_content_banner {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .main_content_banner img {
+    width: 100%;
   }
 
-  /* ### Intro Page Introduce Section ### */
-  .intro_page_introduce_section {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
-  .intro_page_introduce_article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  /* Introduce Article Text */
-  .introduce_txt {
-    order: 1;
-    margin-top: 20px;
-  }
-  .introduce_img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  /* Introduce Article Image */
-  .introduce_img img {
-    order: 2;
-    width: 100%;
-  }
-  .introduce_txt p {
-    font-size: 16px;
-    color: var(--black);
-  }
 
   /* ### Intro Page LIVE Section ### */
   .intro_page_live_section {
@@ -481,22 +542,74 @@
 
     position: relative;
   }
+  .intro_page_live_article h1 {
+    font-size: 24px;
+  }
   /* Live Slide Button */
   .live_slide_btn {
     position: absolute;
     top: 10%;
-    right: 5%;
+    right: 2%;
   }
   /* Live Slide */
   .live_broadcast_items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    flex-wrap: wrap;
+    width: 95%;
+    height: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+  .live_broadcast_items .live_item {
+    width: 175px;
+    height: 100%;
+  }
+  .live_item .live_txt p {
+    font-size: 12px;
+  }
+  .live_item .live_txt .live_bj_name {
+    font-size: 12px;
+  }
+  .live_item .live_txt i {
+    font-size: 12px;
+  }
+  .live_item .live_txt .live_user_viewer {
+    font-size: 12px;
+  }
+  .live_more_view_btn_box {
+    margin-top: 140px;
+    margin-right: 0;
+  }
+
+  .main_service_section {
+    width: 100%;
+
+  };
+  .main_service_title {
     width: 100%;
   }
-  .live_item {
-    height: 100%;
+  .main_service_title h1 {
+    font-size: 24px;
+  }
+  .main_service_title h4 {
+    font-size: 12px;
+  }
+  .main_service_item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .main_service_item_title h5 {
+    font-size: 12px;
+  }
+  .main_service_item .main_service_item_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .main_service_item .main_service_item_img img {
+    width: 40px;
+  }
+  .main_service_item .main_service_item_title h5 {
+    font-size: 10px;
   }
 }

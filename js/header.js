@@ -9,6 +9,32 @@ menuToggleBtn.addEventListener("click", () => {
     hedaerMenuList.classList.add("menuopen");
   }
 });
+
+// 모바일에서 메뉴 클릭시 하위 메뉴 나오기
+const menuShop = document.querySelector(".header_menu.shop");
+const menuShopList = document.querySelector(".shop_malls");
+menuShop.addEventListener("click", () => {
+  menuShopList.style.height = "74px";
+  menuCsList.style.height = "0px";
+  menuMypageList.style.height = "0px";
+});
+
+const menuCs = document.querySelector(".header_menu.cs");
+const menuCsList = document.querySelector(".cs_menu_list");
+menuCs.addEventListener("click", () => {
+  menuCsList.style.height = "74px";
+  menuShopList.style.height = "0px";
+  menuMypageList.style.height = "0px";
+});
+
+const menuMypage = document.querySelector(".header_menu.mobile_myFage");
+const menuMypageList = document.querySelector(".mobile_myFage_list");
+menuMypage.addEventListener("click", () => {
+  menuMypageList.style.height = "112px";
+  menuShopList.style.height = "0px";
+  menuCsList.style.height = "0px";
+});
+
 // 메뉴 닫기 X버튼 클릭시 닫기
 const menuCloseBtn = document.querySelector(".mobile_close_menu_btn");
 

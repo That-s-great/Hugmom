@@ -84,6 +84,7 @@
   overflow-y: scroll;
   display: block;
   background-color: rgba(59, 59, 59, 0.5);
+  border-radius: 5px;
 }
 .live_comment {
   width: 100%;
@@ -159,6 +160,7 @@
   border-radius: 50px;
   margin: 0 auto;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .benefit {
   position: absolute;
@@ -181,11 +183,11 @@
 }
 
 .benefit h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0;
 }
 .benefit p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
   margin-bottom: 30px;
 }

@@ -401,6 +401,66 @@ careCenterBtn.addEventListener('click', (event) => {
 });
 })
 
+// 약관동의
+const agreementCheck1 = document.querySelector('#agreement_check1');
+const agreementCheck2 = document.querySelector('#agreement_check2');
+const agreementCheck3 = document.querySelector('#agreement_check3');
+const allAgreement = document.querySelector('#all_agreement');
+
+agreementCheck1.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#agreement_circle_1').classList.toggle('check');
+})
+agreementCheck2.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#agreement_circle_2').classList.toggle('check');
+})
+agreementCheck3.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#agreement_circle_3').classList.toggle('check');
+})
+
+allAgreement.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('#agreement_circle_1').classList.toggle('check');
+  document.querySelector('#agreement_circle_2').classList.toggle('check');
+  document.querySelector('#agreement_circle_3').classList.toggle('check');
+})
+
+// 전체동의 
+function signup(event) {
+  event.preventDefault()
+  let isValid;
+  const checkCircle1 = document.querySelector('#agreement_circle_1');
+  const checkCircle2 = document.querySelector('#agreement_circle_2');
+
+  if(checkCircle1.classList.contains('check') !== true && checkCircle2.classList.contains('check') === true) {
+    alert("이용약관에 동의해주세요!");
+    isValid = false;
+  }
+
+  if(checkCircle1.classList.contains('check') === true && checkCircle2.classList.contains('check') !== true) {
+    alert("개인정보 취급방침에 동의해주세요!");
+    isValid = false;
+  }
+
+  if(checkCircle1.classList.contains('check') !== true && checkCircle2.classList.contains('check') !== true) {
+    alert("이용약관과 개인정보 취급방침에 동의해주세요!");
+    isValid = false;
+  }
+
+  if(checkCircle1.classList.contains('check') === true && checkCircle2.classList.contains('check') === true) {
+    alert("회원가입을 환영합니다!");
+    isValid = true;
+  }
+
+  navigateToOtherPage(isValid);
+}
+function navigateToOtherPage(isValid) {
+  if(isValid !== false) {
+    location.href = "02-signin.html";
+  }
+}
 
 
 

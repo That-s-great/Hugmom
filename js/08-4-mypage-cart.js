@@ -112,29 +112,24 @@ function calculatePoint(totalPrice) {
 }
 
 
+
+
+
 // 선택삭제 기능
 deleteSelect.addEventListener('click', function(e) {
   e.preventDefault();
 
-  const checkedProducts = document.querySelectorAll('.mypage_shoppingInfo_cart_select .contents input[type="checkbox"]:checked');
-  let totalPrice = 0;
-
-  checkedProducts.forEach(function(product) {
+  products.forEach(function(product) {
     const contents = product.closest('.contents');
-    const productPrice = parseInt(contents.querySelector('p span#totalPrice').innerText.replace(',', ''));
 
-    totalPrice += productPrice;
     contents.remove();
   });
+  orderPrice.innerText = '0';
+  deliveryPrice.innerText = '0';
+  finalPrice.innerText = '0';
+  point.innerText = '0';
 
-  if (!isNaN(totalPrice)) {
-    const currentOrderPrice = parseInt(orderPrice.innerText.replace(',', ''));
-    const newOrderPrice = currentOrderPrice - totalPrice;
-    orderPrice.innerText = newOrderPrice.toLocaleString();
-    deliveryPrice.innerText = calculateDeliveryPrice(newOrderPrice).toLocaleString();
-    finalPrice.innerText = calculateFinalPrice(newOrderPrice).toLocaleString();
-    point.innerText = calculatePoint(newOrderPrice).toLocaleString();
-  }
+  updateProductsNum();
 });
 
 
@@ -171,26 +166,32 @@ for (let i = 0; i < products.length; i++) {
 
 
 
-
-
+function updateProductsNum() {
+  const contents = document.querySelectorAll('.contents');
+  const productsNum = document.querySelector('.selectNum');
+  productsNum.innerText = contents.length;
+}
 
 // product1 삭제
 p1Delete.addEventListener("click", () => {
   product1[0].remove();
   p1TotalPrice.innerText = '0';
   updateOrderPrice();
+  updateProductsNum();
 });
 // product2 삭제
 p2Delete.addEventListener("click", () => {
   product2[0].remove();
   p2TotalPrice.innerText = '0';
   updateOrderPrice();
+  updateProductsNum();
 });
 // product3 삭제
 p3Delete.addEventListener("click", () => {
   product3[0].remove();
   p3TotalPrice.innerText = '0';
   updateOrderPrice();
+  updateProductsNum();
 });
 
 

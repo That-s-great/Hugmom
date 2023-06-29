@@ -90,54 +90,40 @@ lock.forEach((e) => {
   });
 });
 
-// Get the comment elements
 const commentElements = document.querySelectorAll(".comment");
 
-// Loop through each comment element
 commentElements.forEach((commentElement, index) => {
-  // Get the comment_num element within the comment
   const commentNumElement = commentElement.querySelector(".comment_num");
-
-  // Set the comment_num text to the index + 1
   commentNumElement.textContent = index + 1;
 });
-// Get the comment count elements
+
 const commentCountElements = document.querySelectorAll(".commentcount span");
 
-// Hide all comment elements initially
 commentElements.forEach((commentElement) => {
   commentElement.style.display = "none";
 });
 
-// Show the first five comments initially
 for (let i = 0; i < 5 && i < commentElements.length; i++) {
   commentElements[i].style.display = "block";
 }
 
-// Loop through each comment count element
 commentCountElements.forEach((element, index) => {
-  // Add click event listener to each comment count element
   element.addEventListener("click", () => {
-    // Hide all comment elements
     commentElements.forEach((commentElement) => {
       commentElement.style.display = "none";
     });
 
-    // Remove 'active' class from all comment count elements
     commentCountElements.forEach((countElement) => {
       countElement.classList.remove("active");
     });
 
-    // Calculate the starting and ending index for comments to be displayed
     const start = index * 5;
     const end = start + 5;
 
-    // Show the selected comments based on the calculated indexes
     for (let i = start; i < end && i < commentElements.length; i++) {
       commentElements[i].style.display = "block";
     }
 
-    // Add 'active' class to the clicked comment count element
     element.classList.add("active");
   });
 });

@@ -6,3 +6,4 @@ https://www.figma.com/file/MlFIWC7zZybEYX1PbLOyME/GMA-%EB%8C%80%EB%8B%A8%ED%95%9
 
 ### 사이트
 https://hugmom-b6187.web.app/html/01-intro_logout.html
+![Uploading image.png…]()

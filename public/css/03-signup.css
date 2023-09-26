@@ -95,7 +95,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 /* # User Info Form Line Common Input & Label # */
 .user_info_form_line.line_name input,
@@ -315,16 +314,21 @@
   width: 30.4375rem;
 }
 .pregnant_women_code_result {
-  margin-top: 0.625rem;
   color: var(--red);
+  font-size: 14px;
+  margin: 5px 0;
 }
 .error {
-  margin-left: 250px;
+  margin-left: 222px;
   color: var(--red);
-
   font-size: 14px;
 
   /* display: none; */
+}
+#error_sub_location {
+  color: var(--red);
+  margin-top: 5px;
+  font-size: 14px;
 }
 /* .error.show_name {
   display: block;
@@ -630,39 +634,39 @@
     width: 100%;
     height: 100%;
     align-items: flex-start;
-}
-.user_info_form_line {
-  display: flex;
-  flex-direction: column;
-}
-/* # User Info Form Line Common Input & Label # */
-.user_info_form_line.line_name input,
-.user_info_form_line.line_pw input,
-.user_info_form_line.line_confirm_pw input,
-.user_info_form_line.line_birth_date input,
-.user_info_form_line.line_email input,
-.user_info_form_line.line_pregnant_women_code input {
-  width: 97%;
-  /* text-align: center; */
-  margin-bottom: 5px;
-  padding: 10px;
-  margin-left: 5px;
-}
+  }
+  .user_info_form_line {
+    display: flex;
+    flex-direction: column;
+  }
+  /* # User Info Form Line Common Input & Label # */
+  .user_info_form_line.line_name input,
+  .user_info_form_line.line_pw input,
+  .user_info_form_line.line_confirm_pw input,
+  .user_info_form_line.line_birth_date input,
+  .user_info_form_line.line_email input,
+  .user_info_form_line.line_pregnant_women_code input {
+    width: 97%;
+    /* text-align: center; */
+    margin-bottom: 5px;
+    padding: 10px;
+    margin-left: 5px;
+  }
 
-.user_info_form label {
-  width: 100px;
-}
-.user_info_form_line label {
-  font-size: 14px;
-  padding: 10px 0 10px 10px;
-}
-.user_info_form_line label strong {
-  color: var(--red);
-}
-.user_info_form_line input:focus {
-  border-color: var(--main-green);
-}
-/* From Id Line */
+  .user_info_form label {
+    width: 100px;
+  }
+  .user_info_form_line label {
+    font-size: 14px;
+    padding: 10px 0 10px 10px;
+  }
+  .user_info_form_line label strong {
+    color: var(--red);
+  }
+  .user_info_form_line input:focus {
+    border-color: var(--main-green);
+  }
+  /* From Id Line */
   .user_info_form_line.line_id {
     align-items: flex-start;
     border-bottom: 1px solid var(--gray);
@@ -725,7 +729,6 @@
   .line_tel_certified button {
     margin-right: 10px;
     font-size: 14px;
-
   }
   /* Token */
   .token_wrap {
@@ -748,9 +751,7 @@
     width: 100%;
     height: 100%;
   }
-  .user_info_form_line.line_address div {
-    margin-bottom: 5px;
-  }
+
   .address_wrap .address_wrap_first {
     width: 100%;
     justify-content: flex-start;
@@ -794,9 +795,10 @@
     color: var(--red);
     font-size: 12px;
     margin-bottom: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
   }
-  .error {
+  .error,
+  #error_sub_location {
     margin-left: 10px;
     display: flex;
     /* justify-content: center; */
@@ -889,7 +891,7 @@
     margin-left: 0;
     margin: 0 auto;
     margin-bottom: 40px;
-    
+
     /* border: 2px solid var(--gray); */
     border-radius: 5px;
   }

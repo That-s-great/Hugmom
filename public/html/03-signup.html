@@ -128,14 +128,14 @@
             <!-- Name -->
             <div class="user_info_form_line line_name">
               <label for="user_info_name">이름<strong> *</strong></label>
-              <input type="text" id="user_info_name" class="user_info_name" placeholder="이름" required>
+              <input type="text" id="user_info_name" class="user_info_name" placeholder="이름" >
             </div>
             <div class="error" id="error_name"></div>
 
             <!-- Id -->
             <div class="user_info_form_line line_id">
               <label for="user_info_id">아이디<strong> *</strong></label>
-              <input type="text" id="user_info_id" placeholder="아이디" required>
+              <input type="text" id="user_info_id" placeholder="아이디" >
               <div class="line_id_check">
                 <button>중복확인</button>
                 <span class="id_check_result"></span>
@@ -145,21 +145,21 @@
             <!-- PassWord -->
             <div class="user_info_form_line line_pw">
               <label for="user_info_pw">비밀번호<strong> *</strong></label>
-              <input type="password" id="user_info_pw" placeholder="비밀번호" required> 
+              <input type="password" id="user_info_pw" placeholder="비밀번호" > 
             </div>
             <div class="error" id="error_pw"></div>
 
             <!-- Confirm PassWord -->
             <div class="user_info_form_line line_confirm_pw">
               <label for="user_info_confirm_pw">비밀번호 확인<strong> *</strong></label>
-              <input type="password" id="user_info_confirm_pw" placeholder="비밀번호 확인" required>
+              <input type="password" id="user_info_confirm_pw" placeholder="비밀번호 확인" >
             </div>
             <div class="error" id="error_pw2"></div>
 
             <!-- Birth -->
             <div class="user_info_form_line line_birth_date">
               <label for="user_info_birth_date">생년월일<strong> *</strong></label>
-              <input type="text" id="user_info_birth_date" placeholder="생년월일 8자리. : yyyymmdd" maxlength="8"  required>
+              <input type="text" id="user_info_birth_date" placeholder="생년월일 8자리. : yyyymmdd" maxlength="8"  >
             </div>
             <div class="error" id="error_birth"></div>
 
@@ -192,7 +192,7 @@
             <!-- Email -->
             <div class="user_info_form_line line_email">
               <label for="user_info_email">이메일<strong> *</strong></label>
-              <input type="email" id="user_info_email" placeholder="hugmom@hug.com" required>
+              <input type="email" id="user_info_email" placeholder="hugmom@hug.com" >
             </div>
             <div class="error" id="error_email"></div>
 
@@ -201,14 +201,14 @@
               <label for="user_info_address">주소<strong> *</strong></label>
               <div class="address_wrap">
                 <div class="address_wrap_first">
-                  <input id="zip_code" type="text"  maxlength="5" required>
+                  <input id="zip_code" type="text"  maxlength="5" >
                   <button id="address_btn">우편번호 찾기</button>
                 </div>
                 <div class="address_wrap_second">
-                  <input id="address_1" type="text" readonly required>
+                  <input id="address_1" type="text" readonly >
                 </div>
                 <div class="address_wrap_third">
-                  <input id="user_info_location" type="text" placeholder="상세주소를 입력해주세요" required>
+                  <input id="user_info_location" type="text" placeholder="상세주소를 입력해주세요" >
                 </div>
               </div>
             </div>
@@ -218,7 +218,7 @@
           <div class="user_info_form_line line_pregnant_women_code">
             <label for="user_info_pregnant_women_code">임산부코드<strong>   *</strong></label>
             <div>
-              <input type="text"  id="user_info_pregnant_women_code" placeholder="임산부코드를 입력해 주세요." required>
+              <input type="text"  id="user_info_pregnant_women_code" placeholder="임산부코드를 입력해 주세요." >
               <p class="pregnant_women_code_result">.</p>
             </div>
           </div>
@@ -232,7 +232,7 @@
               <label for="carecenter_info">소속 산후조리원<strong> *</strong></label>
               <div class="carecenter_info_content">
                 <div>
-                  <input id="carecenter_address" type="text" name="carecenter_info" required>
+                  <input id="carecenter_address" type="text" name="carecenter_info" >
                   <button id="carecenter_btn">산후조리원 찾기</button>
                 </div>
                 <div>
@@ -312,7 +312,7 @@
             </div>
           </div>
           <div class="agreement_contents_btn">
-            <button onclick="signup(event)">회원가입</button>
+            <button id = "signup_button">회원가입</button>
           </div>
         </section>
       </div>
